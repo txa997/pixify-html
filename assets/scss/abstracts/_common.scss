@@ -32,6 +32,18 @@ a , span  {
     transition: inherit;
 }
 
+svg {
+    fill: inherit;
+    stroke: inherit;
+    transition: inherit;
+
+    * {
+        fill: inherit;
+        stroke: inherit;
+        transition: inherit;
+    }
+}
+
 button {
     border: none;
     outline: none;

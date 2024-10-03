@@ -2,16 +2,19 @@
 :root {
     scroll-behavior: inherit;
 	
-	--pf-font-h1:  "Inter", sans-serif;
-	--pf-font-p1:  "Inter", sans-serif;
+	--pf-font-h-1:  "Inter", sans-serif;
+	--pf-font-p-1:  "Inter", sans-serif;
     
-	--pf-clr-pr-1: #fc5220;
+	--pf-clr-pr-1: #2AC8D3;
 	--pf-clr-sd-1: #FCA804;
 	
 	--pf-clr-white-1: #ffffff;
 	--pf-clr-black-1: #000000;
+	--pf-clr-black-2: #0A0E0E;
 
 	--pf-cube-1:  cubic-bezier(0.19, 1, 0.22, 1);
+	--pf-cube-2: cubic-bezier(.216, .416, .25, 1);
+	
 }
 
 $over:'(min-width: 1800px)';

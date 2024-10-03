@@ -1,13 +1,17 @@
 
-@media (min-width: 1300px) {
+@media (min-width: 1400px) {
     .container{
-        &.wa-container-1 {
+        &.pf-container-1 {
             max-width: 1344px;
         }
 
     }
 }
     
+
+.wa-fix {
+    overflow: hidden;
+}
 
 .wa-img-cover {
     img {

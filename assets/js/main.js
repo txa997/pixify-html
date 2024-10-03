@@ -57,6 +57,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+$(window).scroll(function() {
+	if ($(this).scrollTop() > 250){
+	$('.pf_sticky').addClass('sticky1');
+	}
+	else{
+	$('.pf_sticky').removeClass('sticky1');
+	}
+});
+
+
 
 // offcanvas
 $('.offcanvas_toggle').on('click', function() {
@@ -107,7 +117,8 @@ jQuery(".mobile-main-navigation li.dropdown").append('<span class="dropdown-btn"
 
 
 
-
+// feather-icon
+feather.replace()
 
 
 // bootstrap-tooltip
