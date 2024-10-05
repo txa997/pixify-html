@@ -1,0 +1,52 @@
+/* 
+    counter-1-start
+*/
+.pf-counter-1 {
+    display: flex;
+    gap: 20px 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &-item {
+        display: flex;
+        align-items: end;
+        gap: 16px;
+        max-width: 235px;
+        width: 100%;
+
+        &-number {
+            font-size: 64px;
+            line-height: 1;
+            font-weight: 400;
+            display: flex;
+            align-items: end;
+            gap: 5px;
+
+
+
+            
+            .counter {
+                opacity: 64%;
+            }
+
+            .text {
+                display: inline-block;
+                font-size: 32px;
+                color: var(--pf-clr-pr-1);
+                margin-bottom: 4px;
+            }
+        }
+
+        &-disc {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 300;
+            opacity: 64%;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+/* 
+    counter-1-end
+*/

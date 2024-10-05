@@ -1,0 +1,239 @@
+/* 
+    about-1-start
+*/
+.pf-about-1 {
+
+    &-area {
+        position: relative;
+        padding-top: 350px;
+        padding-bottom: 70px;
+    }
+
+    &-sec-title{
+        max-width: 655px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &-earth {
+        position: relative;
+        
+        &-img {
+            width: 66%;
+            margin-left: auto;
+            margin-right: auto;
+            mix-blend-mode: color-dodge;
+
+            @media #{$xs} {
+                width: 100%;
+            }
+        }
+
+        &-text {
+            display: flex;
+            align-items: self-start;
+            position: absolute;
+            top: 106px;
+            left: 50px;
+            z-index: 1;
+
+
+
+            &-box {
+                width: 100%;
+                max-width: 160px;
+                background: rgba(255, 255, 255, 0.08);
+                border-radius: 12px;
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(255, 255, 255, 0.8);
+                padding: 10px 16px;
+                backdrop-filter: blur(8px);
+            }
+
+            &-shape {
+                fill: var(--pf-clr-white-1);
+                margin-top: 26px;
+                margin-left: -9px;
+                z-index: 1;
+
+                @media #{$xs} {
+                    display: none;
+                }
+
+                @media #{$sm} {
+                    display: inline-block;
+                }
+
+                path {
+                    fill: transparent;
+                    stroke: var(--pf-clr-white-1);
+                }
+            }
+        }
+
+        &-text-2 {
+            display: flex;
+            align-items: self-start;
+            position: absolute;
+            top: 45px;
+            right: 0px;
+            z-index: 1;
+
+
+
+            &-box {
+                width: 100%;
+                max-width: 185px;
+                background: rgba(255, 255, 255, 0.08);
+                border-radius: 12px;
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(255, 255, 255, 0.8);
+                padding: 10px 16px;
+                backdrop-filter: blur(8px);
+            }
+
+            &-shape {
+                fill: var(--pf-clr-white-1);
+                margin-top: 26px;
+                margin-right: -9px;
+                z-index: 1;
+
+                
+                @media #{$xs} {
+                    display: none;
+                }
+
+                @media #{$sm} {
+                    display: inline-block;
+                }
+
+                path {
+                    fill: transparent;
+                    stroke: var(--pf-clr-white-1);
+                }
+            }
+        }
+    }
+
+    &-disc {
+        font-size: 23px;
+        text-align: center;
+        line-height: 1.56;
+        opacity: 64%;
+        max-width: 690px;
+
+        @media #{$xs} {
+            font-size: 18px;
+        }
+
+        @media #{$sm} {
+            font-size: 20px;
+        }
+    }
+
+    &-line-shape {
+        position: absolute;
+        bottom: 20%;
+        left: 0;
+        width: 100%;
+
+        @media #{$md,$xs} {
+            display: none;
+        }
+
+        &-single {
+            fill: transparent;
+            stroke: var(--pf-clr-white-1);
+
+            circle {
+                fill: var(--pf-clr-white-1);
+
+            }
+
+            .flash-ani2 {
+                animation: flash 2s linear infinite;
+            }
+
+            .flash-ani3 {
+                animation: flash 3s linear infinite;
+            }
+
+            .pr-stroke {
+                stroke: var(--pf-clr-pr-1);
+            }
+        }
+    }
+
+    &-bg-shape {
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        width: 100%;
+        height: calc(100% - 200px);
+    }
+
+    &-glow-1 {
+        position: absolute;
+        top: -30%;
+        width: 100%;
+        left: 0;
+        text-align: center;
+        z-index: -2;
+
+        @media #{$xxl} {
+            top: -23%;
+        }
+
+        @media #{$xl} {
+            top: -19%;
+        }
+
+        @media #{$lg} {
+            top: -14%;
+        }
+
+        @media #{$md} {
+            top: -10%;
+        }
+
+        @media #{$xs} {
+            top: -5%;
+        }
+    }
+
+    &-glow-2 {
+        position: absolute;
+        bottom: -50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: -2;
+
+        @media #{$xxl} {
+            bottom: -36%;
+        }
+
+        @media #{$xl} {
+            bottom: -32%;
+        }
+
+        @media #{$lg} {
+            bottom: -30%;
+        }
+
+        @media #{$md} {
+            bottom: -26%;
+        }
+
+        @media #{$xs} {
+            bottom: -16%;
+        }
+    }
+}
+
+
+/* 
+    about-1-end
+*/

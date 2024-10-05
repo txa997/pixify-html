@@ -14,7 +14,7 @@ gsap.config({
 
 // lenis-smooth-scroll
 const lenis = new Lenis({
-	duration: .7, 
+	duration: .8, 
 	easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
 	direction: 'vertical', 
 	smooth: true, 
@@ -115,10 +115,40 @@ jQuery(".mobile-main-navigation li.dropdown").append('<span class="dropdown-btn"
 
 
 
+// text-slide-1
+if($('.client-1-active').length) {
+	$('.client-1-active').marquee({
+		gap: 140,
+		speed: 80,
+		delayBeforeStart: 0,
+		direction: 'left',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
+}
 
+// text-slide-1
+if($('.about-1-shape-active').length) {
+	$('.about-1-shape-active').marquee({
+		gap: 0,
+		speed: 50,
+		delayBeforeStart: 0,
+		direction: 'left',
+		duplicated: true,
+		pauseOnHover: false,
+		startVisible:true,
+	});
+}
 
 // feather-icon
 feather.replace()
+
+// counter-activation
+$('.counter').counterUp({
+	delay: 10,
+	time: 5000
+});
 
 
 // bootstrap-tooltip

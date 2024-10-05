@@ -52,6 +52,33 @@
     }
 }
 
+/* free-phone */
+.pf-free-phone-1 {
+    display: inline-flex;
+    font-family: var(--pf-font-h-1);
+    font-size: 16px;
+    font-weight: 300;
+    align-items: center;
+    color: rgb(255 255 255 / 64%);
+    gap: 12px;
+
+    .icon {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        stroke: var(--pf-clr-pr-1);
+        background: rgb(42 200 211 / 4%);
+        border-radius: 50%;
+        padding: 9px;
+    }
+    
+
+    b {color: rgb(255 255 255 / 80%);}
+}
+
 /* 
     button-component-end
 */

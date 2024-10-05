@@ -1,0 +1,78 @@
+/* 
+    client-1-start
+*/
+.pf-client-1 {
+    &-sec-title {
+        font-size: 20px;
+        line-height: 33px;
+        font-weight: 400;
+        opacity: 72%;
+        margin-bottom: 38px;
+    }
+
+    &-item-row {
+        display: flex;
+        align-items: center;
+        gap: 140px;
+
+        @media #{$lg} {
+            gap: 100px;
+        }
+
+        @media #{$md} {
+            gap: 80px;
+        }
+
+        @media #{$xs} {
+            gap: 40px;
+        }
+
+        @media #{$sm} {
+            gap: 60px;
+        }
+    }
+
+    &-logo {
+        perspective: 2000px;
+        transform-style: preserve-3d;
+
+        img {
+
+            &:nth-child(1) {
+                transform: translateY(0%) rotateX(0deg);
+                opacity: 64%;
+                transition: opacity  .3s var(--pf-cube-2) , transform  .7s var(--pf-cube-2);
+                transition-delay: 0s;
+            }
+
+            &:nth-child(2) {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -120%) rotateX(80deg);
+                opacity: 0;
+                transition: opacity  .3s var(--pf-cube-2) , transform  .7s var(--pf-cube-2);
+                transition-delay: .1s;
+                
+            }
+        }
+
+        &:hover {
+            img {
+                &:nth-child(1) {
+                    transform: translateY(100%) rotateX(-80deg);
+                    opacity: 0;
+                    transition-delay: .1s;
+                }
+                &:nth-child(2) {
+                    transform: translate(-50%, -50%) rotateX(0deg);
+                    opacity: 100%;
+                    transition-delay: 0s;
+                }
+            }
+        }
+    }
+}
+/* 
+    client-1-end
+*/
