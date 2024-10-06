@@ -21,8 +21,33 @@
     &-action-link {
         gap: 20px;
         padding: 17px 20px;
-        border: 1px solid var(--pf-clr-pr-1);
         border-radius: 12px;
+        background: rgb(255 255 255 / 0%);
+        backdrop-filter: blur(8px);
+        position: relative;
+        z-index: 1;
+        border: 1.5px solid transparent; /* No visible border on the button itself */
+
+
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 12px; /* Match button's border-radius */
+          padding: 1.5px; /* Adjust to create space for the border */
+          background: linear-gradient(90deg, rgba(199,255,73,1) 0%, rgba(125,255,88,1) 100%);
+          z-index: -1; /* Place the gradient border behind the button */
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          mask-composite: exclude;
+          animation: rotateGradient 3s linear infinite; /* Animation applied here */
+        }
+
+
 
         &-line {
             width: 1px;
@@ -34,6 +59,75 @@
     
     
 }
+
+@keyframes rotateGradient {
+  0% {
+      background: linear-gradient(0deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  5% {
+      background: linear-gradient(18deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  10% {
+      background: linear-gradient(36deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  15% {
+      background: linear-gradient(54deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  20% {
+      background: linear-gradient(72deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  25% {
+      background: linear-gradient(90deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  30% {
+      background: linear-gradient(108deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  35% {
+      background: linear-gradient(126deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  40% {
+      background: linear-gradient(144deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  45% {
+      background: linear-gradient(162deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  50% {
+      background: linear-gradient(180deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  55% {
+      background: linear-gradient(198deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  60% {
+      background: linear-gradient(216deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  65% {
+      background: linear-gradient(234deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  70% {
+      background: linear-gradient(252deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  75% {
+      background: linear-gradient(270deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  80% {
+      background: linear-gradient(288deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  85% {
+      background: linear-gradient(306deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  90% {
+      background: linear-gradient(324deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  95% {
+      background: linear-gradient(342deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+  100% {
+      background: linear-gradient(360deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+  }
+}
+
+// background: linear-gradient(90deg, rgba(42,200,211, 48%) 0%, rgba(42,200,211, 8%) 100%);
+
 
 
 .pf-header-menu {
