@@ -1,0 +1,115 @@
+/* 
+    overview-1-start
+*/
+.pf-overview-1 {
+
+    &-sec-title {
+        max-width: 830px;
+    }
+
+    &-wrap {
+        position: relative;
+    
+    }
+
+    &-bg {
+        &-circle {
+            width: 65%;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 30%;
+        }
+    }
+
+    &-tabs {
+
+        &-btn-link {
+            border: none;
+            outline: none;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            background-color: rgb(255 255 255 / 12%);
+            position: relative;
+
+            &::before {
+                content:  "";
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background-color: #fff;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+            }
+        }
+
+        &-pane {
+            max-width: 303px;
+            background: rgb(255 255 255 / 8%);
+            border-radius: 12px;
+            padding: 35px 40px;
+            backdrop-filter: blur(8px);
+            
+
+            .title {
+                font-size: 23px;
+                line-height: 30px;
+                font-weight: 500;
+                opacity: 80%;
+                margin-bottom: 14px;
+
+            }
+
+            .item-title {
+                font-size: 16px;
+                line-height: 28px;
+                opacity: 80%;
+                font-weight: 400;
+                margin-bottom: 2px;
+            }
+
+            .item-link {
+                line-height: 26px;
+                opacity: 64%;
+                
+                &:not(:last-child) {
+                    margin-bottom: 11px;
+                }
+            }
+
+            .tab-pane {
+                position: relative;
+                z-index: 1;
+
+                &::after {
+                    content:  "";
+                    width: 17px;
+                    height: 17px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 35px;
+                    left: -49px;
+                    opacity: 12%;
+                }
+                &::before {
+                    content:  "";
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 40px;
+                    left: -44px;
+                }
+            }
+        }
+    }
+    
+    
+}
+
+/* 
+    overview-1-end
+*/

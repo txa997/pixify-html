@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	})
 });
 
-
+// menu-1
 $(window).scroll(function() {
 	if ($(this).scrollTop() > 250){
 	$('.pf_sticky').addClass('sticky1');
@@ -67,6 +67,111 @@ $(window).scroll(function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+        root: null, // Use the viewport as the container
+        rootMargin: '0px', // No margin around the root
+        threshold: 0.5 // Trigger when 50% of the element is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            } else {
+                entry.target.classList.remove('active');
+            }
+        });
+    }, observerOptions);
+
+    const cards = document.querySelectorAll('.pf-solution-1-item-card-single');
+    cards.forEach((card) => {
+        observer.observe(card);
+    });
+});
+
+
+
+
+// // pfsolution-1
+// var pfsolution1 = gsap.timeline({
+
+// 	scrollTrigger: {
+// 	  animation: pfsolution1,
+// 	  trigger: '.pf-solution-1-item-card-single',
+// 	  start: "top 0%",
+// 	  toggleActions: "play reverse play reverse",
+// 	  markers: true,
+// 	  scrub: .5,
+// 	}
+// });
+// pfsolution1.fromTo(".pf-solution-1-item-number-line" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",  duration:1 }, { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 })
+
+
+
+
+
+
+// var races = document.querySelector(".pf-solution-1-item-card");
+
+// function getScrollAmount() {
+// 	var racesHeight = races.scrollHeight;
+// 	return -(racesHeight - window.innerHeight);
+// }
+
+// let st = ScrollTrigger.create({
+// 	trigger: ".pf-solution-1-item-card",
+// 	pin: ".pf-solution-1-bg",
+// 	start: "top 0%",
+// 	end: () => `+=${getScrollAmount() * -1}`,
+// 	pinSpacing: true,
+// 	markers: false,
+// });
+
+
+
+// let st2 = ScrollTrigger.create({
+// 	trigger: ".pf-solution-1-item-card",
+// 	pin: ".pf-solution-1-item-number",
+// 	start: "top 0%",
+// 	end: () => `+=${getScrollAmount() * -1}`,
+// 	pinSpacing: true,
+// 	markers: false,
+// });
+
+
+
+// var sections = $('section')
+//   , nav = $('nav')
+//   , nav_height = nav.outerHeight();
+
+// $(window).on('scroll', function () {
+//   var cur_pos = $(this).scrollTop();
+  
+//   sections.each(function() {
+//     var top = $(this).offset().top - nav_height,
+//         bottom = top + $(this).outerHeight();
+    
+//     if (cur_pos >= top && cur_pos <= bottom) {
+//       nav.find('a').removeClass('active');
+//       sections.removeClass('active');
+      
+//       $(this).addClass('active');
+//       nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+//     }
+//   });
+// });
+
+// nav.find('a').on('click', function () {
+//   var $el = $(this)
+//     , id = $el.attr('href');
+  
+//   $('html, body').animate({
+//     scrollTop: $(id).offset().top - nav_height
+//   }, 500);
+  
+//   return false;
+// });
 
 // offcanvas
 $('.offcanvas_toggle').on('click', function() {
