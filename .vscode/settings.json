@@ -4,7 +4,8 @@
         "maxwidth",
         "offcanvas",
         "Pixify",
-        "Pixify’s"
+        "Pixify’s",
+        "swiper"
     ],
     "liveServer.settings.port": 3003
 }

@@ -3,6 +3,10 @@
 */
 .pf-overview-1 {
 
+    &-area {
+        padding-top: 300px;
+    }
+
     &-sec-title {
         max-width: 830px;
     }
@@ -10,6 +14,9 @@
     &-wrap {
         position: relative;
     
+        @media #{$xs} {
+            padding-bottom: 270px;
+        }
     }
 
     &-bg {
@@ -18,29 +25,206 @@
             margin-left: auto;
             margin-right: auto;
             opacity: 30%;
+
+            @media #{$xl,$lg,$md,$xs} {
+                width: 100%;
+            }
         }
     }
 
     &-tabs {
+        width: 78%;
+        right: 0;
+        position: absolute;
+        top: 48%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
 
-        &-btn-link {
-            border: none;
-            outline: none;
-            width: 17px;
-            height: 17px;
-            border-radius: 50%;
-            background-color: rgb(255 255 255 / 12%);
+
+        @media #{$xl} {
+            width: 93%;
+        }
+
+        @media #{$xs} {
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        @media #{$sm} {
+            width: 100%;
+            flex-wrap: nowrap;
+            gap: 50px;
+        }
+
+        &-btn {
+            width: 100%;
             position: relative;
 
-            &::before {
-                content:  "";
-                width: 7px;
-                height: 7px;
+            @media #{$xs} {
+                display: flex;
+                gap: 30px;
+                align-items: center;
+            }
+
+            
+            &-link {
+                border: none;
+                outline: none;
+                width: 17px;
+                height: 17px;
                 border-radius: 50%;
-                background-color: #fff;
-                position: absolute;
-                top: 5px;
-                left: 5px;
+                background-color: rgb(255 255 255 / 12%);
+                position: relative;
+    
+                &::before {
+                    content:  "";
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    animation: overview-1 1s infinite;
+                }
+
+
+                svg {
+                    fill: transparent;
+                    stroke: white;
+                    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+                    transition: all 1s var(--pf-cube-2);
+                    z-index: -1;
+
+                    @media #{$lg,$md,$xs} {
+                        display: none;
+                    }
+                }
+
+                &:is(.active) {
+                    &::before {
+                        animation: none;
+                    }
+
+                    svg {
+                        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                    }
+                }
+
+                &:is(.btn-1) {
+                    position: absolute;
+                    top: 85.5%;
+                    right: 39%;
+
+                    @media #{$xs} {
+                        position: relative;
+                        left: 0;
+                        bottom: 0;
+                        top: 0;
+                    }
+
+                    svg {
+                        position: absolute;
+                        bottom: 6px;
+                        left: 7px;
+                    }
+                }
+
+                &:is(.btn-2) {
+                    position: absolute;
+                    top: 1.5%;
+                    right: 45%;
+
+                    @media #{$xs} {
+                        position: relative;
+                        left: 0;
+                        bottom: 0;
+                        top: 0;
+                    }
+                    svg {
+                        position: absolute;
+                        left: 8px;
+                        top: 7px;
+                    }
+
+                    &::before {
+                        animation-delay: .3s;
+                    }
+                    
+                }
+
+                &:is(.btn-3) {
+                    position: absolute;
+                    bottom: 41.5%;
+                    left: 29%;
+
+                    @media #{$xs} {
+                        position: relative;
+                        left: 0;
+                        bottom: 0;
+                        top: 0;
+                    }
+                    svg {
+                        position: absolute;
+                        bottom: 8px;
+                        left: 5px;
+                    }
+
+                    &::before {
+                        animation-delay: .6s;
+                    }
+                    
+                }
+
+                &:is(.btn-4) {
+                    position: absolute;
+                    bottom: -29.5%;
+                    left: 20%;
+
+                    @media #{$xs} {
+                        position: relative;
+                        left: 0;
+                        bottom: 0;
+                        top: 0;
+                    }
+                    svg {
+                        position: absolute;
+                        bottom: 6px;
+                        left: 6px;
+                    }
+
+                    &::before {
+                        animation-delay: 9s;
+                    }
+                    
+                }
+
+                &:is(.btn-5) {
+                    position: absolute;
+                    bottom: 17.5%;
+                    left: 3%;
+
+                    @media #{$xs} {
+                        position: relative;
+                        left: 0;
+                        bottom: 0;
+                        top: 0;
+                    }
+                    svg {
+                        position: absolute;
+                        bottom: 6px;
+                        left: 6px;
+                    }
+
+                    &::before {
+                        animation-delay: 1.1s;
+                    }
+                    
+                }
+
+
             }
         }
 
@@ -50,6 +234,9 @@
             border-radius: 12px;
             padding: 35px 40px;
             backdrop-filter: blur(8px);
+
+
+
             
 
             .title {
@@ -81,6 +268,8 @@
             .tab-pane {
                 position: relative;
                 z-index: 1;
+                opacity: 0;
+                transition: all 1s var(--pf-cube-2);
 
                 &::after {
                     content:  "";
@@ -103,11 +292,25 @@
                     top: 40px;
                     left: -44px;
                 }
+
+
+                &:is(.show) {
+                    opacity: 1;
+                }
             }
         }
     }
     
     
+}
+
+@keyframes overview-1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* 

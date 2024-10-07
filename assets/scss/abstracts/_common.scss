@@ -132,7 +132,9 @@ input:focus::placeholder, textarea:focus::placeholder {
     border-radius: 30px;
     }
 }
-
+.swiper-notification {
+    display: none;
+}
 
 /* 
     margin-&-padding_variable-start

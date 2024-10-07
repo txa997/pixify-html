@@ -13,7 +13,9 @@
     line-height: 1.093;
     margin-bottom: 0px;
 
-
+    &:is(.has-opa-72) {
+        opacity: 72%;
+    }
 }
 
 

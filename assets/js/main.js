@@ -217,6 +217,55 @@ jQuery(".mobile-main-navigation li.dropdown").append('<span class="dropdown-btn"
 
 
 
+// testimonial-1-slider
+if($('.pf-t1-active').length) {
+	let slider = new Swiper('.pf-t1-active', {
+		loop: true,
+		spaceBetween: 32,
+		speed: 500,
+		slidesPerView: 3,
+
+		// autoplay: {
+		// 	delay: 5000,
+		// },
+
+		navigation: {
+			nextEl: ".pf-t1-btn-next",
+			prevEl: ".pf-t1-btn-prev",
+		},
+
+        pagination: {
+            el: ".pf-t1-pagination",
+            clickable: true,
+        },
+
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 1,
+			},
+			992: {
+				slidesPerView: 2,
+			},
+			1200: {
+				slidesPerView: 2,
+			},
+			1400: {
+				slidesPerView: 2,
+			},
+			1600: {
+				slidesPerView: 3,
+			},
+		},
+	});
+}
+
 
 
 
