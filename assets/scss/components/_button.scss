@@ -13,6 +13,27 @@
     &:hover {
         opacity: 100%;
     }
+
+    svg *{
+        transition: all .4s var(--pf-cube-2);
+    }
+
+    &:hover {
+        svg {
+            line {
+                stroke: var(--pf-clr-pr-1);
+                &:nth-child(1) {
+                    transform: translateX(-5px);
+                }
+                &:nth-child(2) {
+                    transform: translateX(5px);
+                }
+                &:nth-child(3) {
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
 }
 
 /* search-btn-1 */
@@ -28,6 +49,13 @@
 
     &:hover {
         opacity: 100%;
+        stroke: var(--pf-clr-pr-1);
+
+        svg {
+            line {
+                transform: scale(1.4) translate(-10px, -10px);
+            }
+        }
     }
 }
 
