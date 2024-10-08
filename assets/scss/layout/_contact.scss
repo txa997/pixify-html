@@ -1,0 +1,130 @@
+/* 
+    contact-1-start
+*/
+.pf-contact-1 {
+
+    &-area {
+        background-attachment: fixed;
+        &::after {
+            content: "";
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(0deg, rgba(10,14,14,0) 0%, rgba(10,14,14,1) 100%);
+            z-index: -2;
+        }
+        &::before {
+            content: "";
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(180deg, rgba(10,14,14,0) 0%, rgba(10,14,14,1) 100%);
+            z-index: -2;
+        }
+    }
+
+    &-bg-glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    &-row {
+        display: flex;
+        gap: 50px;
+        justify-content: space-between;
+
+        @media #{$md,$xs} {
+            flex-wrap: wrap; 
+        }
+    }
+
+    &-sec-title {
+        .pf-sec-title-1 {
+            max-width: 350px;
+            margin-bottom: 24px;
+        }
+
+        .sec-disc {
+            opacity: 64%;   
+            max-width: 485px;
+        }
+    }
+
+    &-content {
+        width: 100%;
+        max-width: 540px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: space-between;
+
+        @media #{$lg} {
+            max-width: 350px;
+        }
+    }
+
+    &-brand {
+
+        &-title {
+            font-size: 16px;
+            opacity: 64%;
+            margin-bottom: 20px;
+        }
+
+        &-slider {
+
+            .pf-client-1-logo {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &-form {
+        max-width: 530px;
+        width: 100%;
+        background: rgb(255 255 255 / 4%);
+        backdrop-filter: blur(8px);
+        border-radius: 16px;
+        padding: 64px 48px;
+        padding-top: 52px;
+        position: relative;
+
+        @media #{$xs} {
+            padding: 64px 20px;
+        }
+
+        @media #{$sm} {
+            padding: 64px 48px;
+        }
+ 
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 8px;
+            padding: 1.5px;
+            background: linear-gradient(215deg, rgba(42, 200, 211, 56%) 0%, rgba(42, 200, 211, 4%) 30%);
+            z-index: -1;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            transition: all 0.3s var(--pf-cube-2);
+        }
+    }
+}
+
+/* 
+    contact-1-end
+*/

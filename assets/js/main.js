@@ -266,6 +266,41 @@ if($('.pf-t1-active').length) {
 	});
 }
 
+// contact-1-brand-slider
+if($('.pf-c1-brand-slider').length) {
+	let slider = new Swiper('.pf-c1-brand-slider', {
+		loop: true,
+		spaceBetween: 32,
+		speed: 500,
+		slidesPerView: 3,
+
+		autoplay: {
+			delay: 5000,
+		},
+
+
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 3,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 2,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+
+		},
+	});
+}
+
 
 
 

@@ -1,0 +1,38 @@
+/* 
+    touch-1-start
+*/
+.pf-touch-1 {
+    &-content {
+        max-width: 610px;
+    }
+
+    &-address {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px 50px;
+
+        &-box {
+            max-width: 168px;
+            width: 100%;
+
+            .box-title {
+                font-size: 14px;
+                font-weight: 500;
+                opacity: 48%;
+                margin-bottom: 7px;
+            }
+            .box-disc {
+                font-size: 16px;
+                line-height: 24px;
+                opacity: 72%;
+                letter-spacing: -1px;
+            }
+        }
+    }
+    
+}
+
+
+/* 
+    touch-1-end
+*/
