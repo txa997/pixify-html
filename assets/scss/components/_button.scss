@@ -197,6 +197,42 @@
     }
 }
 
+/* join-btn-1 */
+.pf-join-btn-1 {
+    font-family: var(--pf-font-h-1);
+    font-weight: 400;
+    color: var(--pf-clr-white-1);
+    opacity: 80%;
+    font-size: 14px;
+    transition: all .4s var(--pf-cube-2);
+    b {
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+
+    .icon {
+        fill: transparent;
+        stroke: var(--pf-clr-pr-1);
+        svg{
+            width: 20px;
+        }
+    }
+
+    &:hover {
+        opacity: 1;
+        color: var(--pf-clr-pr-1);
+
+        .icon {
+            svg {
+                line {
+                    transform: translate(-5px, 5px);
+                }
+            }
+        }
+    }
+}
+
+
 /* 
     button-component-end
 */

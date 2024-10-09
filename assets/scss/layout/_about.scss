@@ -7,6 +7,7 @@
         position: relative;
         padding-top: 350px;
         padding-bottom: 70px;
+        z-index: 1;
     }
 
     &-sec-title{
@@ -182,6 +183,10 @@
         text-align: center;
         z-index: -2;
 
+        img {
+                display: inline-block;
+        }
+
         @media #{$xxl} {
             top: -23%;
         }
@@ -210,6 +215,10 @@
         width: 100%;
         text-align: center;
         z-index: -2;
+
+        img {
+                display: inline-block;
+        }
 
         @media #{$xxl} {
             bottom: -36%;

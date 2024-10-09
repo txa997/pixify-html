@@ -2,6 +2,12 @@
     counter-1-start
 */
 .pf-counter-1 {
+
+    &-area {
+        position: relative;
+        z-index: 2;
+    }
+
     display: flex;
     gap: 20px 60px;
     flex-wrap: wrap;

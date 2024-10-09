@@ -5,6 +5,7 @@
 
     &-area {
         background-attachment: fixed;
+        z-index: 3;
         &::after {
             content: "";
             width: 100%;

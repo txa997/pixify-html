@@ -2,6 +2,10 @@
     testimonial-1-start
 */
 .pf-testimonial-1 {
+    &-area {
+        position: relative;
+        z-index: 2;
+    }
     &-sec-title {
         max-width: 500px;
         margin-left: auto;

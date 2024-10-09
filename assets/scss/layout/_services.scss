@@ -2,6 +2,12 @@
     services-1-start
 */
 .pf-services-1 {
+
+    &-area {
+        position: relative;
+        z-index: 2;
+    }
+
     &-sec-title {
         font-size: 32px;
         line-height: 1.31;
