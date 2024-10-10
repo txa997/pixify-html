@@ -52,6 +52,30 @@ document.addEventListener("DOMContentLoaded", function () {
 			}, 1000 ) ;
 
 		}
+
+		// hero-2
+		if($('.pf-h2-active').length) {
+			let slider = new Swiper('.pf-h2-active', {
+				loop: true,
+				spaceBetween: 0,
+				speed: 3000,
+				effect: "fade",
+				fadeEffect: {
+					crossFade: true
+				},
+				// autoplay: {
+				// 	delay: 4000,
+				// },
+		
+				pagination: {
+					el: ".fx-hero-1-pagination",
+					clickable: true,
+				},
+		
+		
+			});
+		}
+		
     
 	})
 });
