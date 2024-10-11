@@ -3,6 +3,34 @@
 /* 
     all-title-paragraph-components-start
 */
+.pf-split-1 {
+	text-transform: unset !important;
+	.split-line {
+        overflow: hidden;
+		div {
+			div {
+				&:nth-child(1) {
+					text-transform: capitalize;
+                    
+				}
+			}
+		}
+	}
+}
+.pf-split-2 {
+	text-transform: unset !important;
+	.split-line {
+        overflow: hidden;
+		div {
+			div {
+				&:nth-child(1) {
+					text-transform: capitalize;
+                    
+				}
+			}
+		}
+	}
+}
 
 
 

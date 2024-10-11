@@ -53,6 +53,95 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		}
 
+		var split1 = $(".pf-split-2");
+
+		if(split1.length == 0) return; gsap.registerPlugin(SplitText); split1.each(function(index, el) {
+
+			el.split = new SplitText(el, { 
+				type: "lines,words,chars",
+				linesClass: "split-line"
+			});
+
+			gsap.set(el, { perspective: 400 });
+
+			if( $(el).hasClass('pf-split-2') ){
+				gsap.set(el.split.chars, {
+					y: "100",
+				});
+			}
+
+			el.anim = gsap.to(el.split.chars, {
+				scrollTrigger: {
+					trigger: el,
+					start: "top 90%",
+				},
+				x: "0",
+				y: "0",
+				opacity: 1,
+				duration:1,
+				ease: "power3.out",
+				stagger: 0.01,
+			});
+
+		});
+
+
+		// hero-1
+		var split1 = $(".pf-split-1");
+			if(split1.length == 0) return; gsap.registerPlugin(SplitText); split1.each(function(index, el) {
+
+				el.split = new SplitText(el, { 
+					type: "lines,words,chars",
+					linesClass: "split-line"
+				});
+
+				gsap.set(el, { perspective: 400 });
+
+				if( $(el).hasClass('pf-split-1') ){
+					gsap.set(el.split.chars, {
+						y: "100",
+					});
+				}
+
+				el.anim = gsap.to(el.split.chars, {
+					scrollTrigger: {
+						trigger: el,
+						start: "top 90%",
+					},
+					x: "0",
+					y: "0",
+					opacity: 1,
+					duration:1,
+					ease: "power3.out",
+					stagger: 0.02,
+					delay:0.3,
+				});
+
+		});
+
+		var h1aniscroll = gsap.timeline({
+
+			scrollTrigger: {
+			  animation: h1aniscroll,
+			  trigger: '.pf-hero-1-bg',
+			  start: "top 0%",
+			  scrub: 1,
+			  toggleActions: "play reverse play reverse",
+			  markers: false
+			}
+		});
+		h1aniscroll.to(".pf-hero-1-bg img" , { scale: 1.2,	duration:1,ease: "power3.out", })
+
+		var h1ani = gsap.timeline();
+		h1ani.from(".h1-ani-slideup" , { yPercent: 100, opacity: 0, duration: 1, stagger: .3, delay: 1,	ease: "power3.out",  })
+		h1ani.from(".h1-ani-img" , { yPercent: 100, duration: 1,	ease: "power3.out", }, "<=.5")
+		h1ani.from(".h1-ani-point-1" ,  {  scale: 0, duration: .5 , ease: "power3.out",} , "<=.5")
+		h1ani.fromTo(".h1-ani-line" , { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",  duration:1 }, { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  duration:.5 ,ease: "power3.out", })
+		h1ani.from(".h1-ani-point-2" ,  {  scale: 0, duration: .5 , ease: "power3.out",})
+		h1ani.from(".h1-ani-text" ,  {  scale: .8, opacity: 0,  duration: .5 , ease: "power3.out", },)
+
+
+
 		// hero-2
 		if($('.pf-h2-active').length) {
 			let slider = new Swiper('.pf-h2-active', {
@@ -124,6 +213,25 @@ jQuery(".mobile-main-navigation li.dropdown").append('<span class="dropdown-btn"
 });
 
 
+// search-box
+// search-popup-start
+$('.search_btn_toggle').on('click', function() {
+    $('.overlay, .search_box_active').addClass('active');
+});
+
+$('.overlay, .search_box_close').on('click', function() {
+    $('.search_box_active').removeClass('active');
+    $('.overlay').removeClass('active');
+});
+
+$(document).on('keydown', function(event) {
+    if (event.key === 'Escape') {
+        $('.search_box_active').removeClass('active');
+        $('.overlay').removeClass('active');
+    }
+});
+
+
 const waScaleX0 = gsap.utils.toArray('.wa-scalex-0');
 waScaleX0.forEach((box, i) => {
 	const anim = gsap.fromTo(box, 
@@ -173,7 +281,7 @@ var about1 = gsap.timeline({
 });
 about1.from(".pf-about-1-earth-img img" ,  {  rotation: 90, opacity: 0, duration: 1 })
 about1.from(".a1-ani-point-1" ,  {  scale: 0, duration: .5 } , "<=.5")
-about1.fromTo(".a1-ani-line" , { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",  duration:1 }, { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  duration:1 })
+about1.fromTo(".a1-ani-line" , { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",  duration:1 }, { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  duration: .5 })
 about1.from(".a1-ani-point-2" ,  {  scale: 0, duration: .5 })
 about1.from(".a1-ani-text" ,  {  scale: .8, opacity: 0,  duration: .5 }, "<=.5")
 
@@ -193,7 +301,7 @@ overview1.from(".pf-overview-1-bg-circle img" ,  {  rotation: 90, opacity: 0, du
 overview1.from(".pf-overview-1-tabs" ,  {  opacity: 0, duration: 1 })
 
 
-// overview-1
+// faq-1
 var faqBtn1 = gsap.timeline({
 
 	scrollTrigger: {
@@ -209,7 +317,29 @@ var faqBtn1 = gsap.timeline({
 faqBtn1.from(".pf-faq-1-all-btn-ani" ,  {  xPercent: 200, yPercent: 100, })
 
 
+// solution-1
 
+gsap.to(".pf-solution-1-bg-img", {
+	scrollTrigger: {
+	  trigger: ".pf-solution-1-wrap",
+	  start: "top top", // Start pinning when the top of .box-wrap hits the top of the viewport
+	  end: "bottom bottom", // End pinning when the bottom of .box-wrap hits the top of the viewport
+	  pin: ".pf-solution-1-bg-img", // Pin the .box-2 element
+	  pinSpacing: true,
+	   // Prevent extra spacing from being added after pinning
+	}
+});
+
+gsap.to(".pf-solution-1-item-number", {
+	scrollTrigger: {
+	  trigger: ".pf-solution-1-wrap",
+	  start: "top top", // Start pinning when the top of .box-wrap hits the top of the viewport
+	  end: "bottom bottom", // End pinning when the bottom of .box-wrap hits the top of the viewport
+	  pin: ".pf-solution-1-item-number", // Pin the .box-2 element
+	  pinSpacing: true,
+	   // Prevent extra spacing from being added after pinning
+	}
+});
 
 // footer-1
 var footer1 = gsap.timeline({

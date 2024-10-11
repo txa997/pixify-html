@@ -24,6 +24,25 @@
 
         <div class="main-wrapper wa-fix">
 
+            <!-- preloader-start -->
+            <div id="preloader">
+                <div class="preloader-wrap">
+                    <div class="cube-grid">
+                        <div class="cube cube1"></div>
+                        <div class="cube cube2"></div>
+                        <div class="cube cube3"></div>
+                        <div class="cube cube4"></div>
+                        <div class="cube cube5"></div>
+                        <div class="cube cube6"></div>
+                        <div class="cube cube7"></div>
+                        <div class="cube cube8"></div>
+                        <div class="cube cube9"></div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- preloader-end -->
+
             <!-- header-start -->
             <div class="pf-header-1-area">
                 <div class="container pf-container-1">
@@ -35,17 +54,48 @@
                         </a>
 
                         <!-- action-link -->
-                        <div class="pf-header-1-action-link d-flex align-items-center">
+                        <div class="pf-header-1-action-link d-flex align-items-center wa-p-relative">
 
                             <!-- search-btn -->
-                            <button class="pf-search-btn-1" >
-                                <i data-feather="search" ></i>
-                            </button>
+                            <div class="pf-header-1-search">
+                                <button class="pf-search-btn-1 search_btn_toggle" >
+                                    <i data-feather="search" ></i>
+                                </button>
+
+                                <div class="txa-search-box search_box_active ">
+
+                                    <div class="txa-search-container">
+                                        <div class="txa-search-wrap text-center mb-55">
+                                            <h5 class="txa-search-title fx-heading-1 fx-font-500">Search</h5>
+                                            <form action="#" class="txa-search-form">
+                                                <input class="txa-search-form-input" type="text" placeholder="What are you looking for?...">
+                                            </form>
+                                        </div>
+
+                                        <div class="txa-search-tag-wrap text-center">
+                                            <h6 class="txa-search-tag-title fx-font-400 fx-heading-1">People also search for:</h6>
+                                            <div class="txa-search-tag d-inline-flex flex-wrap  ">
+                                                <a href="#" aria-label="name" class="txa-search-tag-item fx-heading-1 fx-font-500" >Corporate</a>
+                                                <a href="#" aria-label="name" class="txa-search-tag-item fx-heading-1 fx-font-500" >Business</a>
+                                                <a href="#" aria-label="name" class="txa-search-tag-item fx-heading-1 fx-font-500" >Consulting</a>
+                                                <a href="#" aria-label="name" class="txa-search-tag-item fx-heading-1 fx-font-500" >Finance</a>
+                                                <a href="#" aria-label="name" class="txa-search-tag-item fx-heading-1 fx-font-500" >Reports</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button aria-label="search-close" type="button" class="txa-search-box-close search_box_close">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+
+                                </div>
+                            </div>
+
 
                             <span class="pf-header-1-action-link-line"></span>
 
                             <!-- menu -->
-                            <div class="pf-offcanvas-1 wa-p-relative">
+                            <div class="pf-offcanvas-1 ">
                                 <div class="pf-menu-btn-1 offcanvas_toggle">
                                     <i data-feather="menu"></i>
                                 </div>
@@ -385,9 +435,9 @@
 
                         <!-- left-content -->
                         <div class="pf-hero-1-content">
-                            <h1 class="pf-sec-title-1 title has-opa-80" >Transforming Businesses with Expertise<span class="dot">.</span></h1>
-                            <p class="pf-p-1 has-opa-72 disc">Our consulting service drives growth, enhances efficiency, and transforms businesses for lasting success.</p>
-                            <div class="btn-wrap">
+                            <h1 class="pf-sec-title-1 title has-opa-80 pf-split-1" >Transforming Businesses with Expertise<span class="dot">.</span></h1>
+                            <p class="pf-p-1 has-opa-72 disc h1-ani-slideup">Our consulting service drives growth, enhances efficiency, and transforms businesses for lasting success.</p>
+                            <div class="btn-wrap h1-ani-slideup">
                                 <a href="#" aria-label="name" class="pf-pr-1">
                                     Free Consultation
                                 </a>
@@ -397,19 +447,19 @@
                         <!-- right-img -->
                         <div class="pf-hero-1-img">
                             <div class="pf-hero-1-img-main">
-                                <img src="assets/img/hero/h1-img-1.png" alt="">
+                                <img src="assets/img/hero/h1-img-1.png" class="h1-ani-img" alt="">
                             </div>
                     
                             <div class="pf-hero-1-img-text">
-                                <p class="pf-p-1 pf-hero-1-img-text-box">Driving Success
+                                <p class="pf-p-1 pf-hero-1-img-text-box h1-ani-text">Driving Success
                                     Through Innovation</p>
 
                                 <svg class="pf-hero-1-img-text-shape" width="246" height="280" viewBox="0 0 246 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13 8H52L240 270" stroke="white" stroke-opacity="0.24"/>
-                                    <circle opacity="0.12" cx="8.5" cy="8.5" r="8.5" fill="white"/>
-                                    <circle cx="8.5" cy="8.5" r="3.5" fill="white"/>
-                                    <circle opacity="0.12" cx="237.5" cy="271.5" r="8.5" fill="white"/>
-                                    <circle cx="237.5" cy="271.5" r="3.5" fill="white"/>
+                                    <path class="h1-ani-line" d="M13 8H52L240 270" stroke="white" stroke-opacity="0.24"/>
+                                    <circle class="h1-ani-point-2" opacity="0.12" cx="8.5" cy="8.5" r="8.5" fill="white"/>
+                                    <circle class="h1-ani-point-2" cx="8.5" cy="8.5" r="3.5" fill="white"/>
+                                    <circle class="h1-ani-point-1" opacity="0.12" cx="237.5" cy="271.5" r="8.5" fill="white"/>
+                                    <circle class="h1-ani-point-1" cx="237.5" cy="271.5" r="3.5" fill="white"/>
                                 </svg>
                                         
                             </div>
@@ -556,7 +606,7 @@
             <!-- services-start -->
             <div class="pf-services-1-area pt-125 ">
                 <div class="container pf-container-1">
-                    <h1 class="pf-sec-title-1 pf-services-1-sec-title">We offer expert consulting for strategic growth and operational excellence solutions.</h1>
+                    <h1 class="pf-sec-title-1 pf-services-1-sec-title pf-split-2">We offer expert consulting for strategic growth and operational excellence solutions.</h1>
 
 
                     <!-- item-row -->
@@ -639,7 +689,7 @@
             <!-- about-start -->
             <div class="pf-about-1-area">
                 <div class="container pf-container-1">
-                    <h2 class="pf-sec-title-1 pf-about-1-sec-title has-opa-80 wa-ml-auto wa-mr-auto">Comprehensive Business
+                    <h2 class="pf-sec-title-1 pf-about-1-sec-title has-opa-80 wa-ml-auto wa-mr-auto pf-split-2" >Comprehensive Business
                         Consulting Services for Growth
                         and Efficiency</h2>
 
@@ -677,7 +727,7 @@
 
 
 
-                    <p class="pf-p-1 pf-about-1-disc wa-ml-auto wa-mr-auto" >Our business consulting services aim to optimize operations and strategies, driving growth and ensuring sustained organizational success and development.</p>
+                    <p class="pf-p-1 pf-about-1-disc wa-ml-auto wa-mr-auto wow fadeInDown" >Our business consulting services aim to optimize operations and strategies, driving growth and ensuring sustained organizational success and development.</p>
                 </div>
                 <div class="pf-about-1-line-shape about-1-shape-active wa-fix">
                     <div class="pf-about-1-line-shape-single">
@@ -764,7 +814,7 @@
             <!-- counter-end -->
 
             <!-- solution-start -->
-            <div class="pf-solution-1-area wa-p-relative pb-140 pt-140 d-none" >
+            <div class="pf-solution-1-area wa-p-relative pb-140 pt-140 " >
 
     
                 <div class="container mb-60">
@@ -774,7 +824,13 @@
                     </div>
                 </div>
 
-                <div class="pf-solution-1-wrap wa-p-relative wa-bg-default" data-background="assets/img/solution/s1-img-1.png">
+                <div class="pf-solution-1-wrap wa-p-relative " >
+
+                    <div class="pf-solution-1-bg-img wa-img-cover">
+                        <img class="main-img" src="assets/img/solution/s1-img-1.png" alt="">
+                        <img class="pf-solution-1-bg-img-glow" src="assets/img/solution/s1-img-1-glow.png"  alt="">
+                    </div>
+
                     <div class="container pf-container-1">
 
                         <div class="pf-solution-1-item">
@@ -785,6 +841,7 @@
                                     1
                                 </a>
                                 <a href="#2" aria-label="name" class="pf-solution-1-item-number-btn pf-h-1">
+                                    <span class="pf-solution-1-item-number-line"></span>
                                     2
                                 </a>
                                 <a href="#3" aria-label="name" class="pf-solution-1-item-number-btn pf-h-1">
@@ -928,19 +985,6 @@
 
             </div>
             <!-- solution-start -->
-
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
 
 
             <!-- feature-start -->

@@ -82,6 +82,8 @@
             position: relative;
             z-index: 1;
             margin-bottom: 37px;
+            transform-origin: top left;
+            transition: all .4s var(--pf-cube-2);
 
             img {
                 filter: grayscale(1);
@@ -108,6 +110,13 @@
             font-weight: 400;
             opacity: 72%;
             margin-bottom: 19px;
+            transition: all .4s var(--pf-cube-2);
+
+            &:hover {
+                color: var(--pf-clr-pr-1);
+                opacity: 100%;
+                transform: translateX(3px);
+            }
         }
 
         .item-disc {
@@ -122,6 +131,12 @@
             bottom: -9px;
             left: -8px;
             display: none;
+        }
+
+        &:hover {
+            .icon {
+                transform: rotate(-10deg);
+            }
         }
 
 
@@ -144,6 +159,45 @@
                 left: unset;
                 right: -8px;
             }  
+        }
+
+        &:nth-child(2) {
+            .icon {
+                transform-origin: center center;
+            }
+
+        }
+
+        &:nth-child(3) {
+            .icon {
+                transform-origin: left bottom;
+            }
+            &:hover {
+                .icon {
+                    transform: rotate(0deg) scale(105%);
+                }
+            }
+        }
+    }
+
+    &-call-btn {
+        .pf-free-phone-1 {
+            transition: .4s var(--pf-cube-2);
+            b {
+                transition: .4s var(--pf-cube-2);
+            }
+            .icon {
+                transition: .4s var(--pf-cube-2);
+
+            }
+            &:hover {
+                .icon {
+                    transform: rotate(45deg);
+                } 
+                b {
+                    color: var(--pf-clr-pr-1);
+                }
+            }
         }
     }
 }

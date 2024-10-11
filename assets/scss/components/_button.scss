@@ -153,12 +153,15 @@
 
 /* pr-btn-1 */
 .pf-pr-1 {
+    position: relative;
+    z-index: 1;
     flex: 0 0 auto;
     font-family: var(--pf-font-h-1);
     text-transform: capitalize;
     font-size: 16px;
     line-height: 1.5;
     background-color: rgb(255 255 255 / 4%);
+    backdrop-filter: blur(8px);
     letter-spacing: 1px;
     font-weight: 600;
     border-radius: 12px;
@@ -169,6 +172,23 @@
     &:hover {
         background-color: var(--pf-clr-pr-1);
         color: var(--pf-clr-white-1);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 12px;
+        padding: 1px;
+        background: linear-gradient(90deg, rgb(199, 255, 73) 0%, rgb(125, 255, 88) 100%);
+        z-index: -1;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        animation: rotateGradient 3s linear infinite;
     }
 }
 
