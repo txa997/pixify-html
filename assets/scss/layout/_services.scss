@@ -206,3 +206,190 @@
 /* 
     services-1-end
 */
+
+/* 
+    services-2-start
+*/
+.pf-multi-sec-1 {
+    background-color: var(--pf-clr-black-3);
+
+    .illus-2 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        width: 12%;
+    }
+    
+    .illus-1 {
+        width: 13%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.pf-services-2 {
+    &-sec-title {
+        max-width: 870px;
+        margin-bottom: 68px;
+    }
+
+    &-wrap {
+        display: flex;
+        gap: 206px;
+        align-items: end;
+
+        @media #{$xl} {
+            gap: 35px;
+        }
+
+        @media #{$lg,$lg,$md,$xs} {
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+    }
+
+    &-btn {
+        flex: 0 0 auto;
+    }
+
+    &-slider {
+        display: flex;
+
+        &-item {
+            display: grid;
+            grid-template-columns: auto 1fr 1fr;
+            gap: 32px;
+            padding: 40px;
+            border-radius: 12px 0px 0px 12px;
+            background: var(--pf-clr-white-1);
+
+            @media #{$xs} {
+                padding: 40px 20px;
+            }
+
+            @media #{$sm} {
+                padding: 40px 40px;
+            }
+
+            @media #{$xs} {
+                grid-template-columns: auto;
+            }
+    
+            .subtitle {
+                font-size: 16px;
+                line-height: 28px;
+                color: var(--pf-clr-black-4);
+                font-weight: 500;
+            }
+            
+            
+            .item-img {
+                height: 213px;
+                border-radius: 12px;
+                filter: grayscale(1);
+            }
+            
+            .item-title {
+                font-size: 23px;
+                color: var(--pf-clr-black-4);
+                font-weight: 600;
+                margin-bottom: 13px;
+                transition: all .4s var(--pf-cube-2);
+                
+                &:hover {
+                    transform: translateX(3px);
+                    opacity: 72%;
+                }
+
+                @media #{$xs} {
+                    font-size: 20px;
+                }
+
+                @media #{$sm} {
+                    font-size: 23px;
+                }
+            }
+            
+            .item-disc {
+                color: var(--pf-clr-black-3);
+                font-weight: 400;
+                opacity: 72%;
+            }
+        }
+
+        .swiper-container {
+            overflow: hidden;
+            padding-left: 48px;
+
+            @media #{$xs} {
+                padding-left: 8px;
+            }
+
+            @media #{$sm} {
+                padding-left: 48px;
+            }
+        }
+
+        .pf-s2-pagination-num {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            line-height: 1;
+            font-size: 16px;
+            font-weight: 400;
+            color: rgb(33 37 39 / 40%);
+            position: absolute;
+            bottom: 41px;
+            right: 38%;
+            left: unset;
+            z-index: 1;
+            width: 50px;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+
+            .swiper-pagination-current {
+                color: rgb(33 37 39 / 100%);
+            }
+        }
+
+    }
+    
+}
+
+.pf-slider-hori-btn {
+    display: flex;
+    flex-direction: column;
+    background: #FFE6E3;
+    border-left: 2px solid #FFE6E3;
+    width: 48px;
+    flex: 0 0 auto;
+    border-radius: 0 12px 12px 0;
+    overflow: hidden;
+
+    &-single {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        color: rgb(255 39 39 / 100%);
+        transition: all .4s var(--pf-cube-2);
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--pf-clr-white-1);
+            color: rgb(255 39 39 / 40%);
+        }
+    }
+    
+}
+
+
+/* 
+    services-2-end
+*/

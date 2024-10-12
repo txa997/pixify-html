@@ -77,3 +77,17 @@
 /* 
     client-1-end
 */
+
+/* 
+    client-2-start
+*/
+.pf-client-1-sec-title{
+    &:is(.has-ver-2) {
+        color: var(--pf-clr-black-3);
+        font-weight: 500;
+        opacity: 88%;
+    }
+}
+/* 
+    client-2-end
+*/

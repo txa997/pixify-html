@@ -56,3 +56,149 @@
 /* 
     counter-1-end
 */
+
+/* 
+    counter-2-start
+*/
+.pf-counter-2 {
+    &-row {
+        display: grid;
+        grid-template-columns: 1fr 2.1fr 1fr;
+        gap: 30px;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-meddle {
+        padding-top: 355px;
+
+        @media #{$md,$xs} {
+            padding-top: 50px;
+        }
+    }
+
+    &-sec-title {
+        margin-bottom: 160px;
+
+    }
+
+    &-img {
+        &-1 {
+            max-width: 258px;
+            height: 310px;
+            transform: translateX(217px);
+            border-radius: 8px;
+            margin-bottom: 87px;
+
+            @media #{$xs} {
+                transform: translateX(0px);
+            }
+
+        }
+
+        &-2 {
+            max-width: 306px;
+            height: 310px;
+            border-radius: 8px;
+        }
+
+        &-3 {
+            max-width: 313px;
+            height: 500px;
+            border-radius: 8px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -380px;
+        }
+
+        &-4 {
+            height: 500px;
+            border-radius: 8px;
+            margin-bottom: 45px;
+
+            @media #{$md,$xs} {
+                max-width: 310px;
+            }
+        }
+    }
+
+    &-wrap {
+        max-width: 257px;
+        margin-left: auto;
+
+        .pf-counter-1 {
+            flex-direction: column;
+            gap: 8px;
+
+            &-item {
+                border-radius: 8px;
+                backdrop-filter: blur(8px);
+                background: rgb(255 255 255 / 88%);
+                text-align: left;
+                align-items: center;
+                gap: 12px;
+                padding: 17px 24px;
+
+                .pf-counter-1-item-number {
+                    font-size: 45px;
+                    .counter {
+                        font-weight: 500;
+                        opacity: 1;
+                    }
+                }
+                
+                .pf-counter-1-item-disc {
+                    color: var(--pf-clr-black-2);
+                    opacity: 100;
+                    font-weight: 400;
+                    margin-bottom: 0;
+                }
+
+                &:nth-child(1) {
+                    .pf-counter-1-item-number {
+                        .counter , .text {
+                            color: #FFA800;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    .pf-counter-1-item-number {
+                        .counter , .text {
+                            color: #531FE9;
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    .pf-counter-1-item-number {
+                        .counter , .text {
+                            color: #CD1010;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    &-right {
+        text-align: right;
+
+        .text-left {
+            text-align: left;
+        }
+    }
+
+    &-line-shape {
+        position: absolute;
+        top: 20%;
+        z-index: -1;
+        left: 0;
+        width: 100%;
+    }
+}
+
+/* 
+    counter-2-end
+*/

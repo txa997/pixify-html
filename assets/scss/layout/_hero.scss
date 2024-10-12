@@ -255,10 +255,21 @@
 .pf-hero-2 {
     &-slider {
         &-item {
-            padding-top: 175px;
+            padding-top: 275px;
             padding-bottom: 260px;
             position: relative;
             z-index: 1;
+
+            @media #{$xs} {
+                padding-bottom: 150px;
+                padding-top: 200px;
+            }
+
+            @media #{$sm} {
+                padding-bottom: 260px;
+                padding-top: 275px;
+            }
+
 
             &-content {
                 display: flex;
@@ -266,12 +277,38 @@
                 max-width: 660px;
                 gap: 28px;
 
+                @media #{$xs} {
+                    flex-wrap: wrap;
+                    
+                }
+
+                @media #{$sm} {
+                    flex-wrap: nowrap;
+                    
+                }
+
                 .hero-title {
                     font-size: 64px;
                     font-weight: 900;
                     line-height: 0.906;
                     text-transform: uppercase;
                     margin-bottom: 30px;
+
+                    @media #{$lg} {
+                        font-size: 60px;
+                    }
+
+                    @media #{$md} {
+                        font-size: 55px;
+                    }
+
+                    @media #{$xs} {
+                        font-size: 40px;
+                    }
+
+                    @media #{$sm} {
+                        font-size: 45px;
+                    }
                 }
             }
 
@@ -287,11 +324,12 @@
             &-img {
                 position: relative;
                 z-index: 1;
-                // clip-path: circle(60.6% at 67% 50% );
-                clip-path: circle(20% at 70% 50%);
+                clip-path: circle(60.6% at 67% 50% );
+                // clip-path: circle(20% at 70% 50%);
+                // transform: translateY(-100%);
                 transition: all 1s var(--pf-cube-1);
-                transform: translateY(-100%);
                 transition-delay: 0s;
+                height: 100%;
 
                 &::after {
                     content: "";
@@ -314,9 +352,6 @@
                     .pf-hero-2-slider-item-img {
                         animation: transformAnimation 1s forwards, clipPathAnimation 1s 1s forwards;
                     }
-                }
-                .pf-hero-2-slider-item-img {
-                    animation: transformAnimationReverse 1s forwards, clipPathAnimationReverse 1s 1s forwards;
                 }
             }
         }
