@@ -323,6 +323,9 @@ about1.from(".a1-ani-point-2" ,  {  scale: 0, duration: .5 })
 about1.from(".a1-ani-text" ,  {  scale: .8, opacity: 0,  duration: .5 }, "<=.5")
 
 
+
+
+
 // overview-1
 var overview1 = gsap.timeline({
 
@@ -356,27 +359,143 @@ faqBtn1.from(".pf-faq-1-all-btn-ani" ,  {  xPercent: 200, yPercent: 100, })
 
 // solution-1
 
-gsap.to(".pf-solution-1-bg-img", {
-	scrollTrigger: {
-	  trigger: ".pf-solution-1-wrap",
-	  start: "top top", // Start pinning when the top of .box-wrap hits the top of the viewport
-	  end: "bottom bottom", // End pinning when the bottom of .box-wrap hits the top of the viewport
-	  pin: ".pf-solution-1-bg-img", // Pin the .box-2 element
-	  pinSpacing: true,
-	   // Prevent extra spacing from being added after pinning
-	}
-});
+if (window.matchMedia("(min-width: 992px)").matches) {
 
-gsap.to(".pf-solution-1-item-number", {
-	scrollTrigger: {
-	  trigger: ".pf-solution-1-wrap",
-	  start: "top top", // Start pinning when the top of .box-wrap hits the top of the viewport
-	  end: "bottom bottom", // End pinning when the bottom of .box-wrap hits the top of the viewport
-	  pin: ".pf-solution-1-item-number", // Pin the .box-2 element
-	  pinSpacing: true,
-	   // Prevent extra spacing from being added after pinning
-	}
-});
+
+
+
+	gsap.to(".pf-solution-1-bg-img", {
+		scrollTrigger: {
+		  trigger: ".pf-solution-1-wrap",
+		  start: "top top", 
+		  end: "bottom bottom", 
+		  pin: ".pf-solution-1-bg-img", 
+		  pinSpacing: true,
+		   
+		}
+	});
+	
+	gsap.to(".pf-solution-1-item-number", {
+		scrollTrigger: {
+		  trigger: ".pf-solution-1-wrap",
+		  start: "top top", 
+		  end: "bottom bottom", 
+		  pin: ".pf-solution-1-item-number", 
+		  pinSpacing: true,
+		   
+		}
+	});
+	
+	
+	var solutionCard1 = gsap.timeline({
+		scrollTrigger: {
+		  animation: solutionCard1,
+		  trigger: '.pf-s1-card-1',
+		  start: "top 70%",
+		  end: "top -30%",
+		  scrub: .5,
+		  toggleActions: 'play reverse play reverse',
+		  markers: false,
+		}
+	});
+	
+	solutionCard1.fromTo(".pf-s1-num-1" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", duration:1 }, {  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 , })
+	solutionCard1.to(".pf-s1-btn-1" ,  {  background: "#2AC8D3", color: "#000", borderColor: "transparent", duration: .1 })
+	solutionCard1.from(".pf-s1-card-1" ,  {  opacity: 0, duration: .5 })
+	solutionCard1.to(".pf-s1-card-1" ,  {  opacity: 0, duration: .5 })
+	
+	var solutionCard2 = gsap.timeline({
+		scrollTrigger: {
+		  animation: solutionCard2,
+		  trigger: '.pf-s1-card-2',
+		  start: "top 70%",
+		  end: "top -30%",
+		  scrub: .5,
+		  toggleActions: 'play reverse play reverse',
+		  markers: false,
+		}
+	});
+	
+	solutionCard2.fromTo(".pf-s1-num-2" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", duration:1 }, {  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 , })
+	solutionCard2.to(".pf-s1-btn-2" ,  {  background: "#2AC8D3", color: "#000", borderColor: "transparent", duration: .1 })
+	solutionCard2.from(".pf-s1-card-2" ,  {  opacity: 0, duration: .5 })
+	solutionCard2.to(".pf-s1-card-2" ,  {  opacity: 0, duration: .5 })
+	
+	var solutionCard3 = gsap.timeline({
+		scrollTrigger: {
+		  animation: solutionCard3,
+		  trigger: '.pf-s1-card-3',
+		  start: "top 70%",
+		  end: "top -30%",
+		  scrub: .5,
+		  toggleActions: 'play reverse play reverse',
+		  markers: false,
+		}
+	});
+	
+	solutionCard3.fromTo(".pf-s1-num-3" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", duration:1 }, {  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 , })
+	solutionCard3.to(".pf-s1-btn-3" ,  {  background: "#2AC8D3", color: "#000", borderColor: "transparent", duration: .1 })
+	solutionCard3.from(".pf-s1-card-3" ,  {  opacity: 0, duration: .5 })
+	solutionCard3.to(".pf-s1-card-3" ,  {  opacity: 0, duration: .5 })
+	
+	var solutionCard4 = gsap.timeline({
+		scrollTrigger: {
+		  animation: solutionCard4,
+		  trigger: '.pf-s1-card-4',
+		  start: "top 70%",
+		  end: "top -30%",
+		  scrub: .5,
+		  toggleActions: 'play reverse play reverse',
+		  markers: false,
+		}
+	});
+	
+	solutionCard4.fromTo(".pf-s1-num-4" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", duration:1 }, {  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 , })
+	solutionCard4.to(".pf-s1-btn-4" ,  {  background: "#2AC8D3", color: "#000", borderColor: "transparent", duration: .1 })
+	solutionCard4.from(".pf-s1-card-4" ,  {  opacity: 0, duration: .5 })
+	solutionCard4.to(".pf-s1-card-4" ,  {  opacity: 0, duration: .5 })
+	
+	var solutionCard5 = gsap.timeline({
+		scrollTrigger: {
+		  animation: solutionCard5,
+		  trigger: '.pf-s1-card-5',
+		  start: "top 70%",
+		  end: "top -30%",
+		  scrub: .5,
+		  toggleActions: 'play reverse play reverse',
+		  markers: false,
+		}
+	});
+	
+	solutionCard5.fromTo(".pf-s1-num-5" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", duration:1 }, {  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 , })
+	solutionCard5.to(".pf-s1-btn-5" ,  {  background: "#2AC8D3", color: "#000", borderColor: "transparent", duration: .1 })
+	solutionCard5.from(".pf-s1-card-5" ,  {  opacity: 0, duration: .5 })
+	solutionCard5.to(".pf-s1-card-5" ,  {  opacity: 0, duration: .5 })
+	
+	var solutionCard6 = gsap.timeline({
+		scrollTrigger: {
+		  animation: solutionCard6,
+		  trigger: '.pf-s1-card-6',
+		  start: "top 80%",
+		  end: "top -50%",
+		  scrub: .5,
+		  toggleActions: 'play reverse play reverse',
+		  markers: false,
+		}
+	});
+	
+	solutionCard6.fromTo(".pf-s1-num-6" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", duration:1 }, {  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 , })
+	solutionCard6.to(".pf-s1-btn-6" ,  {  background: "#2AC8D3", color: "#000", borderColor: "transparent", duration: .1 })
+	solutionCard6.from(".pf-s1-card-6" ,  {  opacity: 0, duration: .5 })
+	solutionCard6.to(".pf-s1-card-6" ,  {  opacity: 0, duration: .5 })
+
+
+
+
+
+}
+
+
 
 // footer-1
 var footer1 = gsap.timeline({
