@@ -495,7 +495,39 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 
 }
 
+if (window.matchMedia("(min-width: 992px)").matches) {
 
+	const cards = gsap.utils.toArray(".pf-blog-1-item-sticky");
+
+	cards.forEach((card, index) => {
+	  const tween = gsap.to(card, {
+		scrollTrigger: {
+		  trigger: card,
+		  start: () => `top bottom-=100`,
+		  end: () => `top top+=40`,
+		  pinSpacing: false,
+		  scrub: true,
+		  markers: true,
+		  invalidateOnRefresh: true
+		},
+		ease: "none",
+		scale: () => 1 - (cards.length - index) * 0.025
+	  });
+	
+	  ScrollTrigger.create({
+		trigger: card,
+		start: "top top",
+		pin: true,
+		pinSpacing: false,
+		markers: false,
+		id: 'pin',
+		end: 'max',
+		invalidateOnRefresh: true,
+	  });
+	});
+	
+
+}
 
 // footer-1
 var footer1 = gsap.timeline({
