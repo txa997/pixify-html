@@ -163,3 +163,149 @@
 /* 
     pf-faq-1-end
 */
+
+/* 
+    pf-faq-2-start
+*/
+.pf-faq-2 {
+    &-slider {
+        width: 34.4%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+
+        @media #{$md,$xs} {
+            position: relative;
+            width: 100%;
+            height: 500px;
+        }
+
+        &-item {
+            width: 100%;
+            height: 100%;
+            border-radius: 0 0 72px 0;
+
+            &-btn {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                z-index: 2;
+
+                .pf-rotated-btn-2 {
+                    width: 144px;
+                    height: 144px;
+                    background: #FFE6E3;
+                    backdrop-filter: none;
+                    border: none;
+                    padding: 12px;
+
+                    img {
+                        border: 1px solid #4D0000;
+                        border-radius: 50%;
+                        padding: 12px;
+                    }
+
+                    .icon {
+                        background: #4D0000;
+                        stroke: #FFE6E3;
+                    }
+                }
+            }
+
+
+        }
+
+        .swiper-container {
+            height: 100%;
+        }
+        
+    }
+
+    &-wrap {
+        max-width: 870px;
+        width: 100%;
+        margin-left: auto;
+        padding-top: 165px;
+        padding-bottom: 170px;
+
+        @media #{$xxl} {
+            max-width: 820px;
+        }
+
+        @media #{$xl} {
+            max-width: 700px;
+        }
+
+        @media #{$lg} {
+            max-width: 600px;
+        }
+        @media #{$md,$xs} {
+            max-width: 100%;
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+    }
+
+    &-accordion {
+        .pf-accordion-item {
+            border-top: 1px solid #DFE1E5;
+            &:last-child {
+                border-bottom: 1px solid #DFE1E5;
+            }
+            
+
+            .item-title {
+                font-weight: 500;
+                color: var(--pf-clr-black-3);
+
+                .shape {
+                    fill: var(--pf-clr-red-1);
+                    opacity: 15%;
+                }
+
+                .icon {
+                    background: transparent;
+                    backdrop-filter: unset;
+                    color: var(--pf-clr-pr-2);
+                    border: 1.5px solid #FFE6E3;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+
+                &::after {
+                    background: var(--pf-clr-red-1);
+                    top: -1px;
+                }
+
+
+                &:is(:not(.collapsed)) {
+                    color: var(--pf-clr-red-1);
+                    .shape {
+                        opacity: 100%;
+                    }
+                    .icon {
+                        background: #FFE6E3;
+                    }
+                }
+            }
+
+           .item-body {
+                opacity: 100%;
+                color: var(--pf-clr-black-3);
+                p {
+                    color: var(--pf-clr-black-3);
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+/* 
+    pf-faq-2-end
+*/

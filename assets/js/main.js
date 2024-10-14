@@ -663,6 +663,87 @@ if($('.pf-s2-slider').length) {
 }
 
 
+// overview-2
+if($('.pf-o2-slider').length) {
+	let swiper2 = new Swiper(".pf-o2-slider", {
+		loop: true,
+		grabCursor: true,
+		speed: 500,
+		effect: "creative",
+		creativeEffect: {
+			prev: {
+			  shadow: true,
+			  translate: ["-20%", 0, -1],
+			},
+			next: {
+			  translate: ["100%", 0, 0],
+			},
+		},
+
+		autoplay: {
+			delay: 5000,
+		},
+
+
+		navigation: {
+			nextEl: ".pf-o2-btn-next",
+			prevEl: ".pf-o2-btn-prev",
+		},
+
+	});
+}
+
+// testimonial-2
+if($('.pf-t2-slider').length) {
+	let swiper2 = new Swiper(".pf-t2-slider", {
+		loop: true,
+		grabCursor: true,
+		speed: 1000,
+
+		autoplay: {
+			delay: 5000,
+		},
+
+
+		navigation: {
+			nextEl: ".pf-t2-btn-next",
+			prevEl: ".pf-t2-btn-prev",
+		},
+
+	});
+}
+
+// faq-2
+if($('.pf-faq2-slider').length) {
+	let swiper2 = new Swiper(".pf-faq2-slider", {
+		loop: true,
+		speed: 1000,
+
+		autoplay: {
+			delay: 5000,
+		},
+
+		effect: "creative",
+		creativeEffect: {
+			prev: {
+			  shadow: true,
+			  translate: ["-20%", 0, -1],
+			},
+			next: {
+			  translate: ["100%", 0, 0],
+			},
+		},
+
+
+		navigation: {
+			nextEl: ".pf-faq2-btn-next",
+			prevEl: ".pf-faq2-btn-prev",
+		},
+
+	});
+}
+
+
 
 // text-slide-1
 if($('.client-1-active').length) {

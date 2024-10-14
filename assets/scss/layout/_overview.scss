@@ -316,3 +316,196 @@
 /* 
     overview-1-end
 */
+
+/* 
+    overview-2-start
+*/
+.pf-overview-2 {
+    &-content {
+        max-width: 870px;
+        padding-top: 140px;
+        padding-bottom: 160px;
+
+        @media #{$xl} {
+            max-width: 690px;
+        }
+
+        @media #{$lg} {
+            max-width: 590px;
+        }
+
+        @media #{$md,$xs} {
+            padding-bottom: 50px;
+
+        }
+    }
+
+    &-sec {
+        &-title {
+            margin-bottom: 58px;
+        }
+
+        &-disc {
+            font-size: 20px;
+            line-height: 32px;
+            color: var(--pf-clr-black-3);
+            font-weight: 400;
+            margin-bottom: 55px;
+        }
+    }
+
+
+
+    &-sec-line {
+        display: block;
+        height: 1px;
+        width: 139%;
+        background: var(--pf-clr-red-1);
+        position: relative;
+        z-index: 1;
+        margin-left: -278px;
+        margin-bottom: 56px;
+
+        @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+            width: 100%;
+            margin-left: 0px;
+        }
+
+        .dot {
+            width: 17px;
+            height: 17px;
+            background: rgb(184 0 0 / 12%);
+            border-radius: 50%;
+            position: absolute;
+            bottom: -8px;
+            left: -8px;
+
+            &::after {
+                content: "";
+                width: 7px;
+                height: 7px;
+                background: var(--pf-clr-red-1);
+                border-radius: 50%;
+                position: absolute;
+                bottom: 5px;
+                left: 5px;
+            }
+
+            &:nth-child(2) {
+                left: unset;
+                right: -8px;
+            }
+        }
+    }
+    
+    &-feature {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 75px 40px;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        &-single {
+            display: flex;
+            gap: 24px;
+            align-items: self-start;
+
+            .icon {
+                flex: 0 0 auto;
+            }
+
+            .item-title {
+                font-size: 23px;
+                line-height: 1.26;
+                color: var(--pf-clr-black-3);
+                font-weight: 500;
+                margin-bottom: 12px;
+            }
+
+            .item-disc {
+                color: var(--pf-clr-black-3);
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                opacity: 88%;
+            }
+        }
+    }
+    
+
+    &-slider {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 34%;
+        height: 100%;
+        overflow: hidden;
+
+        @media #{$xxl,$xl} {
+            width: 32%;
+        }
+
+        @media #{$md,$xs} {
+            position: relative;
+            width: 100%;
+            height: 500px;
+        }
+
+        
+
+
+        &-item {
+            height: 100%;
+            filter: grayscale(1);
+
+            img {
+                transition: all .4s var(--pf-cube-2);
+            }
+
+            &:hover {
+                img {
+                    transform: scale(103%);
+                }
+            }
+        }
+
+        .swiper-container {
+            height: 100%;
+        }
+
+        &-btn {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 1;
+            padding: 0 12px;
+            width: 100%;
+
+
+            .pf-slider-btn {
+                background: #FFE6E3;
+                color: var(--pf-clr-pr-2);
+                backdrop-filter: none;
+                cursor: pointer;
+                transition: all .4s var(--pf-cube-2);
+                &::before {
+                    display: none;
+                }
+
+                &:hover {
+                    color: var(--pf-clr-white-1);
+                    background: var(--pf-clr-pr-2);
+                }
+            }
+        }
+    }
+}
+
+/* 
+    overview-2-end
+*/
