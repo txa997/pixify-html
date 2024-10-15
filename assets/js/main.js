@@ -273,8 +273,8 @@ const waScaleX0 = gsap.utils.toArray('.wa-scalex-0');
 waScaleX0.forEach((box, i) => {
 	const anim = gsap.fromTo(box, 
 		
-	{ scaleX: 0, duration: 1, }, 
-	{ scaleX: 1, duration: 1, });
+	{ scaleX: 0, duration: 2, }, 
+	{ scaleX: 1, duration: 2, });
 
 	ScrollTrigger.create({
 		trigger: box,
@@ -497,37 +497,42 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 
 if (window.matchMedia("(min-width: 992px)").matches) {
 
-	const cards = gsap.utils.toArray(".pf-blog-1-item-sticky");
-
-	cards.forEach((card, index) => {
-	  const tween = gsap.to(card, {
+	gsap.to(".pf-blog-1-item", {
 		scrollTrigger: {
-		  trigger: card,
-		  start: () => `top bottom-=100`,
-		  end: () => `top top+=40`,
-		  pinSpacing: false,
-		  scrub: true,
-		  markers: true,
-		  invalidateOnRefresh: true
-		},
-		ease: "none",
-		scale: () => 1 - (cards.length - index) * 0.025
-	  });
-	
-	  ScrollTrigger.create({
-		trigger: card,
-		start: "top top",
-		pin: true,
-		pinSpacing: false,
-		markers: false,
-		id: 'pin',
-		end: 'max',
-		invalidateOnRefresh: true,
-	  });
+			trigger: ".pf-blog-1-item",
+		  start: "top 30%", 
+		  end: "top -100%", 
+		  pin: ".pf-blog-1-item", 
+		  pinSpacing: true,
+		  markers: false,
+		}
 	});
+
+	var solutionCard6p = gsap.timeline({
+		scrollTrigger: {
+		  animation: solutionCard6p,
+		  trigger: '.pf-blog-1-item',
+		  start: "top 50%",
+		  end: "top -80%",
+		  scrub: 1,
+
+		  toggleActions: 'play reverse play reverse',
+		  markers: false,
+		  pinSpacing: true,
+		}
+	});
+	
+	solutionCard6p.from(".pf-b1-item-1" ,  {  opacity: 0 })
+	solutionCard6p.from(".pf-b1-item-1" ,  {  y: 800,  duration: 1,})
+	solutionCard6p.from(".pf-b1-item-2" ,  {  opacity: 0 })
+	solutionCard6p.from(".pf-b1-item-2" ,  {  y: 800, duration: 1, })
+	solutionCard6p.from(".pf-b1-item-3" ,  {  opacity: 0 })
+	solutionCard6p.from(".pf-b1-item-3" ,  {  y: 800, duration: 1, })
 	
 
 }
+
+
 
 // footer-1
 var footer1 = gsap.timeline({

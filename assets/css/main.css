@@ -5163,12 +5163,14 @@ input:focus::placeholder, textarea:focus::placeholder {
   display: inline-block;
   max-width: 72px;
   flex: 0 0 auto;
+  overflow: hidden;
 }
 .pf-feature-1-item-single .item-title {
   font-size: 23px;
   line-height: 29px;
   opacity: 80%;
   margin-bottom: 11px;
+  transition: all 0.4s var(--pf-cube-2);
 }
 @media (max-width: 767px) {
   .pf-feature-1-item-single .item-title {
@@ -5180,10 +5182,17 @@ input:focus::placeholder, textarea:focus::placeholder {
     font-size: 23px;
   }
 }
+.pf-feature-1-item-single .item-title:hover {
+  color: var(--pf-clr-pr-1);
+  transform: translateX(3px);
+}
 .pf-feature-1-item-single .item-disc {
   font-size: 16px;
   line-height: 24px;
   opacity: 64%;
+}
+.pf-feature-1-item-single:hover .icon img {
+  animation: rubberBand 0.8s;
 }
 .pf-feature-1-bg-shape {
   position: absolute;
@@ -5269,6 +5278,23 @@ input:focus::placeholder, textarea:focus::placeholder {
   }
 }
 
+@keyframes rubberBand {
+  0% {
+    transform: scale(1, 1);
+  }
+  40% {
+    transform: scale(1.1, 0.8);
+  }
+  52% {
+    transform: scale(0.8, 0.7);
+  }
+  68% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 /* 
     feature-1-end
 */
@@ -6443,10 +6469,6 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-left: auto;
   margin-right: auto;
 }
-.pf-blog-1-item-sticky {
-  position: sticky;
-  top: 150px;
-}
 .pf-blog-1-item-sticky:nth-child(1) {
   transform: rotate(4deg);
 }
@@ -6462,7 +6484,12 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .pf-blog-1-item-sticky:nth-child(2) {
   transform: rotate(-2deg);
-  padding-top: 60px;
+  margin-top: -270px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .pf-blog-1-item-sticky:nth-child(2) {
+    margin-top: 50px;
+  }
 }
 @media (max-width: 767px) {
   .pf-blog-1-item-sticky:nth-child(2) {
@@ -6476,7 +6503,12 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .pf-blog-1-item-sticky:nth-child(3) {
   transform: rotate(4deg);
-  padding-top: 200px;
+  margin-top: -280px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .pf-blog-1-item-sticky:nth-child(3) {
+    margin-top: 50px;
+  }
 }
 @media (max-width: 767px) {
   .pf-blog-1-item-sticky:nth-child(3) {

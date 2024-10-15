@@ -15,8 +15,6 @@
         margin-right: auto;
 
         &-sticky {
-            position: sticky;
-            top: 150px;
             
             &:nth-child(1) {
                 transform: rotate(4deg);
@@ -33,7 +31,11 @@
             
             &:nth-child(2) {
                 transform: rotate(-2deg);
-                padding-top: 60px;
+                margin-top: -270px;
+
+                @media #{$md,$xs} {
+                    margin-top: 50px;
+                }
 
                 @media #{$xs} {
                     transform: rotate(0deg);
@@ -47,7 +49,11 @@
             
             &:nth-child(3) {
                 transform: rotate(4deg);
-                padding-top: 200px;
+                margin-top: -280px;
+
+                @media #{$md,$xs} {
+                    margin-top: 50px;
+                }
 
                 @media #{$xs} {
                     transform: rotate(0deg);
