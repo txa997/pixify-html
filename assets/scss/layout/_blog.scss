@@ -210,3 +210,192 @@
 /* 
     blog-1-end
 */
+/* 
+    blog-2-start
+*/
+.pf-blog-2 {
+
+    &-area {
+        background-color: #F7F8FB;
+        padding-bottom: 495px;
+    }
+
+    &-illus {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    &-sec-title {
+        text-align: center;
+        margin-bottom: 56px;
+    }
+
+    &-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &-single {
+            .item-img {
+                border-radius: 12px;
+                height: 419px;
+                margin-bottom: 32px;
+
+                @media #{$xs} {
+                    height: 300px;
+                }
+
+                @media #{$sm} {
+                    height: 260px;
+                }
+    
+                img {
+                    filter: grayscale(1);
+                    transition: all .3s var(--pf-cube-2);
+                }
+    
+                .item-date {
+                    position: absolute;
+                    top: 12px;
+                    left: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: var(--pf-font-h-1);
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 1;
+                    text-transform: uppercase;
+                    background: rgba(255, 255, 255, 0.72);
+                    backdrop-filter: blur(8px);
+                    color: var(--pf-clr-pr-2);
+                    margin-bottom: 0;
+                    border-radius: 8px;
+                    padding: 10px 15px;
+    
+                    span {
+                        &:nth-child(1) {
+                            font-size: 45px;
+                            font-weight: 700;
+                            letter-spacing: -1.5px;
+                            margin-bottom: 6px;
+                        }
+                    }
+                }
+            }
+    
+            .item-meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-bottom: 17px;
+            
+                &-item {
+                    font-family: var(--pf-font-h-1);
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 28px;
+                    color: var(--pf-clr-pr-2);
+                    background: #fff;
+                    border-radius: 4px;
+                    padding: 0px 10px;
+                }
+            }
+    
+            .item-title {
+                font-size: 28px;
+                line-height: 1.35;
+                color: var(--pf-clr-black-4);
+                font-weight: 600;
+                letter-spacing: -.5px;
+                margin-bottom: 24px;
+                transition: all .4s var(--pf-cube-2);
+
+                @media #{$xl} {
+                    font-size: 26px;
+                }
+
+                @media #{$lg} {
+                    font-size: 24px;
+                }
+
+                @media #{$md} {
+                    font-size: 22px;
+                }
+
+                @media #{$xs} {
+                    font-size: 20px;
+                }
+    
+    
+                span {
+                    color: var(--pf-clr-pr-2);
+                }
+    
+                &:hover {
+                    color: var(--pf-clr-pr-2);
+                    transform: translateY(3px);
+                }
+                
+            }
+    
+            .item-btn {
+                display: flex;
+                align-items: center;
+                font-family: var(--pf-font-h-1);
+                font-weight: 600;
+                font-size: 16px;
+                text-transform: capitalize;
+                color: var(--pf-clr-pr-2);
+                gap: 10px;
+                letter-spacing: 1px;
+    
+                i {
+                    transition: all .4s var(--pf-cube-2); 
+                }
+                &:hover {
+                    i {
+                        transform: translateX(-3px);
+    
+                        &::before {
+                            content: "\f068";
+                        }
+                    }
+                }
+    
+            }
+            
+            &:hover {
+                .item-img {
+                    img {
+                        transform: scale(103%);
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+
+/* 
+    blog-2-end
+*/

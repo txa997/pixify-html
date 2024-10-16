@@ -388,6 +388,15 @@
     header-2-start
 */
 .pf-header-2 {
+
+    &-area {
+        position: absolute;
+        top: 12px;
+        left: 0;
+        z-index: 5;
+        width: 100%;
+    }
+
     &-top {
         display: flex;
         justify-content: space-between;
@@ -516,12 +525,21 @@
             justify-content: space-between;
             gap: 20px;
 
-            .pf-pr-1 {
+            .pf-pr-2 {
+                background: var(--pf-clr-white-1);
+                color: var(--pf-clr-pr-2);
+                padding: 9px 19px;
+                border-radius: 8px;
+
                 @media #{$xs} {
                     display: none;
                 }
                 @media #{$sm} {
                     display: inline-block;
+                }
+
+                &:hover {
+                    background: var(--pf-clr-black-3);
                 }
             }
         }

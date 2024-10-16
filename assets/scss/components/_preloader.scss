@@ -23,8 +23,8 @@
 		height: 100%;
 
 		.cube-grid {
-			width: 200px;
-			height: 200px;
+			width: 150px;
+			height: 150px;
 		
 			.cube {
 				width: 33%;
@@ -94,6 +94,16 @@
 
 }
 
+#preloader {
+	&:is(.has-home-2) {
+		.preloader-wrap {
+			.cube {
+				background:  var(--pf-clr-pr-2);
+			}
+		}
+
+	}
+}
 
 
 

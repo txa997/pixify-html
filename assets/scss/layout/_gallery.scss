@@ -1,0 +1,20 @@
+/* 
+    gallery-2-start
+*/
+.pf-gallery-2 {
+    &-img {
+        height: 550px;
+        filter: grayscale(1);
+
+        @media #{$xs} {
+            height: 300px;
+        }
+
+        @media #{$sm} {
+            height: 400px;
+        }
+    }
+}
+/* 
+    gallery-2-end
+*/
