@@ -136,7 +136,7 @@
 .pf-contact-2 {
 
     &-area {
-        margin-top: -380px;
+        margin-top: -375px;
         position: relative;
         z-index: 1;
     }
@@ -192,6 +192,8 @@
         }
 
         .pf-form-1 {
+            max-width: 435px;
+
             &-title {
                 color: var(--pf-clr-black-4);
                 font-weight: 600;

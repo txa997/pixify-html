@@ -359,7 +359,116 @@
     }
   }
   
-  
+
+
+
+.txa-offcanvas-box {
+    &:is(.has-default) {
+      position: fixed;
+      right: 12px;
+      top: 12px;
+      background: #fff;
+      z-index: 9;
+      max-width: 720px;
+      width: 100%;
+      height: calc(100% - 24px);
+      background-color: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(40px);
+      -webkit-backdrop-filter: blur(40px);
+      overflow: hidden;
+      transform: translateX(105%);
+      visibility: hidden;
+      opacity: 1;
+      transition: all 0.5s ease-in-out;
+      padding: 80px;
+      border: none;
+      border-radius: 0;
+
+      @media #{$xs} {
+        right: 0px;
+        top: 0px;
+        height: 100%;
+        padding:  80px 30px;
+      }
+
+      @media #{$sm} {
+        right: 0px;
+        top: 0px;
+        height: 100%;
+        padding: 80px;
+      }
+
+        &::before {
+          display: none;
+        }
+
+        &:is(.active) {
+          transform: translateX(0%);
+          visibility: visible;
+          opacity: 1;
+        }
+
+
+      .txa-offcanvas-services-title {
+          color: #000000;
+      }
+
+      .txa-offcanvas-services-item {
+        color: #000000;
+
+        i {
+          color: #000000;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .txa-offcanvas-content-box-title {
+        color: #000000;
+      }
+
+      .txa-offcanvas-contact li {
+        color: #000000;
+        opacity: 1;
+      }
+
+      .txa-offcanvas-social-item {
+        color: #000000;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .txa-offcanvas-box-close {
+        color: #000000;
+        &:hover {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      }
+
+      .mobile-main-navigation .navbar-nav li a {
+        color: #000000;
+      }
+
+      .mobile-main-navigation .navbar-nav li .dropdown-btn {
+        color: #000000;
+      }
+
+      .txa-offcanvas-search-form-input {
+        background: rgb(255 255 255);
+        font-weight: 400;
+        color: rgb(0 0 0 / 94%);
+      }
+
+      .txa-offcanvas-search-form-btn {
+        color: rgb(0 0 0 / 74%);
+      }
+    }
+}
 /* 
     offcanvas-end
 */

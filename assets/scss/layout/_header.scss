@@ -515,7 +515,15 @@
         align-items: center;
         gap: 32px;
 
-        @media #{$md,$xs} {
+        @media #{$md} {
+            padding: 10px 0;
+        }
+
+        @media #{$xs} {
+            padding: 10px 10px;
+        }
+
+        @media #{$sm} {
             padding: 10px 0;
         }
 

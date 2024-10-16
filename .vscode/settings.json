@@ -10,6 +10,8 @@
         "scalex",
         "slideup",
         "swiper",
+        "txaa",
+        "txasplit",
         "Xriver"
     ],
     "liveServer.settings.port": 3003

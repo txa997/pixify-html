@@ -291,6 +291,27 @@
             }
         }
     }
+
+    &:is(.has-border) {
+        border: 2px solid var(--pf-clr-pr-2);
+        background: transparent;
+        color: var(--pf-clr-pr-2);
+        .icon {
+            stroke: var(--pf-clr-pr-2);
+            svg line , polyline {
+                transition: all .3s var(--pf-clr-white-1);
+            }
+        }
+
+        &:hover {
+            background: var(--pf-clr-pr-2);
+            color: var(--pf-clr-white-1);
+
+            .icon {
+                stroke: var(--pf-clr-white-1);
+            }
+        }
+    }
 }
 
 /* free-phone */

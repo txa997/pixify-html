@@ -9,10 +9,19 @@
     }
 
 
+    &-item-pin {
+        height: 200vh;
+
+        @media #{$md,$xs} {
+            height: auto;
+        }
+    }
+
     &-item {
         max-width: 870px;
         margin-left: auto;
         margin-right: auto;
+
 
         &-sticky {
             
@@ -112,6 +121,7 @@
                 height: 280px;
                 border-radius: 12px;
                 position: relative;
+                overflow: hidden;
 
                 &::after {
                     content: "";
@@ -127,6 +137,7 @@
 
                 img {
                     filter: grayscale(1);
+                    transition: all .4s var(--pf-cube-2);
                 }
             }
 
@@ -171,6 +182,7 @@
                 line-height: 1.357;
                 font-weight: 500;
                 opacity: 80%;
+                transition: all .4s var(--pf-cube-2);
 
                 @media #{$md} {
                     font-size: 24px;
@@ -178,6 +190,19 @@
 
                 @media #{$xs} {
                     font-size: 22px;
+                }
+
+                &:hover {
+                    color: var(--pf-clr-pr-1);
+                    transform: translateY(-3px);
+                }
+            }
+
+            &:hover {
+                .item-img {
+                    img {
+                        transform: scale(105%);
+                    }
                 }
             }
 

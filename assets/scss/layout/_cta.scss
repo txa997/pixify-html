@@ -20,8 +20,20 @@
             padding: 45px 20px;
         }
 
+        .btn-wrap {
+            .pf-pr-2 {
+                background: var(--pf-clr-black-3);
+            }
+        }
+
         &:last-child {
             background: var(--pf-clr-black-3);
+
+            .btn-wrap {
+                .pf-pr-2 {
+                    background: var(--pf-clr-pr-2);
+                }
+            }
         }
     }
 
