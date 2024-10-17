@@ -504,7 +504,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 			end: "bottom 80%", 
 			pin: ".pf-blog-1-item", 
 		  	pinSpacing: true,
-			markers: true,
+			markers: false,
 		}
 	});
 

@@ -393,3 +393,162 @@
 /* 
     services-2-end
 */
+
+/* 
+    services-3-start
+*/
+.pf-services-3 {
+    &-sec-title {
+        max-width: 696px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-bottom: 54px;
+    }
+
+
+    &-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr ;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        &-single {
+            background: var(--pf-clr-sd-2);
+            border-radius: 20px 0 0 20px;
+            position: relative;
+            z-index: 1;
+            padding: 48px 48px;
+            transition: all .4s var(--pf-cube-2);
+            overflow: hidden;
+
+            @media #{$xl} {
+                padding: 48px 30px;
+            }
+
+            @media #{$lg} {
+                padding: 48px 20px;
+            }
+
+            @media #{$md} {
+                padding: 48px 30px;
+            }
+
+            @media #{$xs} {
+                padding: 48px 20px;
+            }
+
+            .icon {
+                margin-bottom: 115px;
+                mix-blend-mode: luminosity;
+
+                img {
+                    transition: all .4s var(--pf-cube-2);
+                }
+            }
+
+            .card-shape {
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: -1;
+                fill: #2A2A2A;
+
+                path {
+                    &:nth-child(2) {
+                        transition-delay: .2s;
+                    }
+                    
+                    &:nth-child(3) {
+                        transition-delay: .4s;
+                    }
+                }
+            }
+
+            .card-title {
+                font-size: 23px;
+                font-weight: 500;
+                color: var(--pf-clr-black-5);
+                margin-bottom: 17px;
+                transition: all .4s var(--pf-cube-2);
+
+                &:hover {
+                    opacity: .8;
+                    transform: translateX(3px);
+                }
+            }
+
+
+            &:hover {
+                .card-shape {
+                    path {
+                        transform: translate(20px , -20px);
+                        
+                        &:nth-child(2) {
+                            transition-delay: .2s;
+                        }
+                        
+                        &:nth-child(3) {
+                            transition-delay: .4s;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(1) {
+                .icon {
+                    img {
+                        transform-origin: top left;
+                    }
+                }
+
+                &:hover {
+                    .icon {
+                        img {
+                            transform: rotate(-10deg);
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                background: #D1DEF8;
+
+                &:hover {
+                    .icon {
+                        img {
+                            transform: rotate(-10deg);
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                background: var(--pf-clr-pr-3);
+
+                .card-title  , .card-disc{
+                    color: var(--pf-clr-white-1);
+                }
+
+                &:hover {
+                    .icon {
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+/* 
+    services-3-end
+*/

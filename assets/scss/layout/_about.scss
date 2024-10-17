@@ -327,3 +327,83 @@
 /* 
     about-2-end
 */
+/* 
+    about-3-start
+*/
+.pf-about-3 {
+    &-area {
+        background: rgb(42 42 42 / 4%);
+        backdrop-filter: blur(96px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    
+    &-content {
+        max-width: 696px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .title {
+            margin-bottom: 60px;
+        }
+
+        .pf-rotated-btn-2 {
+            border: 1.5px solid var(--pf-clr-black-5);
+
+            .icon {
+                background: var(--pf-clr-sd-2);
+                stroke: var(--pf-clr-black-5);
+            }
+        }
+    }
+}
+
+
+.pf-about-3-scroll-shape {
+    position: absolute;
+    right: 16%;
+    top: -64px;
+
+    @media #{$xxl} {
+        right: -5%;
+        top: -144px;
+        transform: scale(50%);
+    }
+
+    @media #{$xl} {
+        right: -5%;
+        top: -144px;
+        transform: scale(50%);
+    }
+
+    @media #{$lg} {
+        right: -5%;
+        top: -144px;
+        transform: scale(50%);
+    }
+
+    @media #{$md} {
+        right: -5%;
+        top: -144px;
+        transform: scale(50%);
+    }
+
+    @media #{$xs} {
+        right: -273px;
+        top: -194px;
+        transform: scale(20%);
+    }
+}
+.pf-h3-ani-shape {
+    &-1 {
+        fill: var(--pf-clr-sd-2);
+    }
+    &-2 {
+        fill: var(--pf-clr-pr-3);
+    }
+}
+/* 
+    about-3-end
+*/

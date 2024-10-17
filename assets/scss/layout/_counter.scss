@@ -202,3 +202,68 @@
 /* 
     counter-2-end
 */
+
+/* 
+    counter-3-start
+*/
+.pf-counter-3 {
+    &-sec-title {
+        max-width: 750px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 55px;
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 20px;
+
+
+        .pf-video-2 {
+            &-img {
+                height: 930px;
+                border-radius: 0;
+            }
+
+            .pf-video-btn-1 {
+                color: var(--pf-clr-pr-3);
+                &:hover {
+                    color: var(--pf-clr-pr-3);
+                }
+            }
+        }
+
+
+    }
+
+
+    &-disc {
+        position: absolute;
+        bottom: 0;
+        background: #D1DEF8;
+        left: 0;
+        width: 24.5%;
+        border-top: 20px solid #fff;
+        border-right: 20px solid #fff;
+    }
+
+    &-item {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        background: #ECFFA0;
+    }
+
+    &-rotated-btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+/* 
+    counter-3-end
+*/

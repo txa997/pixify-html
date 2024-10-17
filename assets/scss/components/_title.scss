@@ -61,6 +61,16 @@
 
 }
 
+.pf-p-2 {
+    font-family: var(--pf-font-p-1);
+    font-weight: 400;
+    line-height: 28px;
+    font-size: 18px;
+    color: var(--pf-clr-black-5);
+    margin-bottom: 0px;
+
+}
+
 
 
 .pf-subtitle-1 {
@@ -278,6 +288,77 @@
     &:is(.has-fs-64) {
         font-size: 64px;
         line-height: 0.906;
+
+        @media #{$xxl} {
+            font-size: 60px;
+        }
+
+        @media #{$xl} {
+            font-size: 50px;
+        }
+
+        @media #{$lg} {
+            font-size: 40px;
+        }
+    
+        @media #{$md} {
+            font-size: 35px;
+            letter-spacing: -1px;
+        }
+    
+        @media #{$xs} {
+            font-size: 26px;
+            letter-spacing: 0px;
+        }
+    
+        @media #{$sm} {
+            font-size: 30px;
+            letter-spacing: 0px;
+        }
+    }
+}
+
+.pf-sec-title-3 {
+    font-family: var(--pf-font-h-1);
+    text-transform: capitalize;
+    font-size: 45px;
+    font-weight: 600;
+    color: var(--pf-clr-black-5);
+    letter-spacing: -1.3px;
+    line-height: 1.155;
+    margin-bottom: 0;
+    word-break: break-word;
+
+    .has-clr-gray {
+        color: #A3A3A3;
+
+        word-break: break-word;
+    }
+
+
+    @media #{$lg} {
+        font-size: 40px;
+    }
+
+    @media #{$md} {
+        font-size: 35px;
+        letter-spacing: -1px;
+    }
+
+    @media #{$xs} {
+        font-size: 26px;
+        letter-spacing: 0px;
+    }
+
+    @media #{$sm} {
+        font-size: 30px;
+        letter-spacing: 0px;
+    }
+
+    &:is(.has-fs-64) {
+        font-size: 64px;
+        line-height: 1.09;
+        letter-spacing: -1.6px;
 
         @media #{$xxl} {
             font-size: 60px;

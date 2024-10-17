@@ -546,3 +546,126 @@
 /* 
     hero-2-end
 */
+
+/* 
+    hero-3-start
+*/
+.pf-hero-3 {
+    &-area {
+        padding-top: 225px;
+        padding-bottom: 64px;
+    }
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+        justify-content: space-between;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+        }
+        @media #{$sm} {
+            flex-wrap: nowrap;
+        }
+    }
+
+    &-content {
+        max-width: 789px;
+        width: 100%;
+
+        .hero-title {
+            margin-bottom: 250px;
+
+            @media #{$xs} {
+                margin-bottom: 30px;
+            }
+
+            @media #{$sm} {
+                margin-bottom: 250px;
+            }
+        }
+
+        .hero-disc {
+            max-width: 510px;
+            margin-bottom: 32px;
+        }
+    }
+
+    &-right {
+        text-align: right;
+
+        .bg-shape {
+            position: absolute;
+            right: -100px;
+            top: -40px;
+            width: 100%;
+            z-index: -1;
+        }
+    }
+
+    &-img {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+    
+        .img-2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    &-sig {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: self-start;
+        gap: 10px;
+        position: absolute;
+        bottom: 90px;
+        left: -98px;
+        z-index: 1;
+
+        @media #{$xs} {
+            bottom: 0px;
+            left: 0px;    
+        }
+
+        @media #{$sm} {
+            bottom: 90px;
+            left: -98px;    
+        }
+
+        .text {
+            font-size: 14px;
+            color: var(--pf-clr-pr-3);
+            line-height: 1;
+            position: relative;
+            z-index: 1;
+            padding-left: 12px;
+            font-weight: 400;
+            display: inline-block;
+
+            &::after {
+                content: "";
+                width: 4px;
+                height: 4px;
+                background: var(--pf-clr-pr-3);
+                position: absolute;
+                top: 5px;
+                left: 0;
+                border-radius: 50%;
+            }
+        }
+
+    }
+    
+}
+
+
+/* 
+    hero-3-end
+*/

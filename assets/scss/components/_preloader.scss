@@ -89,12 +89,12 @@
 	&:is(.preloaded) {
 		transform: scale(.9) translateY(100%);
 		border-radius: 20px;
-
 	}
 
 }
 
 #preloader {
+
 	&:is(.has-home-2) {
 		.preloader-wrap {
 			.cube {
@@ -102,6 +102,23 @@
 			}
 		}
 
+	}
+}
+
+#preloader {
+	background: rgb(255 255 255 / 100%);
+	&:is(.has-home-3) {
+		.preloader-wrap {
+			.cube {
+				background:  var(--pf-clr-pr-3);
+			}
+		}
+
+	}
+
+	&:is(.preloaded) {
+		background: rgb(255 255 255 / 70%);
+		backdrop-filter: blur(20px);
 	}
 }
 
