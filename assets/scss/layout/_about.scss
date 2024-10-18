@@ -277,10 +277,18 @@
         }
     }
 
+    &-img-sticky-item {
+        transform: scale(2);
+        transform-origin: top center;
+    }
+
+    &-img-sticky {
+        height: 200vh;
+    }
+
     &-img {
         height: 400px;
         border-radius: 12px;
-        margin-bottom: 50px;
     }
 
     &-disc {
@@ -294,7 +302,7 @@
     
     &-slide-posi {
         position: absolute;
-        top: 28%;
+        top: 225px;
         z-index: -1;
         left: 0;
         width: 100%;

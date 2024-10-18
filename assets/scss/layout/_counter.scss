@@ -73,7 +73,9 @@
 
     &-meddle {
         padding-top: 355px;
-
+        position: relative;
+        z-index: 1;
+        
         @media #{$md,$xs} {
             padding-top: 50px;
         }

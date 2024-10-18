@@ -47,6 +47,14 @@
                 line-height: 24px;
                 opacity: 72%;
                 letter-spacing: -1px;
+
+                a {
+                    transition: all .4s var(--pf-cube-2);
+                    &:hover {
+                        color: var(--pf-clr-pr-1);
+                        transform: translateX(3px);
+                    }
+                }
             }
         }
     }
