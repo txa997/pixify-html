@@ -233,6 +233,38 @@ $(window).scroll(function() {
 });
 
 
+// sticky-header-default
+function glystickyHeader() {
+    var $window = $(window);
+    var lastScrollTop = 0;
+    var $header = $('.txa_sticky_header');
+    var headerHeight = $header.outerHeight() + 30;
+
+    $window.scroll(function () {
+      var windowTop = $window.scrollTop();
+
+      if (windowTop >= headerHeight) {
+        $header.addClass('txa_sticky');
+      } else {
+        $header.removeClass('txa_sticky');
+        $header.removeClass('txa_sticky_show');
+      }
+
+      if ($header.hasClass('txa_sticky')) {
+        if (windowTop < lastScrollTop) {
+          $header.addClass('txa_sticky_show');
+        } else {
+          $header.removeClass('txa_sticky_show');
+        }
+      }
+
+      lastScrollTop = windowTop;
+    });
+}
+
+glystickyHeader();
+
+
 // offcanvas
 $('.offcanvas_toggle').on('click', function() {
     $('.overlay, .offcanvas_box_active').addClass('active');

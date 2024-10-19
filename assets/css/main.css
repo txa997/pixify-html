@@ -4321,6 +4321,35 @@ input:focus::placeholder, textarea:focus::placeholder {
     header-3-end
 */
 /* 
+    sticky-header-css-start
+*/
+.txa_sticky_header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 300ms ease-in-out;
+  z-index: 8;
+}
+.txa_sticky_header:is(.txa_sticky) {
+  transform: translateY(-150%);
+}
+.txa_sticky_header:is(.txa_sticky):is(.txa_sticky_show) {
+  transform: translateY(0%);
+}
+.txa_sticky_header:is(.pf-header-2-area) {
+  top: 12px;
+}
+.txa_sticky_header:is(.pf-header-2-area):is(.txa_sticky_show) {
+  background: #000;
+  top: -40px;
+}
+
+/* 
+    sticky-header-css-end
+*/
+/* 
     hero-1-start
 */
 .pf-hero-1-area {

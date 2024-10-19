@@ -892,3 +892,45 @@
 /* 
     header-3-end
 */
+
+
+
+
+/* 
+    sticky-header-css-start
+*/
+.txa_sticky_header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: 300ms ease-in-out;
+    z-index: 8;
+  
+  
+    &:is(.txa_sticky) {
+      transform: translateY(-150%);
+  
+      &:is(.txa_sticky_show) {
+        transform: translateY(0%);
+      }
+    }
+  
+    &:is(.pf-header-2-area) {
+      top: 12px;
+      &:is(.txa_sticky_show) {
+        background: #000;
+        top: -40px;
+      }
+  
+    }
+  
+
+  
+  }
+  
+  
+/* 
+    sticky-header-css-end
+*/
