@@ -4,6 +4,10 @@
 .pf-solution-1 {
     &-area {
         padding-bottom: 280px;
+
+        @media #{$md,$xs} {
+            padding-bottom: 120px;
+        }
     }
 
     &-sec-title {

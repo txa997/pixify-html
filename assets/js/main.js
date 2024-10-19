@@ -188,6 +188,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 
 
+
+
 		// hero-1-timeline
 		var h1ani = gsap.timeline();
 		h1ani.from(".h1-ani-slideup" , { yPercent: 100, opacity: 0, duration: 1, stagger: .3, delay: 1,	ease: "power3.out",  })
@@ -300,6 +302,24 @@ waOpacityScale0.forEach((box, i) => {
 	});
 });
 
+// scale-.9-to-1
+const wascale11 = gsap.utils.toArray('.wascale0');
+wascale11.forEach((box, i) => {
+	const anim = gsap.fromTo(box, 
+		
+	{ scale: .9, duration: .5, }, 
+	{ scale: 1, duration: .5, });
+
+	ScrollTrigger.create({
+		trigger: box,
+		start: "top 90%",
+		animation: anim,
+		toggleActions: 'play none none reverse',
+		markers: false,
+
+	});
+})
+
 // scaleX-0-to-1
 const waScaleX0 = gsap.utils.toArray('.wa-scalex-0');
 waScaleX0.forEach((box, i) => {
@@ -336,6 +356,25 @@ waItemParallax.forEach((box, i) => {
 		markers: false,
 		scrub: .5,
 	});
+});
+
+// img-parallax
+gsap.utils.toArray(".wa-img-parallax").forEach(function(container) {
+	let image = container.querySelector("img");
+
+	let tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: container,
+			scrub: .5,
+		},
+	}); 
+	tl.from(image, {
+		yPercent: -30,
+		ease: "none",
+	}).to(image, {
+		yPercent: 30,
+		ease: "none",
+	}); 
 });
 
 // about-1-timeline
@@ -629,8 +668,56 @@ var footer1 = gsap.timeline({
 });
 footer1.from(".pf-footer-1-shape img" ,  { yPercent: 50, rotation: 180, duration: 1 })
 
+// video-2-title
+if($('.pf-video-2-split').length) {
+	var pfVideo2 = $(".pf-video-2-split");
 
+	if(pfVideo2.length == 0) return; gsap.registerPlugin(SplitText); pfVideo2.each(function(index, el) {
+	
+		el.split = new SplitText(el, { 
+			type: "lines,words,chars",
+			linesClass: "split-line"
+		});
+	
+		if( $(el).hasClass('pf-video-2-split') ){
+			gsap.set(el.split.chars, {
+				opacity: .24,
+			});
+		}
+	
+		el.anim = gsap.to(el.split.chars, {
+			scrollTrigger: {
+				trigger: el,
+				start: "top 80%",
+				end: "top 30%",
+				markers: false,
+				scrub: 1,
+			},
+	
+			x: "0",
+			y: "0",
+			opacity: 1,
+			duration: .7,
+			stagger: 0.2,
+		});
+	
+	});
+}
 
+// video-2-clippath
+var video2clip = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: video2clip,
+	  trigger: '.has-video-ani',
+	  start: "top 70%",
+	  end: "top 0%",
+	  toggleActions: "play none none reverse",
+	  markers: false
+	}
+});
+video2clip.fromTo(".has-video-ani" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",  duration:1 }, { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 })
+video2clip.from(".has-video-ani-elm" , { top: "-100%" ,  duration:1 }, "<=.2")
 
 
 // testimonial-1-slider
@@ -715,6 +802,156 @@ if($('.pf-c1-brand-slider').length) {
 	});
 }
 
+
+// services-2-slider
+if($('.pf-s2-slider').length) {
+	let swiper2 = new Swiper(".pf-s2-slider", {
+		loop: false,
+		grabCursor: true,
+		speed: 500,
+		effect: "creative",
+		creativeEffect: {
+			prev: {
+			  shadow: true,
+			  translate: ["-5.5%", 0, -1],
+			  opacity: [".1"],
+			},
+			next: {
+			  translate: ["100%", 0, 0],
+			},
+		},
+
+		autoplay: {
+			delay: 5000,
+		},
+
+
+		navigation: {
+			nextEl: ".pf-s2-btn-next",
+			prevEl: ".pf-s2-btn-prev",
+		},
+
+		pagination: {
+			el: ".pf-s2-pagination-num",
+			type: "fraction",
+		},
+	});
+}
+
+
+// overview-2-slider
+if($('.pf-o2-slider').length) {
+	let swiper2 = new Swiper(".pf-o2-slider", {
+		loop: true,
+		grabCursor: true,
+		speed: 500,
+		effect: "creative",
+		creativeEffect: {
+			prev: {
+			  shadow: true,
+			  translate: ["-20%", 0, -1],
+			},
+			next: {
+			  translate: ["100%", 0, 0],
+			},
+		},
+
+		autoplay: {
+			delay: 5000,
+		},
+
+
+		navigation: {
+			nextEl: ".pf-o2-btn-next",
+			prevEl: ".pf-o2-btn-prev",
+		},
+
+	});
+}
+
+// testimonial-2-slider
+if($('.pf-t2-slider').length) {
+	let swiper2 = new Swiper(".pf-t2-slider", {
+		loop: true,
+		grabCursor: true,
+		speed: 1000,
+
+		autoplay: {
+			delay: 5000,
+		},
+
+
+		navigation: {
+			nextEl: ".pf-t2-btn-next",
+			prevEl: ".pf-t2-btn-prev",
+		},
+
+	});
+}
+
+// faq-2-slider
+if($('.pf-faq2-slider').length) {
+	let swiper2 = new Swiper(".pf-faq2-slider", {
+		loop: true,
+		speed: 1000,
+
+		autoplay: {
+			delay: 5000,
+		},
+
+		effect: "creative",
+		creativeEffect: {
+			prev: {
+			  shadow: true,
+			  translate: ["-20%", 0, -1],
+			},
+			next: {
+			  translate: ["100%", 0, 0],
+			},
+		},
+
+
+		navigation: {
+			nextEl: ".pf-faq2-btn-next",
+			prevEl: ".pf-faq2-btn-prev",
+		},
+
+	});
+}
+
+// footer-2-img
+var footer2img = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: footer2img,
+	  trigger: '.pf-footer-2-area',
+	  start: "top 90%",
+	  end: "top 0%",
+	  scrub: .5,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+footer2img.from(".pf-footer-2-img" , { yPercent: -50 ,  duration:1 })
+
+// gallery-2-img
+var gallery2img = gsap.timeline({
+	scrollTrigger: {
+	  animation: gallery2img,
+	  trigger: '.pf-gallery-2-img',
+	  start: "top 90%",
+	  end: "top -10%",
+	  scrub: 1,
+	  toggleActions: 'play reverse play reverse',
+	  markers: false,
+	}
+});
+
+gallery2img.to(".pf-gallery-2-img .img-5" ,  {  opacity: 0, duration: .5 })
+gallery2img.to(".pf-gallery-2-img .img-4" ,  {  opacity: 0, duration: .5 })
+gallery2img.to(".pf-gallery-2-img .img-3" ,  {  opacity: 0, duration: .5 })
+gallery2img.to(".pf-gallery-2-img .img-2" ,  {  opacity: 0, duration: .5 })
 
 // client-1-marquee
 if($('.client-1-active').length) {

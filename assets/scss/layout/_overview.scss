@@ -5,6 +5,10 @@
 
     &-area {
         padding-top: 300px;
+
+        @media #{$md,$xs} {
+            padding-top: 150px;
+        }
     }
 
     &-sec-title {
@@ -16,6 +20,10 @@
     
         @media #{$xs} {
             padding-bottom: 270px;
+        }
+    
+        @media #{$sm} {
+            padding-bottom: 40px;
         }
     }
 

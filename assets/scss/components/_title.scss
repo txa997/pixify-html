@@ -31,6 +31,11 @@
 		}
 	}
 }
+.pf-split-2 {
+    &:is(.pf-sec-title-2) {
+        text-transform: uppercase !important;
+    }
+}
 
 
 

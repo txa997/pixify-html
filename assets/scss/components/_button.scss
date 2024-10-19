@@ -296,10 +296,19 @@
         border: 2px solid var(--pf-clr-pr-2);
         background: transparent;
         color: var(--pf-clr-pr-2);
+        transition: all .4s var(--pf-cube-2);
+
+        .text {
+            transition: all .2s var(--pf-cube-2); 
+        }
+
+        
+
         .icon {
             stroke: var(--pf-clr-pr-2);
-            svg line , polyline {
-                transition: all .3s var(--pf-clr-white-1);
+            transition: all .2s var(--pf-cube-2); 
+            svg * {
+                transition: all .2s var(--pf-cube-2); 
             }
         }
 

@@ -3,6 +3,15 @@
 */
 
 .pf-faq-1 {
+
+    &-area {
+        &:is(.pt-150) {
+            @media #{$md,$xs} {
+                padding-top: 50px;
+            }
+        }
+    }
+
     &-wrap {
         max-width: 870px;
         margin-left: auto;

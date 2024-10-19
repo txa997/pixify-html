@@ -13,6 +13,28 @@
         @media #{$sm} {
             height: 400px;
         }
+
+        .img-posi {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .img-2 {
+            z-index: 2;
+        }
+
+        .img-3 {
+            z-index: 3;
+        }
+
+        .img-4 {
+            z-index: 4;
+        }
+
+        .img-5 {
+            z-index: 5;
+        }
     }
 }
 /* 
