@@ -663,7 +663,7 @@
 
 
 
-// ply-btn-2
+/* ply-btn-2 */
 .pf-video-btn-1 {
     display: flex;
     width: 120px;
@@ -729,6 +729,53 @@
     }
 }
 
+/* arrow-btn-1 */
+
+.pf-arrow-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--pf-clr-pr-3);
+    fill: transparent;
+    stroke: var(--pf-clr-pr-3);
+    overflow: hidden;
+    transition: all .4s var(--pf-cube-2);
+
+    .icon {
+        overflow: hidden;
+        flex: 0 0 auto;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        transition: all .4s var(--pf-cube-2);
+    }
+
+    svg {
+        transition: all .4s var(--pf-cube-2);
+        &:nth-child(1) {
+            position: absolute;
+            transform: translate(-20px, 20px);
+            stroke: var(--pf-clr-white-1);
+        }
+    }
+
+    &:hover {
+        background: var(--pf-clr-pr-3);
+        svg {
+            &:nth-child(1) {
+                transform: translate(0px, 0px);
+            }
+            &:nth-child(2) {
+                transform: translate(20px, -20px);
+            }
+        }  
+    }
+}
 
 /* 
     button-component-end

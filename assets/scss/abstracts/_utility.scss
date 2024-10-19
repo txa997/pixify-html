@@ -177,6 +177,16 @@
 .pf-mlr-20 {
     margin-left: 20px;
     margin-right: 20px;
+
+    @media #{$xs} {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    @media #{$sm} {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
 
 .pf-h-12 {
@@ -186,4 +196,11 @@
 
 .pf-br-32 {
     border-radius: 32px;
+    @media #{$xs} {
+        border-radius: 20px;
+    }
+
+    @media #{$sm} {
+        border-radius: 32px;
+    }
 }

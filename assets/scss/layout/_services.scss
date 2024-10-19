@@ -552,3 +552,115 @@
 /* 
     services-3-end
 */
+/* 
+    services-4-start
+*/
+.pf-services-4 {
+    &-sec-title {
+        max-width: 680px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 54px;
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-card {
+        background: rgb(42 42 42 / 4%);
+        padding: 40px  40px;
+        border-radius: 16px;
+        backdrop-filter: blur(96px);
+        transition: all .4s var(--pf-cube-2);
+
+        @media #{$xl,$lg,$md,$xs} {
+            padding: 40px  20px;
+        }
+
+        .card-img {
+            border-radius: 16px;
+            height: 250px;
+            margin-bottom: 36px;
+            
+            img {
+                filter: grayscale(1);
+                transition: all .4s var(--pf-cube-2);
+            }
+        }
+
+        .card-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .left {
+            width: 100%;
+            max-width: 384px;
+        }
+
+        .card-title {
+            color: var(--pf-clr-black-3);
+            font-weight: 600;
+            font-size: 23px;
+            margin-bottom: 12px;
+            transition: all .4s var(--pf-cube-2);
+
+            a {
+                width: 100%;
+                display: inline !important;
+                background-position-y: -1px;
+                background-repeat: no-repeat;
+                background-size: 0 100%;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+                background-image: linear-gradient(transparent calc(100% - 1.5px), currentColor 2px);
+                transition: all .4s var(--pf-cube-2);
+
+                &:hover {
+                    color: inherit;
+                    background-size: 100% 100%;
+                }
+            }
+        }
+
+        .card-disc {
+            font-size: 16px;
+            line-height: 24px;
+            opacity: 80%;
+        }
+
+        &:hover {
+            background: #D1DEF8;
+            .card-img {
+                img {
+                    transform: scale(105%);
+                    filter: grayscale(0);
+                }
+            }
+        }
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+/* 
+    services-4-end
+*/
