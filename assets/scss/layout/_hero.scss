@@ -601,6 +601,8 @@
             top: -40px;
             width: 100%;
             z-index: -1;
+            animation: pf-hero-3-key 10s linear infinite;
+            
         }
     }
 
@@ -663,6 +665,27 @@
 
     }
     
+}
+
+@keyframes pf-hero-3-key {
+    0% {
+        transform: skew(0deg, 0deg);
+    } 
+    20% {
+        transform: skew(30deg, -30deg);
+    } 
+    40% {
+        transform: skew(10deg, -20deg);
+    } 
+    60% {
+        transform: skew(20deg, 10deg);
+    } 
+    80% {
+        transform: skew(-10deg, 20deg);
+    } 
+    100% {
+        transform: skew(0deg, 0deg);
+    } 
 }
 
 

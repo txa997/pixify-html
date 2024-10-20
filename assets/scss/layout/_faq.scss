@@ -326,3 +326,122 @@
 /* 
     pf-faq-2-end
 */
+
+/* 
+    pf-faq-3-start
+*/
+.pf-faq-3 {
+    &-area {
+        background-color: var(--pf-clr-sd-2);
+    }
+
+    &-sec-title {
+        text-align: center;
+
+        .pf-subtitle-2 {
+            &::after {
+                background: var(--pf-clr-black-5);
+            }
+        
+            &::before {
+                background: var(--pf-clr-black-5);
+            }
+        }
+    }
+
+    &-accordion {
+        max-width: 870px;
+        margin-left: auto;
+        margin-right: auto;
+
+
+        .pf-accordion-item {
+            border-top: 1px solid rgb(42 42 42 / 12%);
+
+            &:last-child {
+                border-bottom: 1px solid rgb(42 42 42 / 12%);
+            }
+            
+
+            .item-title {
+                font-weight: 500;
+                color: var(--pf-clr-black-5);
+
+                .shape {
+                    fill: rgb(42 42 42 / 24%);
+                }
+
+                .icon {
+                    background: rgb(42 42 42 / 8%);
+                    backdrop-filter: unset;
+                    color: var(--pf-clr-pr-5);
+                    border: none;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+
+                &::after {
+                    background: var(--pf-clr-black-5);
+                    top: -1px;
+                }
+
+
+                &:is(:not(.collapsed)) {
+                    .shape {
+                        fill: rgb(42 42 42 / 100%);
+                    }
+                    .icon {
+                        background: rgb(42 42 42 / 100%);
+                        color: var(--pf-clr-sd-2);
+                    }
+                }
+            }
+
+           .item-body {
+                opacity: 80%;
+                color: var(--pf-clr-black-5);
+                p {
+                    color: var(--pf-clr-black-5);
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    &-btn {
+        text-align: center;
+
+        .pf-rotated-btn-2 {
+            display: inline-flex;
+            background: var(--pf-clr-black-5);
+            border: none;
+
+            .icon { 
+                background: var(--pf-clr-sd-2);
+                stroke: var(--pf-clr-black-5);
+            }
+        }
+        
+
+    }
+
+    &-bg-img {
+        filter: grayscale(1);
+        opacity: 20%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+
+
+
+/* 
+    pf-faq-3-end
+*/

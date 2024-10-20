@@ -100,3 +100,71 @@
 /* 
     cta-2-end
 */
+
+/* 
+    cta-3-start
+*/
+.pf-cta-3 {
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    &-col {
+        background: var(--pf-clr-pr-3);
+        padding: 45px 45px;
+        border-radius: 20px;
+
+        @media #{$md,$xs} {
+            padding: 45px 20px;
+        }
+
+        &:last-child {
+            background: #DFE1E5;
+
+            .pf-cta-2-content {
+                .subtitle {
+                    color: var(--pf-clr-black-5);    
+                    
+                    &::after {
+                        background: var(--pf-clr-black-5);
+                    }
+                    
+                    &::before {
+                        background: var(--pf-clr-black-5);
+                    }
+                }
+                .title {
+                    color: var(--pf-clr-black-5);   
+                }
+            }
+        }
+
+
+    }
+}
+
+.pf-cta-2-content {
+    &:is(.has-cta-3) {
+        .subtitle {
+            opacity: 80%;
+        }
+        .title {
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+
+        .has-cta-3 {
+            background: #DFE1E5;
+            border-color: transparent;
+
+            &:hover {
+                border-color: #DFE1E5;
+            }
+        }
+    }
+}
+/* 
+    cta-3-end
+*/

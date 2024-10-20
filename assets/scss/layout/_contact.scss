@@ -261,3 +261,131 @@
 /* 
     contact-2-end
 */
+
+/* 
+    contact-3-start
+*/
+.pf-contact-3 {
+
+    &-area {
+        @media #{$md,$xs} {
+            padding-bottom: 120px;
+        }
+    }
+    &-wrap {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 50px;
+        justify-content: space-between;
+
+        @media #{$lg} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-sec-title {
+        margin-bottom: 192px;
+
+        @media #{$md,$xs} {
+            margin-bottom: 60px;
+        }
+    }
+
+    &-content {
+        max-width: 644px;
+        width: 100%;
+
+        .pf-hero-3-right {
+            text-align: center;
+
+            .bg-shape {
+                right: 0;
+                width: 70%;
+            }
+        }
+
+        .pf-hero-3-sig {
+            left: 0;
+        }
+
+        .pf-hero-3-img {
+            margin-left: -60px;
+
+            @media #{$md,$xs} {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &-form {
+        max-width: 530px;
+        width: 100%;
+
+        .pf-form-1-box .radio-wrap {
+            gap: 8px;
+        }
+
+        .pf-form-1-title {
+            color: var(--pf-clr-black-5);
+            font-weight: 600;
+        }
+
+        .pf-form-1-radio span {
+            color: var(--pf-clr-black-5);
+            font-weight: 500;
+            text-transform: capitalize;
+            letter-spacing: 0;
+            border: 1px solid #D1DEF8;
+            border-radius: 18px;
+            padding: 0px 8px;
+
+            &::before {
+                display: none;
+            }
+
+            &:hover {
+                background: var(--pf-clr-pr-3);
+                color: var(--pf-clr-white-1);
+                border-color: transparent;
+            }
+        }
+
+        .pf-form-1-label {
+            opacity: 64%;
+            color: var(--pf-clr-black-5)
+        }
+
+        .pf-form-1-input {
+            font-weight: 400;
+            color: rgb(42 42 42 / 80%);
+            border-color: #D1DEF8;
+
+            &:hover {
+                color: #000;
+                border-color: var(--pf-clr-pr-3);
+            }
+        }
+
+        .pf-form-1-box {
+            &:focus-within {
+                .pf-form-1-label {
+                    color: var(--pf-clr-pr-3);
+                    opacity: 1;
+                }
+                .pf-form-1-input {
+                    border-color: var(--pf-clr-pr-3);
+                }
+            }
+        }
+    }
+}
+
+
+
+/* 
+    contact-3-end
+*/

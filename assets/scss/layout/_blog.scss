@@ -424,3 +424,56 @@
 /* 
     blog-2-end
 */
+
+/* 
+    blog-3-start
+
+*/
+
+.pf-blog-3 {
+    &-area {
+        background: rgb(42 42 42 / 4%);
+        backdrop-filter: blur(96px);
+    }
+    &-sec-title {
+        text-align: center;
+        margin-bottom: 54px;
+    }
+}
+
+
+.pf-blog-2-item-single {
+    &:is(.has-v3) {
+        .item-img .item-date {
+            color: var(--pf-clr-black-5);
+        }
+
+        .item-meta-item {
+            color: var(--pf-clr-white-1);
+            background: var(--pf-clr-pr-3);
+        }
+
+        .item-title {
+            color: var(--pf-clr-black-5);
+
+            span {
+                color: var(--pf-clr-pr-3);
+            }
+
+            &:hover {
+                color: var(--pf-clr-pr-3);
+            }
+        }
+
+        .item-btn {
+            color: var(--pf-clr-pr-3);
+
+            &:hover {
+                color: var(--pf-clr-black-5);
+            }
+        }
+    }
+}
+/* 
+    blog-3-end
+*/

@@ -366,6 +366,7 @@
 
     &:hover {
         border-color: transparent;
+        background: var(--pf-clr-pr-3);
         .icon {
             transform: rotate(45deg);
         }
@@ -375,6 +376,25 @@
             width: 100%;
             height: 100%;
             border-radius: 100px;
+        }
+    }
+
+    &:is(.has-bg-fill) {
+        background: var(--pf-clr-pr-3);
+        color: var(--pf-clr-white-1);
+        border-color: transparent;
+
+        .icon {
+            stroke: var(--pf-clr-black-5);
+        }
+        &::after {
+            background: var(--pf-clr-white-1);
+        }
+
+        &:hover {
+            background: var(--pf-clr-white-1);
+            border-color: var(--pf-clr-pr-3);
+            color: var(--pf-clr-black-5);
         }
     }
 }

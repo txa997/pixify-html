@@ -213,7 +213,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		h1aniscroll.to(".pf-hero-1-bg img" , { scale: 1.2,	duration:1,ease: "power3.out", })
 
 
-
+		// hero-3-timeline
+		var h3ani = gsap.timeline();
+		h3ani.from(".hero-disc" , { yPercent: 100, opacity: 0, duration: .5, delay: 1,	ease: "power3.out",  })
+		h3ani.from(".hero-btn" , { yPercent: 100, opacity: 0, duration: .5,	ease: "power3.out",  })
+		h3ani.from(".pf-hero-3-img .img-2" , { rotation: 360, opacity: 0, duration: 1.5,	ease: "power3.out",  },"<=-.5")
+		h3ani.from(".pf-hero-3-img .img-1" , { opacity: 0, scale: .9, duration: .5,	ease: "power3.out",  })
+		h1ani.fromTo(".pf-hero-3-sig .sig-img" , { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",  duration:2 }, { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  duration:2 ,ease: "power3.out", }, "<-1")
 
 
 	})
@@ -321,15 +327,17 @@ const waOpacityScale0 = gsap.utils.toArray('.wa-scale-0');
 waOpacityScale0.forEach((box, i) => {
 	const anim = gsap.fromTo(box, 
 		
-	{ scale: .3, opacity: 0,   duration: .5, }, 
-	{ scale: 1, opacity: 1, delay:.2,  duration: .5, });
+	{ scale: .3, opacity: 0,    }, 
+	{ scale: 1, opacity: 1, delay:.2,   });
 	ScrollTrigger.create({
 		trigger: box,
-		start: "top 80%",
+		start: "top 85%",
+		end: "top 50%",
 		animation: anim,
 		toggleActions: 'play reverse play reverse',
 		once: false,
 		markers: false,
+		scrub: 1,
 
 	});
 });
@@ -752,6 +760,42 @@ video2clip.fromTo(".has-video-ani" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0
 video2clip.from(".has-video-ani-elm" , { top: "-100%" ,  duration:1 }, "<=.2")
 
 
+// gallery-2-img
+var gallery2img = gsap.timeline({
+	scrollTrigger: {
+	  animation: gallery2img,
+	  trigger: '.pf-gallery-2-img',
+	  start: "top 90%",
+	  end: "top -10%",
+	  scrub: 1,
+	  toggleActions: 'play reverse play reverse',
+	  markers: false,
+	}
+});
+
+gallery2img.to(".pf-gallery-2-img .img-5" ,  {  opacity: 0, duration: .5 })
+gallery2img.to(".pf-gallery-2-img .img-4" ,  {  opacity: 0, duration: .5 })
+gallery2img.to(".pf-gallery-2-img .img-3" ,  {  opacity: 0, duration: .5 })
+gallery2img.to(".pf-gallery-2-img .img-2" ,  {  opacity: 0, duration: .5 })
+
+
+// footer-2-img
+var footer2img = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: footer2img,
+	  trigger: '.pf-footer-2-area',
+	  start: "top 90%",
+	  end: "top 0%",
+	  scrub: .5,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+footer2img.from(".pf-footer-2-img" , { yPercent: -70 ,  duration:1 })
+
+
 // testimonial-1-slider
 if($('.pf-t1-active').length) {
 	let slider = new Swiper('.pf-t1-active', {
@@ -951,39 +995,59 @@ if($('.pf-faq2-slider').length) {
 	});
 }
 
-// footer-2-img
-var footer2img = gsap.timeline({
+// video-3-slider
+if($('.pf-video-3-active').length) {
+	let swiper3 = new Swiper(".pf-video-3-active", {
+		loop: true,
+		speed: 1000,
 
-	scrollTrigger: {
-	  animation: footer2img,
-	  trigger: '.pf-footer-2-area',
-	  start: "top 90%",
-	  end: "top 0%",
-	  scrub: .5,
-	  toggleActions: "play reverse play reverse",
-	  markers: false
-	}
-});
-	
-footer2img.from(".pf-footer-2-img" , { yPercent: -50 ,  duration:1 })
+		autoplay: {
+			delay: 5000,
+		},
 
-// gallery-2-img
-var gallery2img = gsap.timeline({
-	scrollTrigger: {
-	  animation: gallery2img,
-	  trigger: '.pf-gallery-2-img',
-	  start: "top 90%",
-	  end: "top -10%",
-	  scrub: 1,
-	  toggleActions: 'play reverse play reverse',
-	  markers: false,
-	}
-});
+		effect: "creative",
+		creativeEffect: {
+			prev: {
+			  shadow: true,
+			  translate: ["-20%", 0, -1],
+			},
+			next: {
+			  translate: ["100%", 0, 0],
+			},
+		},
 
-gallery2img.to(".pf-gallery-2-img .img-5" ,  {  opacity: 0, duration: .5 })
-gallery2img.to(".pf-gallery-2-img .img-4" ,  {  opacity: 0, duration: .5 })
-gallery2img.to(".pf-gallery-2-img .img-3" ,  {  opacity: 0, duration: .5 })
-gallery2img.to(".pf-gallery-2-img .img-2" ,  {  opacity: 0, duration: .5 })
+
+		navigation: {
+			nextEl: ".pf-video-3-next",
+			prevEl: ".pf-video-3-prev",
+		},
+
+	});
+}
+
+// video-3-slider
+if($('.pf-t3-slider').length) {
+	let swiper3 = new Swiper(".pf-t3-slider", {
+		loop: true,
+		speed: 1000,
+		autoplay: {
+			delay: 5000,
+		},
+
+        pagination: {
+            el: ".pf-t3-pagination",
+            clickable: true,
+        },
+
+
+		navigation: {
+			nextEl: ".pf-t3-btn-next",
+			prevEl: ".pf-t3-btn-prev",
+		},
+
+	});
+}
+
 
 // client-1-marquee
 if($('.client-1-active').length) {
