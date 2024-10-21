@@ -218,16 +218,6 @@
     }
     
 
-    &-glow {
-        position: absolute;
-        top: -20%;
-        left: -50%;
-        z-index: -1;
-
-        @media #{$lg,$md,$xs} {
-            top: 0%;
-        }
-    }
 
     &-shape {
         width: 45%;

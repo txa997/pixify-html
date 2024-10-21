@@ -5,9 +5,10 @@
 
     &-area {
         position: relative;
-        padding-top: 350px;
+        padding-top: 140px;
         padding-bottom: 70px;
         z-index: 1;
+
     }
 
     &-sec-title{
@@ -124,6 +125,7 @@
         line-height: 1.56;
         opacity: 64%;
         max-width: 690px;
+        margin-top: -50px;
 
         @media #{$xs} {
             font-size: 18px;
@@ -172,7 +174,12 @@
         bottom: 0;
         z-index: -1;
         width: 100%;
-        height: calc(100% - 200px);
+        height: 100%;
+
+
+        @media #{$xs} {
+            object-fit: cover;
+        }
     }
 
     &-glow-1 {

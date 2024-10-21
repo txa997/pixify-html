@@ -4,11 +4,13 @@
 .pf-overview-1 {
 
     &-area {
-        padding-top: 300px;
+        padding-top: 308px;
 
         @media #{$md,$xs} {
             padding-top: 150px;
         }
+
+
     }
 
     &-sec-title {

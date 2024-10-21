@@ -93,9 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
 					},
 
 					
-					autoplay: {
-						delay: 5000,
-					},
+					// autoplay: {
+					// 	delay: 5000,
+					// },
 						
 					thumbs: {
 						swiper: swiper3,
@@ -215,8 +215,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		// hero-3-timeline
 		var h3ani = gsap.timeline();
-		h3ani.from(".hero-disc" , { yPercent: 100, opacity: 0, duration: .5, delay: 1,	ease: "power3.out",  })
-		h3ani.from(".hero-btn" , { yPercent: 100, opacity: 0, duration: .5,	ease: "power3.out",  })
+		h3ani.from(".pf-hero-3-content .hero-disc" , { yPercent: 100, opacity: 0, duration: .5, delay: 1,	ease: "power3.out",  })
+		h3ani.from(".pf-hero-3-content .hero-btn" , { yPercent: 100, opacity: 0, duration: .5,	ease: "power3.out",  })
 		h3ani.from(".pf-hero-3-img .img-2" , { rotation: 360, opacity: 0, duration: 1.5,	ease: "power3.out",  },"<=-.5")
 		h3ani.from(".pf-hero-3-img .img-1" , { opacity: 0, scale: .9, duration: .5,	ease: "power3.out",  })
 		h1ani.fromTo(".pf-hero-3-sig .sig-img" , { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",  duration:2 }, { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  duration:2 ,ease: "power3.out", }, "<-1")
@@ -382,14 +382,17 @@ waScaleX0.forEach((box, i) => {
 // item-parallax
 const waItemParallax = gsap.utils.toArray('.item-parallax');
 waItemParallax.forEach((box, i) => {
-	const anim = gsap.from(box, 
+	const anim = gsap.fromTo(box, 
 		
-	{ yPercent: 30, stagger: .3, duration: .5, });
+	{ yPercent: 20, stagger: .3, duration: .5, },
+	{ yPercent: -5, stagger: .3, duration: .5, }
+
+	);
 
 	ScrollTrigger.create({
 		trigger: box,
 		start: "top 100%",
-		end: "top -30%",
+		end: "top -40%",
 		animation: anim,
 		toggleActions: 'play none none reverse',
 		once: false,
@@ -463,29 +466,13 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 		}
 	});
 	
-	
-	var solutionCard1 = gsap.timeline({
-		scrollTrigger: {
-		  animation: solutionCard1,
-		  trigger: '.pf-s1-card-1',
-		  start: "top 70%",
-		  end: "top -30%",
-		  scrub: .5,
-		  toggleActions: 'play reverse play reverse',
-		  markers: false,
-		}
-	});
-	
-	solutionCard1.fromTo(".pf-s1-num-1" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", duration:1 }, {  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 , })
-	solutionCard1.to(".pf-s1-btn-1" ,  {  background: "#2AC8D3", color: "#000", borderColor: "transparent", duration: .1 })
-	solutionCard1.from(".pf-s1-card-1" ,  {  opacity: 0, duration: .5 })
-	solutionCard1.to(".pf-s1-card-1" ,  {  opacity: 0, duration: .5 })
+
 	
 	var solutionCard2 = gsap.timeline({
 		scrollTrigger: {
 		  animation: solutionCard2,
 		  trigger: '.pf-s1-card-2',
-		  start: "top 70%",
+		  start: "top 80%",
 		  end: "top -30%",
 		  scrub: .5,
 		  toggleActions: 'play reverse play reverse',
@@ -502,7 +489,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 		scrollTrigger: {
 		  animation: solutionCard3,
 		  trigger: '.pf-s1-card-3',
-		  start: "top 70%",
+		  start: "top 80%",
 		  end: "top -30%",
 		  scrub: .5,
 		  toggleActions: 'play reverse play reverse',
@@ -519,7 +506,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 		scrollTrigger: {
 		  animation: solutionCard4,
 		  trigger: '.pf-s1-card-4',
-		  start: "top 70%",
+		  start: "top 80%",
 		  end: "top -30%",
 		  scrub: .5,
 		  toggleActions: 'play reverse play reverse',
@@ -536,7 +523,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 		scrollTrigger: {
 		  animation: solutionCard5,
 		  trigger: '.pf-s1-card-5',
-		  start: "top 70%",
+		  start: "top 80%",
 		  end: "top -30%",
 		  scrub: .5,
 		  toggleActions: 'play reverse play reverse',
@@ -553,7 +540,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 		scrollTrigger: {
 		  animation: solutionCard6,
 		  trigger: '.pf-s1-card-6',
-		  start: "top 80%",
+		  start: "top 90%",
 		  end: "top -50%",
 		  scrub: .5,
 		  toggleActions: 'play reverse play reverse',
@@ -618,8 +605,8 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 		scrollTrigger: {
 		  animation: solutionCard6p,
 		  trigger: '.pf-blog-1-item',
-		  start: "top 50%",
-		  end: "top -80%",
+		  start: "top 90%",
+		  end: "top -60%",
 		  scrub: 1,
 
 		  toggleActions: 'play reverse play reverse',
@@ -816,7 +803,7 @@ var pfAbout3 = gsap.timeline({
 	  start: "top 20%",
 	  scrub: true, // Set to true or a number for smooth scrubbing
 	  toggleActions: 'play reverse play reverse',
-	  markers: true,
+	  markers: false,
 	}
 });
   

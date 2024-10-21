@@ -5,11 +5,11 @@
 .pf-faq-1 {
 
     &-area {
-        &:is(.pt-150) {
-            @media #{$md,$xs} {
-                padding-top: 50px;
-            }
+        padding-top: 150px;
+        @media #{$md,$xs} {
+            padding-top: 20px;
         }
+
     }
 
     &-wrap {

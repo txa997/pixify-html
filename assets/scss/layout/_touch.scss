@@ -77,6 +77,18 @@
         transform: translateY(-50%);
         z-index: -1;
     }
+
+    &-glow-2 {
+        position: absolute;
+        top: 36%;
+        left: -53%;
+        z-index: -1;
+
+        @media #{$lg,$md,$xs} {
+            top: 0%;
+        }
+    }
+
 }
 
 
