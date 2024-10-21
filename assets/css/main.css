@@ -5470,6 +5470,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   text-align: center;
   margin-bottom: 54px;
 }
+.pf-services-3-sec-title .pf-sec-shape {
+  margin-bottom: 47px;
+  width: 150px;
+}
 .pf-services-3-card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -6000,13 +6004,38 @@ input:focus::placeholder, textarea:focus::placeholder {
 /* 
     about-3-start
 */
+.pf-about-3-scroll {
+  height: 3000px;
+  position: relative;
+}
+
+.pf-about-3-shape-posi {
+  position: absolute;
+  top: -55px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.pf-sec-shape {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pf-sec-shape, .pf-sec-shape-1, .pf-sec-shape-2 {
+  will-change: transform;
+}
+
 .pf-about-3-area {
   background: rgba(42, 42, 42, 0.04);
-  backdrop-filter: blur(96px);
+  backdrop-filter: blur(70px);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 90vh !important;
 }
 .pf-about-3-content {
   max-width: 696px;
@@ -6022,54 +6051,6 @@ input:focus::placeholder, textarea:focus::placeholder {
 .pf-about-3-content .pf-rotated-btn-2 .icon {
   background: var(--pf-clr-sd-2);
   stroke: var(--pf-clr-black-5);
-}
-
-.pf-about-3-scroll-shape {
-  position: absolute;
-  right: 16%;
-  top: -64px;
-}
-@media only screen and (min-width: 1400px) and (max-width: 1599px) {
-  .pf-about-3-scroll-shape {
-    right: -5%;
-    top: -144px;
-    transform: scale(50%);
-  }
-}
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .pf-about-3-scroll-shape {
-    right: -5%;
-    top: -144px;
-    transform: scale(50%);
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .pf-about-3-scroll-shape {
-    right: -5%;
-    top: -144px;
-    transform: scale(50%);
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .pf-about-3-scroll-shape {
-    right: -5%;
-    top: -144px;
-    transform: scale(50%);
-  }
-}
-@media (max-width: 767px) {
-  .pf-about-3-scroll-shape {
-    right: -273px;
-    top: -194px;
-    transform: scale(20%);
-  }
-}
-
-.pf-h3-ani-shape-1 {
-  fill: var(--pf-clr-sd-2);
-}
-.pf-h3-ani-shape-2 {
-  fill: var(--pf-clr-pr-3);
 }
 
 /* 
@@ -9110,6 +9091,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .pf-contact-3-form .pf-form-1-box:focus-within .pf-form-1-input {
   border-color: var(--pf-clr-pr-3);
+}
+.pf-contact-3-form .pf-pr-3:hover {
+  color: var(--pf-clr-white-1);
 }
 
 /* 

@@ -381,6 +381,12 @@
                 }
             }
         }
+
+        .pf-pr-3 {
+            &:hover {
+                color: var(--pf-clr-white-1);
+            }
+        }
     }
 }
 

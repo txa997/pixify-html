@@ -409,10 +409,12 @@ gsap.utils.toArray(".wa-img-parallax").forEach(function(container) {
 		},
 	}); 
 	tl.from(image, {
-		yPercent: -30,
+		yPercent: -25,
+		scale: 1.1,
 		ease: "none",
 	}).to(image, {
-		yPercent: 30,
+		yPercent: 25,
+		scale: 1.1,
 		ease: "none",
 	}); 
 });
@@ -792,8 +794,41 @@ var footer2img = gsap.timeline({
 	  markers: false
 	}
 });
-	
 footer2img.from(".pf-footer-2-img" , { yPercent: -70 ,  duration:1 })
+
+// about-3-sticky
+gsap.to(".pf-about-3-area", {
+	scrollTrigger: {
+	  trigger: ".pf-about-3-scroll",
+	  start: "top 3%", 
+	  end: "bottom bottom", 
+	  pin: ".pf-about-3-area", 
+	  pinSpacing: true,
+	  markers: false,
+	}
+});
+
+
+
+var pfAbout3 = gsap.timeline({
+	scrollTrigger: {
+	  trigger: '.pf-about-3-scroll',
+	  start: "top 20%",
+	  scrub: true, // Set to true or a number for smooth scrubbing
+	  toggleActions: 'play reverse play reverse',
+	  markers: true,
+	}
+});
+  
+  pfAbout3.to(".pf-about-3-shape-posi .pf-sec-shape-1", { y: 2900 });
+  pfAbout3.to(".pf-about-3-shape-posi .pf-sec-shape-1", { xPercent: -300 , width: "65px" }, "<");
+  pfAbout3.to(".pf-about-3-shape-posi .pf-sec-shape-1 .left-right", { xPercent: 300 }, "<");
+//   pfAbout3.to(".pf-about-3-shape-posi .pf-sec-shape-1", { xPercent: -300 ,  }, "<");
+//   pfAbout3.to(".pf-about-3-shape-posi .pf-sec-shape-2", { xPercent: 300 ,   }, "<");
+//   pfAbout3.to(".pf-about-3-shape-posi .pf-sec-shape-1 .left-right", { xPercent: 300 , width: "55px" , }, "<");
+//   pfAbout3.to(".pf-about-3-shape-posi .pf-sec-shape-2 .left-right", { xPercent: -300 , width: "55px",  }, "<");
+  
+
 
 
 // testimonial-1-slider

@@ -354,14 +354,40 @@
 /* 
     about-3-start
 */
+.pf-about-3-scroll {
+    height: 3000px;
+    position: relative;
+}
+
+.pf-about-3-shape-posi {
+    position: absolute ;
+    top: -55px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+}
+
+.pf-sec-shape {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pf-sec-shape, .pf-sec-shape-1, .pf-sec-shape-2 {
+    will-change: transform;
+}
+
 .pf-about-3 {
     &-area {
         background: rgb(42 42 42 / 4%);
-        backdrop-filter: blur(96px);
+        backdrop-filter: blur(70px);
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        height: 90vh  !important;
     }
     
     &-content {
@@ -385,49 +411,13 @@
 }
 
 
-.pf-about-3-scroll-shape {
-    position: absolute;
-    right: 16%;
-    top: -64px;
 
-    @media #{$xxl} {
-        right: -5%;
-        top: -144px;
-        transform: scale(50%);
-    }
 
-    @media #{$xl} {
-        right: -5%;
-        top: -144px;
-        transform: scale(50%);
-    }
 
-    @media #{$lg} {
-        right: -5%;
-        top: -144px;
-        transform: scale(50%);
-    }
 
-    @media #{$md} {
-        right: -5%;
-        top: -144px;
-        transform: scale(50%);
-    }
 
-    @media #{$xs} {
-        right: -273px;
-        top: -194px;
-        transform: scale(20%);
-    }
-}
-.pf-h3-ani-shape {
-    &-1 {
-        fill: var(--pf-clr-sd-2);
-    }
-    &-2 {
-        fill: var(--pf-clr-pr-3);
-    }
-}
+
+
 /* 
     about-3-end
 */
