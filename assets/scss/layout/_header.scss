@@ -892,6 +892,180 @@
 /* 
     header-3-end
 */
+/* 
+    header-4-start
+*/
+.pf-header-4-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+
+    .pf-header-2-top {
+        background: #fff;
+        border-color: var(--pf-clr-gray-3);
+
+        .pf-free-phone-1 {
+            color: var(--pf-clr-black-6);
+            font-weight: 400;
+
+            b {
+                font-weight: 600;
+                color: var(--pf-clr-black-6);
+            }
+            .icon {
+                background: transparent;
+                stroke: var(--pf-clr-pr-4);
+                border-color: var(--pf-clr-gray-3);
+            }
+
+            &:hover {
+
+                .icon {
+                    background: var(--pf-clr-pr-4);
+                    stroke: var(--pf-clr-white-1);
+                }
+
+                b {
+                    color: var(--pf-clr-pr-4);
+                }
+            }
+        }
+
+        .pf-search-btn-2 {
+            border-color: var(--pf-clr-gray-3);
+            color: rgb(13 23 63 / 40%);
+            font-weight: 400;
+
+            stroke: var(--pf-clr-pr-4);
+
+            &:hover {
+                color: var(--pf-clr-pr-4);
+            }
+        }
+
+        
+        .pf-join-btn-1 {
+            color: var(--pf-clr-black-6);
+            border-color: var(--pf-clr-gray-3);
+            font-weight: 400;
+            
+            b {
+                font-weight: 600;
+            }
+
+            .icon {
+                stroke: var(--pf-clr-pr-4);
+            }
+
+            &:hover {
+                color: var(--pf-clr-pr-4);
+            }
+        }
+
+        .pf-footer-1-social {
+            color: var(--pf-clr-black-6);
+
+            a {
+                &:hover {
+                    color: var(--pf-clr-pr-4);
+                }
+            }
+        }
+    }
+
+
+    .pf-header-2-main-action-link {
+        .pf-pr-4 {
+            background: var(--pf-clr-sd-3);
+            color: var(--pf-clr-black-6);
+            padding: 9px 18px;
+
+            @media #{$xs} {
+                display: none;
+            }
+
+            @media #{$sm} {
+                display: flex;
+            }
+    
+            &::after {
+                display: none;
+            }
+    
+            &:hover {
+                background: var(--pf-clr-pr-4);
+                color: var(--pf-clr-white-1);
+            }
+        }
+
+        .pf-menu-btn-2 {
+            span {
+                background: var(--pf-clr-pr-4);
+            }
+        }
+    }
+
+}
+
+
+.vy-main-navigation {
+    &:is(.has-header-2) {
+        &:is(.has-header-4) {
+            .navbar-nav {
+                li {
+                    &:is(.dropdown) {
+                        a {
+                            &::before {
+                                color: var(--pf-clr-pr-4);
+                            }
+                        }
+                    }
+                    a {
+                        font-weight: 500;
+                        color: var(--pf-clr-black-6);
+                        opacity: 100%;
+
+                        &::after {
+                            background: var(--pf-clr-pr-4);
+                        }
+                    }
+
+
+                    &:hover {
+                        > a {
+                            color: var(--pf-clr-pr-4);
+                        }
+                    }
+
+                    .dropdown-menu {
+                        border-color: var(--pf-clr-pr-4);
+
+                        li {
+                            a {
+                                &::after {
+                                    background: var(--pf-clr-pr-4);
+                                }
+                            }
+                            &:hover {
+                                > a {
+                                    color: var(--pf-clr-pr-4);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* 
+    header-4-end
+*/
 
 
 

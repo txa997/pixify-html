@@ -692,3 +692,147 @@
 /* 
     hero-3-end
 */
+
+/* 
+    hero-4-start
+*/
+.pf-hero-4 {
+
+    &-area {
+        padding-top: 385px;
+        padding-bottom: 186px;
+        position: relative;
+        z-index: 1;
+        background-color: var(--pf-clr-white-2);
+
+        @media #{$xl} {
+            padding-top: 275px;
+        }
+
+        @media #{$lg} {
+            padding-top: 275px;
+            padding-bottom: 80px;
+        }
+
+        @media #{$md,$xs} {
+            padding-top: 230px;
+            padding-bottom: 0px;
+        }
+    }
+    &-content {
+        max-width: 520px;
+
+        @media #{$md,$xs} {
+            margin-bottom: 50px;
+        }
+
+        .hero-4-title {
+            margin-bottom: 23px;
+        }
+        
+        .hero-4-disc {
+            margin-bottom: 32px;
+        }
+    }
+
+
+    &-right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        text-align: right;
+
+        @media #{$xl} {
+            width: 46%;
+        }
+
+        @media #{$lg} {
+            width: 40%;
+        }
+
+        @media #{$md,$xs} {
+            position: relative;
+        }
+    }
+
+    &-img {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+
+        .shape {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+    }
+}
+
+
+.pf-hero-4 {
+    &-popup {
+        &-posi {
+            position: absolute;
+            top: 31%;
+            left: -46px;
+            z-index: -2;
+            display: flex;
+            align-items: self-start;
+
+            @media #{$lg} {
+                top: 0%;
+            }
+
+            @media #{$md} {
+                top: 0%;
+                left: 1%;
+            }
+
+            @media #{$xs} {
+                top: 0%;
+                left: 1%;
+                display: none;
+            }
+
+            @media #{$sm} {
+                top: 0%;
+                left: 1%;
+                display: flex;
+            }
+        }
+
+        &-text {
+            width: 181px;
+            background: rgb(139 91 250 / 12%);
+            border-radius: 12px;
+            padding: 16px;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 500;
+            color: var(--pf-clr-pr-4);
+            text-align: right;
+            
+        }
+
+        &-shape {
+            fill: transparent;
+            stroke: var(--pf-clr-pr-4);
+
+            margin-left: -10px;
+            margin-top: 32px;
+
+            &-point-1 {
+                fill: var(--pf-clr-pr-4);
+            }
+            &-point-2 {
+                fill: var(--pf-clr-pr-4);
+            }
+        }
+    }
+}
+
+
+/* 
+    hero-4-end
+*/

@@ -91,3 +91,37 @@
 /* 
     client-2-end
 */
+/* 
+    client-3-start
+*/
+.pf-client-3 {
+    &-area {
+        background-color: var(--pf-clr-white-2);
+
+        .pf-client-1-sec-title {
+            color: var(--pf-clr-black-6);
+            opacity: 1;
+            font-weight: 500;
+        }
+
+        .pf-client-1-logo {
+            img {
+                &:nth-child(1) {
+                    opacity: 84%;
+                }    
+            }
+            
+            &:hover {
+                img {
+                    &:nth-child(1) {
+                        opacity: 0;
+                    }    
+                }
+            }
+        }
+    }
+}
+
+/* 
+    client-3-end
+*/
