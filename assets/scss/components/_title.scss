@@ -495,10 +495,10 @@
     }
 
 
-    &:is(.has-fs-64) {
-        font-size: 64px;
-        line-height: 1.09;
-        letter-spacing: -1.8px;
+    &:is(.has-fs-45) {
+        font-size: 45px;
+        line-height: 1.155;
+        letter-spacing: -1.6px;
 
         @media #{$lg} {
             font-size: 40px;

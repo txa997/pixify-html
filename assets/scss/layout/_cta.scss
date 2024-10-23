@@ -168,3 +168,45 @@
 /* 
     cta-3-end
 */
+/* 
+    cta-4-start
+*/
+.pf-cta-4 {
+    &-bg-shape {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &-img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &-sec-title {
+        max-width: 705px;
+        margin-left: auto;
+
+        .pf-subtitle-3 {
+            color: var(--pf-clr-white-1);
+
+            &-line {
+                background: var(--pf-clr-white-1);
+            }
+        }
+
+        .pf-sec-title-4  {
+            color: var(--pf-clr-white-1);
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+/* 
+    cta-4-end
+*/
