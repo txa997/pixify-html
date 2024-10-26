@@ -211,16 +211,23 @@
 
     }
 
-    &-shape {
-        width: 35%;
+    &-shape-posi {
         position: absolute;
         right: 0;
         top: 135px;
         z-index: -1;
-
+        text-align: right;
+        width: 35%;
         @media #{$xxxl,$xxl,$xl,$xl,$lg,$md,$xs} {
             top: 0;
         }
+    }
+
+    &-shape {
+        @media #{$xxxl,$xxl,$xl,$xl,$lg,$md,$xs} {
+            width: 100%;
+        }
+
 
         path {
             &:nth-child(1) {
@@ -292,6 +299,11 @@
         padding-top: 305px;
         padding-bottom: 220px;
         z-index: 2;
+
+        @media #{$xxl,$xl,$lg,$md,$xs} {
+            padding-top: 150px;
+            padding-bottom: 130px;
+        }
     }
 
     &-bg-shape {
@@ -304,13 +316,20 @@
     }
 
 
-    &-shape {
+    &-shape-posi {
         width: 47%;
         overflow: hidden;
         position: absolute;
         right: 0;
         top: -170px;
         z-index: -1;
+        text-align: right;
+    }
+    &-shape {
+        @media #{$xxxl,$xxl,$xl,$xl,$lg,$md,$xs} {
+            width: 100%;
+        }
+
 
         path {
             &:nth-child(3) {
@@ -326,7 +345,7 @@
     }
 
     &-sec-title {
-        max-width: 610px;
+        max-width: 630px;
         margin-bottom: 30px;
 
 
@@ -341,6 +360,15 @@
         .pf-sec-title-4 {
             color: var(--pf-clr-white-1);
             letter-spacing: -2.8px;
+            margin-bottom: 30px;
+
+            @media #{$md} {
+                letter-spacing: -1px;
+            }
+
+            @media #{$xs} {
+                letter-spacing: 0px;
+            }
         }
 
         .pf-pr-4 {

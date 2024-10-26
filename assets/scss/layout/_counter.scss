@@ -530,6 +530,10 @@
         text-align: center;
         margin-bottom: 140px;
 
+        @media #{$xs} {
+            margin-bottom: 60px;
+        }
+
 
         .pf-subtitle-3 {
             color: var(--pf-clr-sd-3);
@@ -542,6 +546,13 @@
         .pf-sec-title-4 {
             color: var(--pf-clr-white-1);
             letter-spacing: -3px;
+
+            @media #{$md} {
+                letter-spacing: -1px;
+            }
+            @media #{$xs} {
+                letter-spacing: 0px;
+            }
         }
     }
 

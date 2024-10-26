@@ -495,13 +495,21 @@
         padding-top: 145px;
         padding-bottom: 170px;
 
-        @media #{$xs} {
-            padding-bottom: 120px;
+        @media #{$lg,$md,$xs} {
+            padding-bottom: 100px;
         }
     }
     &-sec-title {
         margin-bottom: 57px;
         max-width: 615px;
+
+        .pf-sec-title-4 {
+            margin-bottom: 15px;
+        }
+
+        .sec-disc {
+            opacity: 80%;
+        }
     }
 
     &-all-btn {

@@ -206,11 +206,11 @@
     display: inline-block;
     position: relative;
     z-index: 1;
-    margin-bottom: 12px;
+    margin-bottom: 17px;
 
     &-line {
         width: 100%;
-        height: 1.5px;
+        height: 1px;
         position: absolute;
         left: 0;
         bottom: 4px;
@@ -465,6 +465,11 @@
             border-radius: 5px;
         }
     }
+
+    .split-line {
+        padding-bottom: 5px;
+        margin-top: -5px;
+    }
     
 
     @media #{$xxl} {
@@ -499,6 +504,8 @@
         font-size: 45px;
         line-height: 1.155;
         letter-spacing: -1.6px;
+
+
 
         @media #{$lg} {
             font-size: 40px;

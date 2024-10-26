@@ -221,6 +221,22 @@ document.addEventListener("DOMContentLoaded", function () {
 		h3ani.from(".pf-hero-3-img .img-1" , { opacity: 0, scale: .9, duration: .5,	ease: "power3.out",  })
 		h1ani.fromTo(".pf-hero-3-sig .sig-img" , { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",  duration:2 }, { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  duration:2 ,ease: "power3.out", }, "<-1")
 
+		// hero-4-timeline
+		var h4ani = gsap.timeline();
+		h4ani.from(".hero-4-disc" , { yPercent: 100, opacity: 0, duration: .5, 	ease: "power3.out", delay: 1, })
+		h4ani.from(".hero-4-btn" , { yPercent: 100, opacity: 0, duration: .5,	ease: "power3.out",  })
+		h4ani.fromTo(".hero-4-title .has-highlight-line" , { clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",  duration:1, }, { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  duration:1,  })
+		
+		var h4aniT2 = gsap.timeline();
+		h4aniT2.from(".pf-hero-4-popup-shape-point-1" ,  {  scale: 0, duration: .5 , ease: "power3.out", delay: 1,})
+		h4aniT2.fromTo(".pf-hero-4-popup-shape-line" , { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",  duration:.5 }, { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  duration:.5 ,ease: "power3.out", })
+		h4aniT2.from(".pf-hero-4-popup-shape-point-2" ,  {  scale: 0, duration: .5 , ease: "power3.out",})
+		h4aniT2.from(".pf-hero-4-popup-text" ,  {  scale: .8, opacity: 0,  duration: .5 , ease: "power3.out", },)
+		
+		var h4aniT3 = gsap.timeline();
+		h4aniT3.from(".pf-hero-4-img .shape" ,  {  xPercent: 100, opacity: 0, duration: 1 , ease: "power3.out", delay: 2,})
+		h4aniT3.from(".pf-hero-4-img .main-img" ,  {  scale: .9, opacity: 0, duration: 1 , ease: "power3.out",})
+
 
 	})
 });
@@ -328,7 +344,7 @@ waOpacityScale0.forEach((box, i) => {
 	const anim = gsap.fromTo(box, 
 		
 	{ scale: .3, opacity: 0,    }, 
-	{ scale: 1, opacity: 1, delay:.2,   });
+	{ scale: 1, opacity: 1, delay:.3,   });
 	ScrollTrigger.create({
 		trigger: box,
 		start: "top 90%",
@@ -337,7 +353,7 @@ waOpacityScale0.forEach((box, i) => {
 		toggleActions: 'play reverse play reverse',
 		once: false,
 		markers: false,
-		scrub: 1,
+		scrub: 1.5,
 
 	});
 });
@@ -422,6 +438,39 @@ gsap.utils.toArray(".wa-img-parallax").forEach(function(container) {
 	}); 
 });
 
+
+// highlight
+const highlight1 = gsap.utils.toArray('.highlight-line-ani');
+highlight1.forEach((box, i) => {
+	const anim = gsap.fromTo(box, 
+		{ clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",  duration:1  }, { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 , delay: .5 }
+	);
+	ScrollTrigger.create({
+		trigger: box,
+		start: "top 90%",
+		animation: anim,
+		toggleActions: 'play none none none',
+		once: false,
+		markers: false,
+	});
+});
+
+// subtitle-4
+const subtitle4 = gsap.utils.toArray('.pf-subtitle-3-line');
+subtitle4.forEach((box, i) => {
+	const anim = gsap.fromTo(box, 
+		{ clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",  duration:1  }, { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 , delay: .5 }
+	);
+	ScrollTrigger.create({
+		trigger: box,
+		start: "top 90%",
+		animation: anim,
+		toggleActions: 'play none none none',
+		once: false,
+		markers: false,
+	});
+});
+
 // about-1-timeline
 var about1 = gsap.timeline({
 
@@ -438,6 +487,20 @@ about1.from(".a1-ani-point-1" ,  {  scale: 0, duration: .5 } , "<=.5")
 about1.fromTo(".a1-ani-line" , { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",  duration:1 }, { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  duration: .5 })
 about1.from(".a1-ani-point-2" ,  {  scale: 0, duration: .5 })
 about1.from(".a1-ani-text" ,  {  scale: .8, opacity: 0,  duration: .5 }, "<=.5")
+
+// about-1-shape
+var about1shape = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: about1,
+	  trigger: '.pf-about-1-line-shape-single',
+	  start: "top 80%",
+	  toggleActions: 'play reverse play reverse',
+	  markers: false,
+	}
+});
+about1shape.from(".pf-about-1-line-shape-single svg " ,  {  scaleY: 0,  duration: 1 })
+
 
 
 
@@ -778,7 +841,7 @@ var footer2img = gsap.timeline({
 
 	scrollTrigger: {
 	  animation: footer2img,
-	  trigger: '.pf-footer-2-area',
+	  trigger: '[pf-f2-scroll]',
 	  start: "top 90%",
 	  end: "top 0%",
 	  scrub: .5,
@@ -821,6 +884,126 @@ var pfAbout3 = gsap.timeline({
 //   pfAbout3.to(".pf-about-3-shape-posi .pf-sec-shape-2 .left-right", { xPercent: -300 , width: "55px",  }, "<");
   
 
+// touch-4-shape
+var pfTouch4 = gsap.timeline({
+	scrollTrigger: {
+	  trigger: '.pf-touch-4-shape',
+	  start: "top 80%",
+	  toggleActions: 'play reverse play reverse',
+	  markers: false,
+	}
+});
+pfTouch4.from(".pf-touch-4-shape path", { yPercent: 100, opacity: 0, rotation: 100, stagger: .2, duration: 1 });
+  
+
+// counter-4-shape
+var pfCounter4 = gsap.timeline({
+	scrollTrigger: {
+	  trigger: '.pf-counter-4-shape',
+	  start: "top 80%",
+	  toggleActions: 'play reverse play reverse',
+	  markers: false,
+	}
+});
+pfCounter4.from(".pf-counter-4-shape path", { xPercent: -50, opacity: 0, stagger: .2, duration: 1 });
+  
+
+// counter-4-item
+var pfCounterItem = gsap.timeline({
+	scrollTrigger: {
+	  trigger: '.pf-counter-4-item',
+	  start: "top 90%",
+	  end: "top 20%",
+	  toggleActions: 'play reverse play reverse',
+	  scrub: 1,
+	  markers: false,
+	}
+});
+pfCounterItem.from(".pf-counter-4-item .ani-item-2", { y: -80, duration: 1 });
+pfCounterItem.from(".pf-counter-4-item .ani-item-3", { y: -160, duration: 1 }, "<");
+
+// feature-4-img
+var pfFeatureImg = gsap.timeline({
+	scrollTrigger: {
+	  trigger: '.pf-features-4-img',
+	  start: "top 90%",
+	  toggleActions: 'play reverse play reverse',
+	  markers: false,
+	}
+});
+pfFeatureImg.from(".pf-features-4-img .img-2", { xPercent: 100, duration: .5 });
+pfFeatureImg.from(".pf-features-4-img .img-1", { scale: .9, opacity: 0 , duration: .5 });
+  
+
+// touch-4-shape
+var pfCta4t = gsap.timeline({
+	scrollTrigger: {
+	  trigger: '.pf-cta-4-shape',
+	  start: "top 80%",
+	  toggleActions: 'play reverse play reverse',
+	  markers: false,
+	}
+});
+pfCta4t.from(".pf-cta-4-shape path", { xPercent: 100, opacity: 0, rotation: 10, stagger: .2, duration: 1 });
+  
+
+// testimonial-4-shape
+var pfCta4t = gsap.timeline({
+	scrollTrigger: {
+	  trigger: '.pf-testimonial-4-bg-shape',
+	  start: "top 80%",
+	  toggleActions: 'play reverse play reverse',
+	  markers: false,
+	}
+});
+pfCta4t.from(".pf-testimonial-4-bg-shape path", { xPercent: 100, opacity: 0, rotation: -10, stagger: .2, duration: 1 });
+  
+
+// cta-5-shape
+var pfCta4t = gsap.timeline({
+	scrollTrigger: {
+	  trigger: '.pf-cta-5-shape',
+	  start: "top 80%",
+	  toggleActions: 'play reverse play reverse',
+	  markers: false,
+	}
+});
+pfCta4t.from(".pf-cta-5-shape path", { xPercent: 100, opacity: 0, rotation: 15, stagger: .2, duration: 1 });
+  
+
+
+// footer-4-brand-name
+if($(".pf-footer-4-brand-text").length) {
+	var split1 = $(".pf-footer-4-brand-text");
+	if(split1.length == 0) return; gsap.registerPlugin(SplitText); split1.each(function(index, el) {
+
+		el.split = new SplitText(el, { 
+			type: "lines,words,chars",
+			linesClass: "split-line"
+		});
+
+		gsap.set(el, { perspective: 400 });
+
+		if( $(el).hasClass('pf-footer-4-brand-text') ){
+			gsap.set(el.split.chars, {
+				y: "100",
+			});
+		}
+
+		el.anim = gsap.to(el.split.chars, {
+			x: "0",
+			y: "0",
+			opacity: 1,
+			duration:1,
+			ease: "elastic.out(1,0.3)",
+			stagger: .3,
+			delay:0.3,
+			yoyo: true, 
+			repeat: -1,
+		});
+
+	});
+}
 
 
 // testimonial-1-slider
@@ -1090,18 +1273,7 @@ if($('.client-1-active').length) {
 }
 
 
-// about-1-shape-marquee
-if($('.about-1-shape-active').length) {
-	$('.about-1-shape-active').marquee({
-		gap: 0,
-		speed: 50,
-		delayBeforeStart: 0,
-		direction: 'left',
-		duplicated: true,
-		pauseOnHover: false,
-		startVisible:true,
-	});
-}
+
 
 // counter-2-line-marquee
 if($('.pf-counter-2-line-active').length) {
@@ -1149,7 +1321,7 @@ $(function () {
 var backtotop = $('.scroll_top');
 backtotop.on('click', function(e) {
 	e.preventDefault();
-	$('html, body').animate({scrollTop:0}, '2000');
+	$('html, body').animate({scrollTop: 0}, 1500); 
 });
 
 // popup-video-activation

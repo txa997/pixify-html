@@ -878,6 +878,7 @@
         background: var(--pf-clr-white-2);
         border-radius: 16px;
         padding: 48px 32px;
+        transition: all .5s var(--pf-cube-2);
 
         @media #{$xl,$lg,$md,$xs} {
             padding: 48px 20px;
@@ -885,19 +886,33 @@
 
         .icon {
             margin-bottom: 75px;
+            transition: all 1s var(--pf-cube-2);
         }
 
         .card-title {
             font-size: 23px;
             margin-bottom: 15px;
+            transition: all .3s var(--pf-cube-2);
 
             @media #{$xl,$lg,$md,$xs} {
                 font-size: 20px;
+            }
+
+            &:hover {
+                color: var(--pf-clr-pr-4);
             }
         }
 
         .card-disc {
             opacity: 88%;
+        }
+
+        &:hover {
+            transform: scale(99%);
+            .icon {
+                transform: translateX(10px);
+            }
+
         }
 
         &:nth-child(even) {
