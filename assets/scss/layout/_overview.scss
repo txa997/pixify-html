@@ -360,7 +360,8 @@
             line-height: 32px;
             color: var(--pf-clr-black-3);
             font-weight: 400;
-            margin-bottom: 55px;
+            margin-bottom: 52px;
+            opacity: 88%;
         }
     }
 
@@ -424,6 +425,7 @@
 
             .icon {
                 flex: 0 0 auto;
+                transition: all 1s var(--pf-cube-2);
             }
 
             .item-title {
@@ -450,9 +452,7 @@
 
             &:hover {
                 .icon {
-                    img {
-                        animation: rubberBand 0.8s;
-                    }
+                    transform: translateY(10px);
                 }
             }
         }

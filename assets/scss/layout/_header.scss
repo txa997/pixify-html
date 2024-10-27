@@ -1109,6 +1109,15 @@
   
     }
   
+    &:is(.pf-header-3-area) {
+      &:is(.txa_sticky_show) {
+        background: #fff;
+        top: -45px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      }
+  
+    }
+  
 
   
   }

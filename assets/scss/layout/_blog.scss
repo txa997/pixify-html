@@ -449,6 +449,26 @@
         text-align: center;
         margin-bottom: 54px;
     }
+
+    &-bg-shape-1 {
+        width: 21%;
+        filter: blur(40px);
+        opacity: 60%;
+        position: absolute;
+        top: -12%;
+        left: -11%;
+        z-index: -1;
+    }
+
+    &-bg-shape-2 {
+        width: 21%;
+        filter: blur(60px);
+        opacity: 58%;
+        position: absolute;
+        top: 10%;
+        right: -13%;
+        z-index: -1;
+    }
 }
 
 

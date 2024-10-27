@@ -295,7 +295,8 @@
     }
 
     &-img-sticky {
-        height: 200vh;
+        // height: 2000px;
+        margin-bottom: 40px;
         @media #{$md,$xs} {
             height: auto;
         }
@@ -362,18 +363,31 @@
     about-3-start
 */
 .pf-about-3-scroll {
-    height: 3000px;
     position: relative;
+    z-index: 3;
 }
 
-.pf-about-3-shape-posi {
-    position: absolute ;
-    top: -55px;
+.pf-about-3-shape {
+    position: absolute;
+    top: -70px;
     left: 0;
     width: 100%;
-    height: 100%;
-    text-align: center;
 
+    .text-right {
+        text-align: right;
+    }
+
+    .pf-sec-shape {
+        @media #{$lg} {
+            width: 600px;
+        }
+        @media #{$md} {
+            width: 400px;
+        }
+        @media #{$xs} {
+            width: 300px;
+        }
+    }
 }
 
 .pf-sec-shape {
@@ -394,7 +408,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 90vh  !important;
+        height: 90vh !important;
     }
     
     &-content {

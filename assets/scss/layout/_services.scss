@@ -413,6 +413,32 @@
     services-3-start
 */
 .pf-services-3 {
+
+    &-area {
+        padding-top: 150px;
+    }
+
+
+    &-bg-shape-1 {
+        width: 21%;
+        filter: blur(60px);
+        opacity: 48%;
+        position: absolute;
+        bottom: 0;
+        right: -10%;
+        z-index: -1;
+    }
+
+    &-bg-shape-2 {
+        width: 21%;
+        filter: blur(60px);
+        opacity: 48%;
+        position: absolute;
+        bottom: 0;
+        left: -10%;
+        z-index: -1;
+    }
+
     &-sec-title {
         max-width: 696px;
         margin-left: auto;
@@ -577,6 +603,35 @@
     services-4-start
 */
 .pf-services-4 {
+
+    &-bg-shape-1 {
+        width: 21%;
+        filter: blur(40px);
+        opacity: 48%;
+        position: absolute;
+        top: 2%;
+        left: -10%;
+        z-index: -1;
+    }
+
+    &-bg-shape-2 {
+        width: 21%;
+        filter: blur(50px);
+        opacity: 48%;
+        position: absolute;
+        top: 20%;
+        right: -10%;
+        z-index: -1;
+    }
+
+    &-sec-shape {
+        max-width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex !important;
+        margin-bottom: 47px;
+    }
+
     &-sec-title {
         max-width: 680px;
         text-align: center;

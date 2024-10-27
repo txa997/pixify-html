@@ -577,6 +577,11 @@
         .hero-title {
             margin-bottom: 250px;
 
+            .split-line {
+                padding-bottom: 5px;
+                margin-top: -5px;
+            }
+
             @media #{$xs} {
                 margin-bottom: 30px;
             }
