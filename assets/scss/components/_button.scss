@@ -456,6 +456,70 @@
 
 }
 
+/* pr-btn-5 */
+.pf-pr-5 {
+    position: relative;
+    z-index: 1;
+    flex: 0 0 auto;
+    font-family: var(--pf-font-h-1);
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1.5px solid transparent;
+    background-color: var(--pf-clr-pr-5);
+    letter-spacing: .5px;
+    font-weight: 600;
+    border-radius: 100px;
+    padding: 11.5px 12px;
+    padding-left: 22px;
+    color: var(--pf-clr-white-1);
+    transition: all 0.4s var(--pf-cube-2);
+    display: inline-flex;
+    align-items: center;
+    gap: 22px;
+
+    .icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--pf-clr-white-1);
+        fill: transparent;
+        stroke: var(--pf-clr-pr-5);
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .5s var(--pf-cube-2);
+        overflow: hidden;
+
+        svg {
+            &:nth-child(2) {
+                position: absolute;
+                transform: translate(-20px, 20px);
+                stroke: var(--pf-clr-sd-5);
+            }
+        }
+    }
+
+
+    &:hover {
+        background: var(--pf-clr-sd-5);
+        .icon {
+            svg {
+                &:nth-child(1) {
+                    transform: translate(20px, -20px);
+                }
+                &:nth-child(2) {
+                    transform: translate(0px, 0px);
+                }
+            }
+        }
+
+    }
+
+}
+
 /* free-phone */
 .pf-free-phone-1 {
     display: inline-flex;

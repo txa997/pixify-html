@@ -1345,6 +1345,53 @@ if($('.pf-t3-slider').length) {
 	});
 }
 
+// hero-2-slider
+if($(".pf-h5-preview-slider").length) {
+
+	let pfHero5title = new Swiper(".pf-h5-title-slider", {
+		loop: false,
+		spaceBetween: 20,
+		grabCursor: true,
+		speed: 1000,
+		
+	});
+
+
+	var pfh5main = new Swiper(".pf-h5-slider", {
+		speed: 500,
+		loop: true,
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true
+		},
+		
+		// autoplay: {
+		// 	delay: 5000,
+		// },
+			
+		thumbs: {
+			swiper: pfHero5title,
+		},
+
+	});
+
+	var pfHero5preview = new Swiper(".pf-h5-preview-slider", {
+		effect: "cards",
+		grabCursor: true,
+
+					
+		thumbs: {
+			swiper: pfh5main,
+		},
+
+		// thumbs: {
+		// 	swiper: pfHero5title,
+		// },
+		
+	});
+
+
+}	
 
 // client-1-marquee
 if($('.client-1-active').length) {

@@ -1068,6 +1068,126 @@
 */
 
 
+/* 
+    header-5-start
+*/
+.pf-header-5-area {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+
+
+    .pf-header-2-main {
+        background: rgb(255 255 255 / 48%);
+        border-radius: 16px;
+        backdrop-filter: blur(24px);
+        box-shadow: -12px 12px 40px 0 rgba(0,0,0,.12);
+        padding: 0 24px;
+
+        @media #{$md,$xs} {
+            padding: 10px 20px;
+        }
+    }
+
+    .pf-header-2-main-action-link {
+        .pf-pr-5 {
+            background: var(--pf-clr-sd-5);
+            padding: 8px 18px;
+
+
+
+            &:hover {
+                background: var(--pf-clr-pr-5);
+            }
+
+            @media #{$lg} {
+                display: none;
+            }
+
+            @media #{$xs} {
+                display: none;
+            }
+
+            @media #{$sm} {
+                display: inline-flex;
+            }
+        }
+
+        .pf-menu-btn-2 {
+            span {
+                background: var(--pf-clr-sd-5);
+            }
+
+            &:hover {
+                span {
+                    background: var(--pf-clr-sd-5);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.pf-header-5-area {
+    .vy-main-navigation {
+        .navbar-nav {
+            li {
+                a {
+                    color: var(--pf-clr-black-7);
+                    opacity: 100%;
+                    font-weight: 500;
+
+                    &::after {
+                        background: var(--pf-clr-sd-5);
+                    }
+                }
+
+
+                &:is(.dropdown) {
+                    a {
+                        &::before {
+                            color: var(--pf-clr-sd-5);
+                        }
+
+                    }
+                }
+
+                &:hover {
+                    > a {
+                        color: var(--pf-clr-sd-5);
+                    }
+                }
+
+                .dropdown-menu {
+                    border-color: var(--pf-clr-sd-5);
+
+                    li {
+                        a {
+                            &::after {
+                                background: var(--pf-clr-sd-5);
+                            }
+                        }
+                        &:hover {
+                            > a {
+                                color: var(--pf-clr-sd-5);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 
+    header-5-end
+*/
+
+
 
 
 /* 

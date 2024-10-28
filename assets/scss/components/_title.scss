@@ -93,6 +93,16 @@
 
 }
 
+.pf-p-5 {
+    font-family: var(--pf-font-p-1);
+    font-weight: 400;
+    line-height: 28px;
+    font-size: 18px;
+    color: var(--pf-clr-black-7);
+    margin-bottom: 0px;
+
+}
+
 
 
 .pf-subtitle-1 {
@@ -216,6 +226,20 @@
         bottom: 4px;
         background: var(--pf-clr-pr-4);
     }
+
+}
+
+.pf-subtitle-5 {
+    font-family: var(--pf-font-h-1);
+    text-transform: capitalize;
+    color: var(--pf-clr-sd-5);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 17px;
 
 }
 
@@ -505,6 +529,83 @@
         line-height: 1.155;
         letter-spacing: -1.6px;
 
+
+
+        @media #{$lg} {
+            font-size: 40px;
+        }
+    
+        @media #{$md} {
+            font-size: 35px;
+            letter-spacing: -1px;
+        }
+    
+        @media #{$xs} {
+            font-size: 26px;
+            letter-spacing: 0px;
+        }
+    
+        @media #{$sm} {
+            font-size: 30px;
+            letter-spacing: 0px;
+        }
+
+
+    }
+}
+
+.pf-sec-title-5 {
+    font-family: var(--pf-font-h-1);
+    text-transform: capitalize;
+    font-size: 64px;
+    font-weight: 600;
+    color: var(--pf-clr-black-7);
+    letter-spacing: -1.6px;
+    line-height: 1.093;
+    margin-bottom: 0;
+
+    .has-dot {
+        color: var(--pf-clr-sd-5);
+    }
+
+    .split-line {
+        padding-bottom: 5px;
+        margin-top: -5px;
+    }
+    
+
+    @media #{$xxl} {
+        font-size: 60px;
+    }
+
+    @media #{$xl} {
+        font-size: 50px;
+    }
+
+    @media #{$lg} {
+        font-size: 40px;
+    }
+
+    @media #{$md} {
+        font-size: 35px;
+        letter-spacing: -1px;
+    }
+
+    @media #{$xs} {
+        font-size: 26px;
+        letter-spacing: 0px;
+    }
+
+    @media #{$sm} {
+        font-size: 30px;
+        letter-spacing: 0px;
+    }
+
+
+    &:is(.has-fs-45) {
+        font-size: 45px;
+        line-height: 1.155;
+        letter-spacing: -1.6px;
 
 
         @media #{$lg} {
