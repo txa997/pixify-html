@@ -984,3 +984,120 @@
 /* 
     services-5-end
 */
+
+/* 
+    services-6-start
+*/
+.pf-services-6 {
+    &-area {
+        background: var(--pf-clr-sd-5);
+    }
+
+    &-left {
+        overflow: hidden;
+    }
+    
+    &-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        gap: 167px;
+    }
+
+    &-sec-title {
+        .pf-subtitle-5 {
+            color: var(--pf-clr-white-1);
+            opacity: 80%;
+        }
+        
+        .pf-sec-title-5 {
+            color: var(--pf-clr-white-1);
+        }
+    }
+
+    &-title {
+        &-single {
+            padding-top: 30px;
+            position: relative;
+            z-index: 1;
+
+            .title {
+                font-size: 23px;
+                line-height: 1.347;
+                font-weight: 500;
+                opacity: 56%;
+            }
+
+
+            .item-dot {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 12px;
+                height: 12px;
+                border: 4px solid #fff;
+                border-radius: 50%;
+                opacity: 20%;
+            }
+
+            &::after {
+                position: absolute;
+                top: 5px;
+                right: 0;
+                height: 2px;
+                width: calc(100% - 12px);
+                background: #fff;
+                content: '';
+                opacity: 20%;
+            }
+
+            &::before {
+                position: absolute;
+                top: 5px;
+                left: 12px;
+                height: 2px;
+                // width: calc(100% - 12px);
+                width: calc(0% - 12px);
+                background: #fff;
+                content: '';
+            }
+        }
+    }
+    
+
+    &-content {
+        &-single {
+            color: var(--pf-clr-white-1);
+            max-width: 500px;
+        }
+    }
+
+    &-all-btn {
+        .pf-pr-5 {
+            background: #2CFFA5;
+            color: var(--pf-clr-sd-5);
+
+            .icon {
+                background: var(--pf-clr-sd-5);
+
+                svg {
+                    &:nth-child(1) {
+                        stroke: #2CFFA5;
+                    }
+                    &:nth-child(2) {
+                        stroke: var(--pf-clr-pr-5);
+                    }
+                }
+            }
+
+            &:hover {
+                background: var(--pf-clr-pr-5);
+                color: var(--pf-clr-white-1);
+            }
+        }
+    }
+}
+
+/* 
+    services-6-end
+*/

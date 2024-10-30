@@ -125,3 +125,99 @@
 /* 
     client-3-end
 */
+
+/* 
+    client-5-start
+*/
+.pf-client-5 {
+    &-area {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: -690px;
+
+        @media #{$lg,$md,$xs} {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+
+
+    &-shadow {
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: calc(100% - 80px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: 0 120px 120px 0 rgba(0, 0, 0, 0.12);
+            background: transparent;
+            z-index: -1;
+            border-radius: 30px;
+        }
+    }
+
+    &-mask {
+        mask-image: url("../img/client/client-5-mask-shape.png");
+        -webkit-mask-image: url("../img/client/client-5-mask-shape.png");
+        mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+        mask-size: 100% 100%;
+        -webkit-mask-size: 100% 100%;
+        height: 900px;
+        background: #fff;
+        padding-bottom: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        @media #{$lg,$md,$xs} {
+            mask-image: unset;
+            -webkit-mask-image: unset;
+            border-radius: 20px;
+        }
+
+    }
+
+
+    &-content {
+        margin-top: -49px;
+        padding-right: 15%;
+        @media #{$lg,$md,$xs} {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-top: -79px;
+        }
+
+        &-wrap {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            max-width: 26.9%;
+            margin-left: auto;
+            text-align: center;
+
+            @media #{$lg,$md,$xs} {
+                max-width: 370px;
+                margin-right: auto;
+            }
+
+            .title {
+                font-size: 16px;
+                line-height: 26px;
+                color: var(--pf-clr-black-7);
+                opacity: 80%;
+                font-weight: 500;
+            }
+        }
+    }
+}
+/* 
+    client-5-end
+*/

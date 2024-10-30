@@ -714,3 +714,230 @@
 /* 
     counter-4-end
 */
+/* 
+    counter-5-start
+*/
+.pf-counter-5 {
+    &-container {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        padding-top: 245px;
+
+        @media #{$xs} {
+            padding-top: 145px;
+        }
+
+        .illus-1 {
+            position: absolute;
+            width: 23%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 40px 120px 0 rgba(0,0,0,.12);
+            top: 150px;
+            left: 20px;
+            z-index: -1;
+
+            @media #{$xs} {
+                display: none;
+            }
+        }
+        
+        .illus-2 {
+            width: 12%;
+            border-radius: 12px;
+            overflow: hidden;
+            position: absolute;
+            right: 13%;
+            top: 295px;
+            box-shadow: 0 40px 120px 0 rgba(0,0,0,.12);
+            z-index: -1;
+
+            @media #{$lg,$md} {
+                right: 3%;
+                
+            }
+            @media #{$xs} {
+                display: none;
+            }
+        }
+        
+    }
+
+    &-sce-title {
+        max-width: 590px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 82px;
+    }
+
+    &-counter {
+ 
+        .pf-counter-1-item {
+            align-items: center;
+
+            .pf-counter-1-item-number {
+                font-weight: 600;
+
+                .counter {
+                    opacity: 100%;
+                }
+                .text {
+                    color: inherit;
+                }
+            }
+
+            .pf-counter-1-item-disc {
+                opacity: 80%;
+                color: var(--pf-clr-black-7);
+                font-weight: 400;
+            }
+
+            &:nth-child(1) {
+                .pf-counter-1-item-number {
+                    color: #2CFFA5;
+                }
+     
+            }
+
+            &:nth-child(2) {
+                .pf-counter-1-item-number {
+                    color: var(--pf-clr-sd-5);
+                }
+     
+            }
+
+            &:nth-child(3) {
+                .pf-counter-1-item-number {
+                    color: var(--pf-clr-pr-5);
+                }
+     
+            }
+        }
+    }
+
+    &-line {
+        height: 283px;
+
+        @media #{$xxl,$xl} {
+            height: 200px;
+        }
+    
+
+        @media #{$lg} {
+            height: 160px;
+        }
+
+        @media #{$md} {
+            height: 123px;
+        }
+
+        @media #{$xs} {
+            height: 80px;
+        }
+    
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        
+    }
+
+    &-bottom {
+        .illus-1 {
+            width: 9%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 40px 120px 0 rgba(0, 0, 0, 0.12);
+            position: absolute;
+            bottom: 0;
+            left: 24%;
+
+            @media #{$xs} {
+                display: none;
+            }
+        }
+        
+        .illus-2 {
+            width: 9%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 40px 120px 0 rgba(0, 0, 0, 0.12);
+            position: absolute;
+            bottom: 0;
+            right: 28%;
+
+            @media #{$xs} {
+                display: none;
+            }
+        }
+        
+        .illus-3 {
+            width: 9%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 40px 120px 0 rgba(0, 0, 0, 0.12);
+            position: absolute;
+            bottom: 32%;
+            right: 1%;
+
+            @media #{$xs} {
+                display: none;
+            }
+        }
+        
+    }
+
+    &-roted-btn {
+        position: absolute;
+        top: 11%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .pf-rotated-btn-2 {
+            border: 2px solid var(--pf-clr-pr-5);
+
+            .icon {
+                background: var(--pf-clr-pr-5);
+            }
+        }
+    }
+}
+
+
+
+/* 
+    counter-5-end
+*/
+
+/* 
+    text-slide-5-start
+*/
+.pf-text-slide-5 {
+    .item-title {
+        color: #2CFFA5;
+        font-weight: 600;
+        text-transform: capitalize;
+        background-size: 0% 100%;
+        background-repeat: no-repeat;
+        transition:  background-size 0.5s ease;
+
+
+        &:hover {
+            background-image: linear-gradient(to right, var(--pf-clr-sd-5), var(--pf-clr-sd-5));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 100% 100%;
+        }
+    }
+
+    svg {
+        fill: var(--pf-clr-sd-5);
+    }
+}
+/* 
+    text-slide-5-end
+*/

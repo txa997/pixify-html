@@ -166,6 +166,10 @@
             .pr-stroke {
                 stroke: var(--pf-clr-pr-1);
             }
+
+            svg , img {
+                width: 100%;
+            }
         }
     }
 
@@ -180,6 +184,8 @@
         @media #{$xs} {
             object-fit: cover;
         }
+
+        
     }
 
     &-glow-1 {
