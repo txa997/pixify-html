@@ -798,7 +798,7 @@
 
             &:nth-child(1) {
                 .pf-counter-1-item-number {
-                    color: #2CFFA5;
+                    color: var(--pf-clr-sd-4);
                 }
      
             }
@@ -918,7 +918,7 @@
 */
 .pf-text-slide-5 {
     .item-title {
-        color: #2CFFA5;
+        color: var(--pf-clr-sd-4);
         font-weight: 600;
         text-transform: capitalize;
         background-size: 0% 100%;

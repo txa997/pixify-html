@@ -1545,6 +1545,79 @@ if($(".pf-ser-6-slider").length) {
 
 }	
 
+
+// services-6-slider
+if($(".pf-ser-6-slider").length) {
+
+
+
+
+
+	let pfSer6title = new Swiper(".pf-ser-6-slider", {
+		loop: true,
+		spaceBetween: 0,
+		speed: 1000,
+		watchSlidesProgress: true,
+
+
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+
+		},	
+
+	});
+
+	var pfSer6img = new Swiper(".pf-ser-6-img-slider", {
+		speed: 500,
+		loop: true,
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true
+		},
+		
+		autoplay: {
+			delay: 5000,
+		},
+			
+		thumbs: {
+			swiper: pfSer6title,
+		},
+
+	});
+
+	let pfSer6disc = new Swiper(".pf-ser-6-disc", {
+		loop: true,
+		spaceBetween: 20,
+		speed: 500,
+
+		autoplay: {
+			delay: 5000,
+		},
+
+		thumbs: {
+			swiper: pfSer6title,
+		},
+	});
+
+
+}	
+
+
 // client-1-marquee
 if($('.client-1-active').length) {
 	$('.client-1-active').marquee({
