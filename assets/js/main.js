@@ -1549,10 +1549,6 @@ if($(".pf-ser-6-slider").length) {
 // services-6-slider
 if($(".pf-ser-6-slider").length) {
 
-
-
-
-
 	let pfSer6title = new Swiper(".pf-ser-6-slider", {
 		loop: true,
 		spaceBetween: 0,
@@ -1611,6 +1607,70 @@ if($(".pf-ser-6-slider").length) {
 
 		thumbs: {
 			swiper: pfSer6title,
+		},
+	});
+
+
+}	
+
+// testimonial-5-slider
+if($(".pf-t5-img").length) {
+
+	let pft5img = new Swiper(".pf-t5-preview", {
+		loop: true,
+		spaceBetween: 24,
+		speed: 500,
+		watchSlidesProgress: true,
+
+
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+
+		},	
+
+	});
+
+	let pft5preview = new Swiper(".pf-t5-img", {
+		loop: true,
+		spaceBetween: 20,
+		speed: 500,
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true
+		},
+
+		pagination: {
+            el: ".pf-t5-pagination",
+            clickable: true,
+        },
+
+		autoplay: {
+			delay: 5000,
+		},
+
+		
+		navigation: {
+			nextEl: ".pf-t5-btn-next",
+			prevEl: ".pf-t5-btn-prev",
+		},
+
+		thumbs: {
+			swiper: pft5img,
 		},
 	});
 

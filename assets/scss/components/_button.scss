@@ -518,6 +518,31 @@
 
     }
 
+
+    &:is(.has-border) {
+        border-color: var(--pf-clr-sd-5);
+        background: transparent;
+        color: var(--pf-clr-sd-5);
+
+        .icon {
+            background: var(--pf-clr-sd-5);
+
+            svg {
+                &:nth-child(1) {
+                    stroke: var(--pf-clr-white-1);
+                }
+                &:nth-child(2) {
+                    stroke: var(--pf-clr-sd-4);
+                }
+            }
+        }
+
+        &:hover {
+            background: var(--pf-clr-sd-4);
+            border-color: transparent;
+        }
+    }
+
 }
 
 /* free-phone */
