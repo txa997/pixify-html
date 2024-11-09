@@ -89,6 +89,13 @@
 			background-color: var(--pf-clr-pr-5);
 		}
 	}
+
+	&:is(.has-home-6) {
+		background: var(--pf-clr-white-1);
+		.dot {
+			background-color: var(--pf-clr-pr-6);
+		}
+	}
 }
 
 

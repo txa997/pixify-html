@@ -1187,6 +1187,72 @@
     header-5-end
 */
 
+/* 
+    header-6-start
+*/
+.pf-header-6-area {
+
+    .pf-free-phone-1 {
+        &:hover {
+            b {
+                color: var(--pf-clr-pr-6);
+            }
+        }
+    }
+    .pf-search-btn-2 {
+        &:hover {
+            opacity: 1;
+            color: var(--pf-clr-pr-6);
+            stroke: var(--pf-clr-pr-6);
+        }
+    }
+
+    .pf-join-btn-1 {
+        &:hover {
+            b {
+                color: var(--pf-clr-pr-6);
+            }
+            .icon {
+                stroke: var(--pf-clr-pr-6);
+            }
+        }
+    }
+
+    .pf-footer-1-social {
+        a {
+            &:hover {
+                color: var(--pf-clr-pr-6);
+            }
+        }
+    }
+
+    .pf-menu-btn-2  {
+        &:hover {
+            span {
+                background: var(--pf-clr-pr-6);
+            }
+        }
+    }
+    .pf-pr-2 {
+        border-radius: 100px;
+        background: var(--pf-clr-pr-6);
+        color: var(--pf-clr-white-1);
+
+        .text {
+            &::after {
+                color: var(--pf-clr-pr-6);
+            }
+        }
+        &:hover {
+            background: var(--pf-clr-white-1);
+ 
+        }
+    }
+}
+/* 
+    header-6-end
+*/
+
 
 
 

@@ -115,7 +115,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
 			}	
 
+			// hero-6-slider
+			if($(".pf-h6-subtitle-active").length) {
 
+				let pfHero6title = new Swiper(".pf-h6-title-active", {
+					loop: true,
+					spaceBetween: 20,
+					speed: 1000,
+					effect: "fade",
+					fadeEffect: {
+						crossFade: true
+					},
+					
+				});
+
+
+				var pfHero6subtitle = new Swiper(".pf-h6-subtitle-active", {
+					speed: 1000,
+					loop: true,
+					autoplay: {
+						delay: 5000,
+					},
+						
+					thumbs: {
+						swiper: pfHero6title,
+					},
+
+					navigation: {
+						nextEl: ".pf-h6-btn-next",
+						prevEl: ".pf-h6-btn-prev",
+					},
+
+				});
+
+
+			}	
 
 		}, 500);
 
@@ -309,6 +343,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		h4aniT3.from(".pf-hero-4-img .main-img" ,  {  scale: .9, opacity: 0, duration: 1 , ease: "power3.out",})
 
 
+		// hero-6-timeline
+		var h6ani = gsap.timeline();
+		h6ani.from(".pf-hero-6-bg-img img" , { scale: 1.2, filter: "blur(10px)", duration: 2, delay: .5, ease: "power3.out",  })
 	})
 });
 
