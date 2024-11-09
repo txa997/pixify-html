@@ -4981,6 +4981,12 @@ input:focus::placeholder, textarea:focus::placeholder {
   top: -45px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
+.txa_sticky_header:is(.pf-header-5-area) {
+  top: 40px;
+}
+.txa_sticky_header:is(.pf-header-5-area):is(.txa_sticky_show) {
+  top: 10px;
+}
 
 /* 
     sticky-header-css-end

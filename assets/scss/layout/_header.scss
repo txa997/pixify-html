@@ -1238,6 +1238,14 @@
   
     }
   
+    &:is(.pf-header-5-area) {
+        top: 40px;
+      &:is(.txa_sticky_show) {
+        top: 10px;
+      }
+  
+    }
+  
 
   
   }
