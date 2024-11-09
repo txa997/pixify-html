@@ -189,6 +189,9 @@
     &-content {
         margin-top: -49px;
         padding-right: 15%;
+        position: relative;
+        z-index: 1;
+        
         @media #{$lg,$md,$xs} {
             padding-right: 15px;
             padding-left: 15px;

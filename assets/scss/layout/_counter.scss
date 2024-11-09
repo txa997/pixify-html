@@ -896,6 +896,7 @@
         top: 11%;
         left: 50%;
         transform: translateX(-50%);
+        z-index: 1;
 
         .pf-rotated-btn-2 {
             border: 2px solid var(--pf-clr-pr-5);

@@ -40,6 +40,16 @@ $('a[href^="#"]').on('click', function (e) {
 	}
 });
 
+// split-default
+if($('.wa-split-1').length) {
+	var txasplit1 = $('.wa-split-1');
+	if(txasplit1.length == 0) return; gsap.registerPlugin(SplitText); txasplit1.each(function(index, el) {
+		el.split = new SplitText(el, { 
+		type: "lines",
+		linesClass: "split-line"
+		});
+	});
+}
 
 // windows-loaded-before-functions
 document.addEventListener("DOMContentLoaded", function () {
@@ -177,16 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			}	
 		})
 
-		// split-default
-		if($('.wa-split-1').length) {
-			var txasplit1 = $('.wa-split-1');
-			if(txasplit1.length == 0) return; gsap.registerPlugin(SplitText); txasplit1.each(function(index, el) {
-				el.split = new SplitText(el, { 
-				type: "lines",
-				linesClass: "split-line"
-				});
-			});
-		}
+
 
 		// section-title-1
 		if($(".pf-split-1").length) {
@@ -1100,6 +1101,101 @@ if($(".pf-footer-4-brand-text").length) {
 
 	});
 }
+
+// counter-5-tl
+var counter5tl = gsap.timeline({
+	scrollTrigger: {
+	  animation: counter5tl,
+	  trigger: '.pf-counter-5-bottom',
+	  start: "top 95%",
+	  end: "top -20%",
+	  toggleActions: 'play reverse play reverse',
+	  markers: false,
+	}
+});
+
+counter5tl.from(".pf-counter-5-line" ,  {  scaleY: 0, duration: 1 })
+counter5tl.from(".pf-counter-5-bottom .illus-1" ,  {  scaleY: 0, duration: .5 })
+counter5tl.from(".pf-counter-5-bottom .illus-2" ,  {  scaleY: 0, duration: .5 },"<=.2")
+counter5tl.from(".pf-counter-5-bottom .illus-3" ,  {  scaleY: 0, duration: .5 },"<=.2")
+
+// counter-5-btn-tl
+var counter5tl = gsap.timeline({
+	scrollTrigger: {
+	  animation: counter5tl,
+	  trigger: '.pf-counter-5-bottom',
+	  start: "top 95%",
+	  end: "top 0%",
+	  toggleActions: 'play reverse play reverse',
+	  markers: false,
+	  scrub: .5,
+	}
+});
+
+counter5tl.from(".pf-counter-5-roted-btn" ,  {  top: "43%", left: "60%",  duration: 1 })
+
+// services-6-shape
+var services6shape = gsap.timeline({
+	scrollTrigger: {
+	  animation: services6shape,
+	  trigger: '.pf-services-6-mask .bg-shape',
+	  start: "top 90%",
+	  end: "top 10%",
+	  toggleActions: 'play none none play',
+	  markers: false,
+	}
+});
+
+services6shape.fromTo(".pf-services-6-mask .bg-shape" ,  {  clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)", duration: 1 },{  clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 1 } )
+
+// feature-5-shape
+var feature5shape = gsap.timeline({
+	scrollTrigger: {
+	  animation: feature5shape,
+	  trigger: '.pf-feature-5-sec-bg',
+	  start: "top 100%",
+	  end: "top 10%",
+	  toggleActions: 'play none none reverse',
+	  markers: false,
+	}
+});
+
+feature5shape.fromTo(".pf-feature-5-sec-bg" ,  {  clipPath: "polygon(0% 20%, 100% 20%, 100% 100%, 0% 100%)", duration: 1 },{  clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 1 } )
+
+// feature-5-card
+if (window.matchMedia("(min-width: 1200px)").matches) {
+	var feature5card = gsap.timeline({
+		scrollTrigger: {
+		  animation: feature5card,
+		  trigger: '.pf-f5-card-up',
+		  start: "top 70%",
+		  end: "top 10%",
+		  toggleActions: 'play none none reverse',
+		  markers: false,
+		  scrub: .5,
+		}
+	});
+	
+	feature5card.from(".pf-f5-card-up" ,  {  y: 80,  duration: 1 })
+	feature5card.from(".pf-f5-card-down" ,  {  y: -80,  duration: 1 },"<=")
+}
+
+
+// ani-5
+var pfAni5 = gsap.timeline({
+	scrollTrigger: {
+	  animation: pfAni5,
+	  trigger: '.pf-ani-5-area',
+	  start: "top 90%",
+	  end: "top 30%",
+	  toggleActions: 'play none none reverse',
+	  markers: false,
+	  scrub: 1,
+	}
+});
+
+pfAni5.from(".pf-ani-5-shape" ,  {  yPercent: 100,  duration: 1 })
+
 
 // img-parallax
 gsap.utils.toArray(".wa-img-parallax").forEach(function(container) {

@@ -3941,93 +3941,69 @@ input:focus::placeholder, textarea:focus::placeholder {
   align-items: center;
   height: 100%;
 }
-#preloader .preloader-wrap .cube-grid {
-  width: 150px;
-  height: 150px;
+#preloader .preloader-wrap .loader {
+  display: flex;
+  gap: 5px;
+  align-items: end;
 }
-#preloader .preloader-wrap .cube-grid .cube {
-  width: 33%;
-  height: 33%;
+#preloader .preloader-wrap .dot {
+  width: 10px;
+  height: 20px;
   background-color: var(--pf-clr-pr-1);
-  float: left;
-  -webkit-animation: cubeGridScaleDelay 1.3s infinite ease-in-out;
-  animation: cubeGridScaleDelay 1.3s infinite ease-in-out;
-  border-radius: 8px;
+  border-radius: 5px;
+  animation: heightBounce 0.6s infinite alternate;
 }
-#preloader .preloader-wrap .cube-grid .cube1 {
-  -webkit-animation-delay: 0.2s;
+#preloader .preloader-wrap .dot:nth-child(2) {
+  animation-delay: 0.1s;
+  opacity: 0.9;
+}
+#preloader .preloader-wrap .dot:nth-child(3) {
   animation-delay: 0.2s;
+  opacity: 0.8;
 }
-#preloader .preloader-wrap .cube-grid .cube2 {
-  -webkit-animation-delay: 0.3s;
+#preloader .preloader-wrap .dot:nth-child(4) {
   animation-delay: 0.3s;
+  opacity: 0.7;
 }
-#preloader .preloader-wrap .cube-grid .cube3 {
-  -webkit-animation-delay: 0.4s;
+#preloader .preloader-wrap .dot:nth-child(5) {
   animation-delay: 0.4s;
-}
-#preloader .preloader-wrap .cube-grid .cube4 {
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s;
-}
-#preloader .preloader-wrap .cube-grid .cube5 {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-}
-#preloader .preloader-wrap .cube-grid .cube6 {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-}
-#preloader .preloader-wrap .cube-grid .cube7 {
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-}
-#preloader .preloader-wrap .cube-grid .cube8 {
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s;
-}
-#preloader .preloader-wrap .cube-grid .cube9 {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
+  opacity: 0.6;
 }
 #preloader:is(.preloaded) {
   transform: scale(0.9) translateY(100%);
   border-radius: 20px;
 }
-
-#preloader:is(.has-home-2) .preloader-wrap .cube {
-  background: var(--pf-clr-pr-2);
+#preloader:is(.has-home-2) {
+  background: var(--pf-clr-white-1);
+}
+#preloader:is(.has-home-2) .dot {
+  background-color: var(--pf-clr-pr-2);
+}
+#preloader:is(.has-home-3) {
+  background: var(--pf-clr-white-1);
+}
+#preloader:is(.has-home-3) .dot {
+  background-color: var(--pf-clr-pr-3);
+}
+#preloader:is(.has-home-4) {
+  background: var(--pf-clr-white-1);
+}
+#preloader:is(.has-home-4) .dot {
+  background-color: var(--pf-clr-black-6);
+}
+#preloader:is(.has-home-5) {
+  background: var(--pf-clr-white-1);
+}
+#preloader:is(.has-home-5) .dot {
+  background-color: var(--pf-clr-pr-5);
 }
 
-#preloader {
-  background: rgb(255, 255, 255);
-}
-#preloader:is(.has-home-3) .preloader-wrap .cube {
-  background: var(--pf-clr-pr-3);
-}
-#preloader:is(.preloaded) {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(20px);
-}
-
-@-webkit-keyframes cubeGridScaleDelay {
-  0%, 70%, 100% {
-    -webkit-transform: scale3D(1, 1, 1);
-    transform: scale3D(1, 1, 1);
+@keyframes heightBounce {
+  from {
+    height: 10px;
   }
-  35% {
-    -webkit-transform: scale3D(0, 0, 1);
-    transform: scale3D(0, 0, 1);
-  }
-}
-@keyframes cubeGridScaleDelay {
-  0%, 70%, 100% {
-    -webkit-transform: scale3D(1, 1, 1);
-    transform: scale3D(1, 1, 1);
-  }
-  35% {
-    -webkit-transform: scale3D(0, 0, 1);
-    transform: scale3D(0, 0, 1);
+  to {
+    height: 50px;
   }
 }
 /* 
@@ -6318,6 +6294,8 @@ input:focus::placeholder, textarea:focus::placeholder {
 .pf-client-5-content {
   margin-top: -49px;
   padding-right: 15%;
+  position: relative;
+  z-index: 1;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .pf-client-5-content {
@@ -8603,6 +8581,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   top: 11%;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
 }
 .pf-counter-5-roted-btn .pf-rotated-btn-2 {
   border: 2px solid var(--pf-clr-pr-5);
