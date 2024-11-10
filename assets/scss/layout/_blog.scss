@@ -658,3 +658,127 @@
 /* 
     blog-5-end
 */
+/* 
+    blog-6-start
+*/
+
+.pf-blog-6 {
+    &-area {
+        padding-top: 230px;
+    }
+    &-sec-title {
+        font-weight: 500;
+        margin-bottom: 56px;
+    }
+    &-card {
+        width: 100%;
+
+        .card-img {
+            height: 419px;
+            margin-bottom: 32px;
+            filter: grayscale(1);
+
+            @media #{$xs} {
+                height: 300px;
+            }
+
+            @media #{$sm} {
+                height: 419px;
+            }
+
+            img {
+                transition: all .4s var(--pf-cube-2);
+            }
+        }
+
+        .card-category {
+            font-size: 16px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--pf-clr-black-1);
+            fill: transparent;
+            stroke: var(--pf-clr-pr-6);
+            margin-bottom: 24px;
+            transition: all .4s var(--pf-cube-2);
+            &:hover {
+                color: var(--pf-clr-pr-6);
+            }
+        }
+
+        .card-title {
+            font-size: 28px;
+            line-height: 1.357;
+            color: var(--pf-clr-black-1);
+            font-weight: 500;
+            letter-spacing: -1px;
+            transition: all .4s var(--pf-cube-2);
+
+            @media #{$xxl} {
+                font-size: 24px;
+            }
+
+            @media #{$xl,$lg,$md,$xs} {
+                font-size: 22px;
+            }
+
+
+            &:hover {
+                color: var(--pf-clr-pr-6);
+                transform: translateY(-3px);
+            }
+        }
+
+        &:hover {
+            .card-img {
+                img {
+                    transform: scale(105%);
+                }
+            }
+        }
+    }
+
+    &-slider {
+        margin-right: -450px;
+
+        @media #{$xxl,$xl} {
+            margin-right: -200px;
+        }
+
+        @media #{$lg,$md,$xs} {
+            margin-right: 0px;
+        }
+
+        &:hover {
+            .pf-blog-6-cursor {
+                opacity: 1;
+                display: flex;
+            }
+        }
+    }
+}
+
+
+.pf-blog-6-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: var(--pf-clr-pr-6);
+    pointer-events: none;
+    z-index: 5;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 12px;
+    text-transform: lowercase;
+    color: #fff;
+    opacity: 0 ;
+}
+/* 
+    blog-6-end
+*/

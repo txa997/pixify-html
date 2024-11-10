@@ -346,6 +346,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		// hero-6-timeline
 		var h6ani = gsap.timeline();
 		h6ani.from(".pf-hero-6-bg-img img" , { scale: 1.2, filter: "blur(10px)", duration: 2, delay: .5, ease: "power3.out",  })
+		h6ani.from(".pf-hero-6-bottom" , { yPercent: 100, duration: 1, ease: "power3.out",  })
 	})
 });
 
@@ -1234,6 +1235,73 @@ var pfAni5 = gsap.timeline({
 pfAni5.from(".pf-ani-5-shape" ,  {  yPercent: 100,  duration: 1 })
 
 
+// about-6-title
+if($('.pf-about-6-split').length) {
+	var pfVideo2 = $(".pf-about-6-split");
+
+	if(pfVideo2.length == 0) return; gsap.registerPlugin(SplitText); pfVideo2.each(function(index, el) {
+	
+		el.split = new SplitText(el, { 
+			type: "lines,words,chars",
+			linesClass: "split-line"
+		});
+	
+		if( $(el).hasClass('pf-about-6-split') ){
+			gsap.set(el.split.chars, {
+				opacity: .40,
+			});
+		}
+	
+		el.anim = gsap.to(el.split.chars, {
+			scrollTrigger: {
+				trigger: el,
+				start: "top 70%",
+				end: "top 0%",
+				markers: false,
+				scrub: 1,
+			},
+	
+			x: "0",
+			y: "0",
+			opacity: 1,
+			duration: .7,
+			stagger: 0.2,
+		});
+	
+	});
+}
+
+
+
+// video-6
+var pfVideo6 = gsap.timeline({
+	scrollTrigger: {
+	  animation: pfVideo6,
+	  trigger: '.pf-video-6-area',
+	  start: "top 80%",
+	  end: "top 20%",
+	  toggleActions: 'play none none reverse',
+	  markers: false,
+	  scrub: 1,
+	}
+});
+
+pfVideo6.fromTo(".pf-video-6-area" ,  {  clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",	duration: 1 }, {  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",	duration: 1 })
+
+// video-6
+var pfVideo6card = gsap.timeline({
+	scrollTrigger: {
+	  animation: pfVideo6card,
+	  trigger: '.pf-video-6-area',
+	  start: "top 50%",
+	  end: "top 0%",
+	  toggleActions: 'play none none reverse',
+	  markers: false,
+	}
+});
+
+pfVideo6card.from(".pf-video-6-card" ,  {  yPercent: -200,	duration: 1 })
+
 // img-parallax
 gsap.utils.toArray(".wa-img-parallax").forEach(function(container) {
 	let image = container.querySelector("img");
@@ -1810,6 +1878,39 @@ if($(".pf-t5-img").length) {
 
 }	
 
+// blog-6-slider
+if($(".pf-blog-6-active").length) {
+
+	let pft5img = new Swiper(".pf-blog-6-active", {
+		loop: true,
+		spaceBetween: 32,
+		speed: 500,
+
+
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+
+		},	
+
+	});
+
+}	
+
 
 // client-1-marquee
 if($('.client-1-active').length) {
@@ -1837,6 +1938,35 @@ if($('.pf-a2-slide').length) {
 		pauseOnHover: true,
 		startVisible:true,
 	});
+}
+
+// blog-6-cursor
+if ($(".pf-blog-6-cursor").length) {
+	const cursor = document.querySelector('.pf-blog-6-cursor');
+	gsap.set(cursor, {
+		xPercent: -50,
+		yPercent: -60,
+	});
+	
+	document.addEventListener('pointermove', movecursor);
+	
+	function movecursor(e) {
+		gsap.to(cursor, {
+			duration: 0.2,
+			x: e.clientX,
+			y: e.clientY,
+		});
+	}
+	
+	document.querySelectorAll('a').forEach(link => {
+		link.addEventListener('mouseenter', () => {
+			gsap.to(cursor, { scale: 0, duration: 0.2 });
+		});
+		link.addEventListener('mouseleave', () => {
+			gsap.to(cursor, { scale: 1, duration: 0.2 });
+		});
+	});
+	
 }
 
 // feather-icon

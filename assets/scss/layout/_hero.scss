@@ -1328,6 +1328,10 @@
 .pf-hero-6 {
     &-area {
         padding-top: 570px;
+
+        @media #{$xs} {
+            padding-top: 260px;
+        }
     }
 
     &-bg-img {
@@ -1349,6 +1353,19 @@
         justify-content: space-between;
         padding: 0 40px;
         padding-bottom: 35px;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+            gap: 50px;
+            padding: 0 20px;
+            padding-bottom: 35px;
+        }
+        @media #{$sm} {
+            flex-wrap: wrap;
+            gap: 50px;
+            padding: 0 40px;
+            padding-bottom: 35px;
+        }
     }
 
     &-title {
@@ -1368,6 +1385,33 @@
                 
             }           
             
+
+            @media #{$xxl} {
+                font-size: 80px;
+            }
+
+            @media #{$xl} {
+                font-size: 70px;
+            }
+
+            @media #{$lg} {
+                font-size: 60px;
+            }
+
+            @media #{$md} {
+                font-size: 50px;
+                letter-spacing: -1px;
+            }
+
+            @media #{$xs} {
+                font-size: 35px;
+                letter-spacing: 0px;
+            }
+
+            @media #{$sm} {
+                font-size: 48px;
+                letter-spacing: 0px;
+            }
 
         }
 
@@ -1410,6 +1454,14 @@
         display: flex;
         align-items: center;
         gap: 40px;
+
+        @media #{$xs} {
+            gap: 20px;
+        }
+
+        @media #{$sm} {
+            gap: 40px;
+        }
     }
 
     &-subtitle {
@@ -1486,9 +1538,120 @@
         }
 
     }
+
+
+    &-bottom {
+        border-top: 1px solid rgb(255 255 255 / 32%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 40px;
+
+        @media #{$xs} {
+            padding: 18px 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        @media #{$sm} {
+            padding: 18px 40px;
+            flex-wrap: nowrap;
+            gap: 0px;
+        }
+
+        .client-btn {
+            font-size: 16px;
+            font-weight: 400;
+            color: rgb(255 255 255 / 72%);
+            fill: transparent;
+            stroke: var(--pf-clr-pr-6);
+            transition: all .4s var(--pf-cube-2);
+
+            b {
+                font-weight: 500;
+                color: var(--pf-clr-white-1);
+            }
+
+            &:hover {
+                b {
+                    color: var(--pf-clr-pr-6);
+                }
+
+                svg {
+                    transform: translate(3px , -3px);
+                }
+            }
+        }
+    }
+    
+    &-scroll-down {
+        position: relative;
+        z-index: 1;
+        flex: 0 0 auto;
+        text-transform: capitalize;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--pf-clr-white-1);
+        transition: all 0.4s var(--pf-cube-2);
+        display: inline-flex;
+        align-items: center;
+        font-weight: 400;
+        gap: 12px;
+    
+        .text {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+    
+            &::after {
+                top: 0;
+                left: 0;
+                opacity: 1;
+                width: 100%;
+                display: block;
+                transition: all .4s var(--pf-cube-2);
+                position: absolute;
+                content: attr(data-back);
+                transform: translateY(-100%);
+                color: var(--pf-clr-pr-6);
+            }
+        
+            &::before {
+                top: 0;
+                left: 0;
+                opacity: 1;
+                display: block;
+                transition: all .4s var(--pf-cube-2);
+                position: relative;
+                content: attr(data-front);
+                transform: translateY(0);
+    
+            }
+        }
+    
+        svg {
+            fill: transparent;
+            stroke: var(--pf-clr-pr-6);
+        }
+    
+    
+        &:hover {
+    
+            .text {
+                &::after {
+                    opacity: 1;
+                    transform: translateY(0%);
+                }
+                &::before {
+                    opacity: 1;
+                    transform: translateY(100%);
+                }
+            }
+        }
+    
+    }
+    
 }
-
-
 
 /* 
     hero-6-end
