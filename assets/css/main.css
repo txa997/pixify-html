@@ -13464,6 +13464,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .pf-quick-link-6-area {
     padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 .pf-quick-link-6-wrap {
@@ -14064,6 +14065,11 @@ input:focus::placeholder, textarea:focus::placeholder {
 .pf-footer-6-area {
   margin-top: -110px;
 }
+@media (max-width: 767px) {
+  .pf-footer-6-area {
+    margin-top: -50px;
+  }
+}
 .pf-footer-6-top {
   background: var(--pf-clr-black-1);
   margin-bottom: 20px;
@@ -14088,6 +14094,17 @@ input:focus::placeholder, textarea:focus::placeholder {
   display: flex;
   gap: 96px;
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .pf-footer-6-widget {
+    gap: 50px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .pf-footer-6-widget {
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+}
 .pf-footer-6-widget .pf-footer-1-widget-single:last-child {
   margin-left: auto;
 }
@@ -14099,6 +14116,12 @@ input:focus::placeholder, textarea:focus::placeholder {
   align-items: center;
   justify-content: space-between;
   gap: 10px 30px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .pf-footer-6-copyright-flex {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .has-footer-v6:is(.pf-footer-1-menu) li a {

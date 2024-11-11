@@ -716,6 +716,10 @@
 
     &-area {
         margin-top: -110px;
+
+        @media #{$xs} {
+            margin-top: -50px;
+        }
     }
 
     &-top {
@@ -745,6 +749,15 @@
         display: flex;
         gap: 96px;
 
+        @media #{$lg} {
+            gap: 50px;
+        }
+
+        @media #{$md,$xs} {
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
         .pf-footer-1-widget-single {
             &:last-child {
                 margin-left: auto;
@@ -760,6 +773,11 @@
             align-items: center;
             justify-content: space-between;
             gap: 10px 30px;
+
+            @media #{$md,$xs} {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
     }
 }
