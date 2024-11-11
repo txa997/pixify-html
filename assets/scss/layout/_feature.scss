@@ -628,3 +628,82 @@
 /* 
     feature-5-end
 */
+
+/* 
+    feature-7-start
+*/
+.pf-feature-7 {
+
+    &-area {
+        .pf-feature-3-bg-shape {
+            object-fit: cover;
+        }
+    }
+
+    &-sec-title {
+        max-width: 860px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .pf-subtitle-3 {
+            color: var(--pf-clr-black-1);
+
+            &-line {
+                background: var(--pf-clr-black-1);
+            }
+        }
+    }
+
+    &-btn {
+        .pf-pr-5 {
+            background: var(--pf-clr-black-1);
+
+            .icon {
+                background: var(--pf-clr-sd-4);
+
+                svg {
+                    &:nth-child(1) {
+                        stroke: var(--pf-clr-black-1);
+                    }
+                    &:nth-child(2) {
+                        stroke: var(--pf-clr-black-1);
+                    }
+                }
+            }
+
+            &:hover {
+                background: var(--pf-clr-pr-6);
+            }
+        }
+    }
+}
+
+.pf-feature-1-item {
+    &:is(.has-feature-7) {
+        .pf-feature-1-item-single:is(.has-f3) .item-title {
+            font-weight: 600;
+            color: var(--pf-clr-black-1);
+
+            a {
+                width: 100%;
+                display: inline !important;
+                background-position-y: -1px;
+                background-repeat: no-repeat;
+                background-size: 0 100%;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+                background-image: linear-gradient(transparent calc(100% - 1.5px), currentColor 2px);
+                transition: all .4s var(--pf-cube-2);
+
+                &:hover {
+                    color: inherit;
+                    background-size: 100% 100%;
+                }
+            }
+
+        }
+    }
+}
+/* 
+    feature-7-end
+*/

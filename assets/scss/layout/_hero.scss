@@ -1656,3 +1656,86 @@
 /* 
     hero-6-end
 */
+
+/* 
+    hero-7-start
+*/
+.pf-hero-7 {
+    &-area {
+        padding-top: 255px;
+    }
+
+    &-wrap {
+        display: flex;
+        align-items: end;
+        gap: 50px;
+        padding-bottom: 35px;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+        }
+    }
+
+    &-bottom-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .client-btn {
+            color: var(--pf-clr-black-1);
+
+            b {
+                color: var(--pf-clr-black-1);
+                font-weight: 600;
+            }
+        }
+
+        .pf-hero-6-scroll-down {
+            color: var(--pf-clr-black-1);
+        }
+    }
+}
+
+
+.pf-hero-6-title {
+    &:is(.has-home-7) {
+        .pf-hero-6-title-single {
+            color: var(--pf-clr-black-1);
+        }
+    }
+}
+
+.pf-hero-6-subtitle {
+    &:is(.has-hero-7) {
+        .pf-hero-6-subtitle-single {
+            .subtitle {
+                color: var(--pf-clr-black-1);
+            }
+        }
+    }
+}
+
+.pf-hero-6-bottom {
+    &:is(.has-hero-7) {
+        border-color: #DFE1E5;
+        padding: 18px 0px;
+
+        
+    }
+}
+
+
+.pf-hero-img-7-area {
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: top;
+}
+/* 
+    hero-7-end
+*/

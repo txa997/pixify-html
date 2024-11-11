@@ -215,3 +215,17 @@
 /* 
     video-6-end
 */
+
+/* 
+    video-7-start
+*/
+.pf-video-6-card {
+    &:is(.has-video-7) {
+        video {
+            filter: grayscale(0);
+        }
+    }
+}
+/* 
+    video-7-end
+*/

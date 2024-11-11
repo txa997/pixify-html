@@ -1302,6 +1302,28 @@ var pfVideo6card = gsap.timeline({
 
 pfVideo6card.from(".pf-video-6-card" ,  {  yPercent: -200,	duration: 1 })
 
+
+// services-7-card
+if (window.matchMedia("(min-width: 1200px)").matches) {
+
+	var services7card = gsap.timeline({
+		scrollTrigger: {
+		  animation: services7card,
+		  trigger: '.pf-services-7-wrap',
+		  start: "top 70%",
+		  end: "top 0%",
+		  toggleActions: 'play none none reverse',
+		  markers: false,
+		  scrub: 1,
+		}
+	});
+	
+	services7card.from(".pf-services-7-wrap .item-1" ,  {  y: -64,  duration: 1 })
+	services7card.from(".pf-services-7-wrap .item-2" ,  {  y: -128,  duration: 1 },"<=")
+	services7card.from(".pf-services-7-wrap .item-3" ,  {  y: -212,  duration: 1 },"<=")
+
+}
+
 // img-parallax
 gsap.utils.toArray(".wa-img-parallax").forEach(function(container) {
 	let image = container.querySelector("img");
@@ -1968,6 +1990,14 @@ if ($(".pf-blog-6-cursor").length) {
 	});
 	
 }
+
+// solution-7-hover-active
+$(".pf-solution-7-item").on("mouseover", function(){
+	var current_class = document.getElementsByClassName("pf-solution-7-item active");
+	current_class[0].className = current_class[0].className.replace(" active", "");
+	this.className += " active";
+});
+
 
 // feather-icon
 feather.replace()
