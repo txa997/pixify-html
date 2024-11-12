@@ -114,25 +114,64 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 
 
+
 @media #{$over,$xxxl,$xxl,$xl,$lg,$md} {
     ::-webkit-scrollbar {
-        width: 5px;
+        width: 7px;
         background-color: transparent;
         box-shadow: none;
         border: none;
     }
         
     ::-webkit-scrollbar-track {
-    background: transparent;
-    box-shadow: none;
-    border: none;
+        background: transparent;
+        box-shadow: none;
+        border: none;
     }
         
     ::-webkit-scrollbar-thumb {
-    background: var(--pf-clr-pr-1);
-    border-radius: 30px;
+        background: var(--pf-clr-pr-1);
+        border-radius: 30px;
     }
+    
+    .pf-home-2 {
+        &::-webkit-scrollbar-thumb {
+            background: var(--pf-clr-pr-2);
+        }
+    }
+    
+    .pf-home-3 {
+        &::-webkit-scrollbar-thumb {
+            background: var(--pf-clr-pr-3);
+        }
+    }
+    
+    .pf-home-4 {
+        &::-webkit-scrollbar-thumb {
+            background: var(--pf-clr-pr-4);
+        }
+    }
+    
+    .pf-home-5 {
+        &::-webkit-scrollbar-thumb {
+            background: var(--pf-clr-pr-5);
+        }
+    }
+    
+    .pf-home-6 {
+        &::-webkit-scrollbar-thumb {
+            background: var(--pf-clr-pr-6);
+        }
+    }
+    
+    .pf-home-7 {
+        &::-webkit-scrollbar-thumb {
+            background: var(--pf-clr-pr-6);
+        }
+    }
+    
 }
+
 .swiper-notification {
     display: none;
 }

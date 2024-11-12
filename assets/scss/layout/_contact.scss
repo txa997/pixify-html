@@ -511,3 +511,39 @@
 /* 
     contact-5-end
 */
+
+/* 
+    contact-7-start
+*/
+.pf-contact-5-content {
+    &:is(.has-contact-7) {
+        .pf-subtitle-3 {
+            color: var(--pf-clr-pr-6);
+
+            &-line {
+                background: var(--pf-clr-pr-6);
+            }
+        }
+
+        .pf-pr-5  {
+            .icon {
+                svg {
+                    &:nth-child(2) {
+                        stroke: var(--pf-clr-white-1);
+                    }
+                }
+            }
+            &:hover {
+                background: var(--pf-clr-white-1);
+                color: var(--pf-clr-pr-6);
+
+                .icon {
+                    background: var(--pf-clr-pr-6);
+                }
+            }
+        }
+    }
+}
+/* 
+    contact-7-end
+*/

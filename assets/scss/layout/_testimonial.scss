@@ -1060,3 +1060,31 @@
 /* 
     testimonial-5-end
 */
+
+/* 
+    testimonial-7-start
+*/
+.pf-testimonial-5-sce-title  {
+    &:is(.has-testimonial-7) {
+        .pf-subtitle-5 {
+            color: var(--pf-clr-pr-6);
+        }
+    }
+}
+
+.pf-hero-5-slider-btn {
+    &:is(.has-testimonial-7) {
+        stroke: var(--pf-clr-pr-6);
+    }
+}
+
+.pf-testimonial-5-pagination {
+    &:is(.has-testimonial-7) {
+        span {
+            background: var(--pf-clr-pr-6);
+        }
+    }
+}
+/* 
+    testimonial-7-end
+*/

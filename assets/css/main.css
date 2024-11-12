@@ -150,7 +150,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 @media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   ::-webkit-scrollbar {
-    width: 5px;
+    width: 7px;
     background-color: transparent;
     box-shadow: none;
     border: none;
@@ -163,6 +163,24 @@ input:focus::placeholder, textarea:focus::placeholder {
   ::-webkit-scrollbar-thumb {
     background: var(--pf-clr-pr-1);
     border-radius: 30px;
+  }
+  .pf-home-2::-webkit-scrollbar-thumb {
+    background: var(--pf-clr-pr-2);
+  }
+  .pf-home-3::-webkit-scrollbar-thumb {
+    background: var(--pf-clr-pr-3);
+  }
+  .pf-home-4::-webkit-scrollbar-thumb {
+    background: var(--pf-clr-pr-4);
+  }
+  .pf-home-5::-webkit-scrollbar-thumb {
+    background: var(--pf-clr-pr-5);
+  }
+  .pf-home-6::-webkit-scrollbar-thumb {
+    background: var(--pf-clr-pr-6);
+  }
+  .pf-home-7::-webkit-scrollbar-thumb {
+    background: var(--pf-clr-pr-6);
   }
 }
 .swiper-notification {
@@ -12089,6 +12107,24 @@ input:focus::placeholder, textarea:focus::placeholder {
     testimonial-5-end
 */
 /* 
+    testimonial-7-start
+*/
+.pf-testimonial-5-sce-title:is(.has-testimonial-7) .pf-subtitle-5 {
+  color: var(--pf-clr-pr-6);
+}
+
+.pf-hero-5-slider-btn:is(.has-testimonial-7) {
+  stroke: var(--pf-clr-pr-6);
+}
+
+.pf-testimonial-5-pagination:is(.has-testimonial-7) span {
+  background: var(--pf-clr-pr-6);
+}
+
+/* 
+    testimonial-7-end
+*/
+/* 
     blog-1-start
 */
 .pf-blog-1-area {
@@ -12356,6 +12392,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-radius: 12px;
   height: 419px;
   margin-bottom: 32px;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .pf-blog-2-item-single .item-img {
@@ -12580,6 +12617,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-radius: 16px;
   height: 258px;
   border-bottom: 8px solid rgba(13, 23, 63, 0.12);
+  transition: all 0.4s var(--pf-cube-2);
 }
 .pf-blog-2-item-single:is(.has-v4) .item-title {
   color: var(--pf-clr-black-6);
@@ -12594,7 +12632,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   opacity: 80%;
 }
 .pf-blog-2-item-single:is(.has-v4):hover .item-img {
-  border-radius: 16px;
+  transform: translateY(3px);
+}
+.pf-blog-2-item-single:is(.has-v4):hover .item-img img {
+  transform: unset;
 }
 
 /* 
@@ -12627,6 +12668,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-radius: 16px;
   height: 258px;
   border-bottom: 8px solid rgba(13, 23, 63, 0.12);
+  transition: all 0.4s var(--pf-cube-2);
 }
 .pf-blog-2-item-single:is(.has-v5) .item-title {
   color: var(--pf-clr-black-7);
@@ -12641,7 +12683,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   opacity: 80%;
 }
 .pf-blog-2-item-single:is(.has-v5):hover .item-img {
-  border-radius: 16px;
+  transform: translateY(3px);
+}
+.pf-blog-2-item-single:is(.has-v5):hover .item-img img {
+  transform: unset;
 }
 
 /* 
@@ -12758,6 +12803,81 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
     blog-6-end
+*/
+/* 
+    blog-7-start
+*/
+.pf-blog-7-sce-title {
+  max-width: 615px;
+}
+.pf-blog-7-sce-title .pf-subtitle-3 {
+  color: var(--pf-clr-pr-6);
+}
+.pf-blog-7-sce-title .pf-subtitle-3-line {
+  background: var(--pf-clr-pr-6);
+}
+.pf-blog-7-sce-title .pf-sec-title-5 {
+  margin-bottom: 10px;
+}
+.pf-blog-7-sce-title .sec-disc {
+  opacity: 80%;
+}
+.pf-blog-7-all-btn .pf-pr-5 {
+  border-width: 2px;
+  border-color: var(--pf-clr-pr-6);
+  color: var(--pf-clr-pr-6);
+}
+.pf-blog-7-all-btn .pf-pr-5 .icon {
+  background: var(--pf-clr-pr-6);
+}
+.pf-blog-7-all-btn .pf-pr-5 .icon svg:nth-child(2) {
+  stroke: var(--pf-clr-white-1);
+}
+.pf-blog-7-all-btn .pf-pr-5:hover {
+  background: var(--pf-clr-pr-6);
+  color: var(--pf-clr-white-1);
+}
+.pf-blog-7-all-btn .pf-pr-5:hover .icon {
+  background: var(--pf-clr-black-1);
+}
+
+.pf-blog-2-item-single:is(.has-v7) .item-img .item-date {
+  background: var(--pf-clr-sd-4);
+  color: var(--pf-clr-black-5);
+  font-weight: 500;
+}
+.pf-blog-2-item-single:is(.has-v7) .item-meta-item {
+  color: var(--pf-clr-white-1);
+  background: var(--pf-clr-pr-6);
+  border-radius: 100px;
+}
+.pf-blog-2-item-single:is(.has-v7) .item-img {
+  border-radius: 16px;
+  height: 258px;
+  border-bottom: 8px solid rgba(13, 23, 63, 0.12);
+  transition: all 0.4s var(--pf-cube-2);
+}
+.pf-blog-2-item-single:is(.has-v7) .item-title {
+  color: var(--pf-clr-black-1);
+}
+.pf-blog-2-item-single:is(.has-v7) .item-title span {
+  color: inherit;
+}
+.pf-blog-2-item-single:is(.has-v7) .item-title:hover {
+  color: var(--pf-clr-pr-6);
+}
+.pf-blog-2-item-single:is(.has-v7) .item-disc {
+  opacity: 80%;
+}
+.pf-blog-2-item-single:is(.has-v7):hover .item-img {
+  transform: translateY(3px);
+}
+.pf-blog-2-item-single:is(.has-v7):hover .item-img img {
+  transform: unset;
+}
+
+/* 
+    blog-7-end
 */
 /* 
     contact-1-start
@@ -13189,6 +13309,29 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
     contact-5-end
+*/
+/* 
+    contact-7-start
+*/
+.pf-contact-5-content:is(.has-contact-7) .pf-subtitle-3 {
+  color: var(--pf-clr-pr-6);
+}
+.pf-contact-5-content:is(.has-contact-7) .pf-subtitle-3-line {
+  background: var(--pf-clr-pr-6);
+}
+.pf-contact-5-content:is(.has-contact-7) .pf-pr-5 .icon svg:nth-child(2) {
+  stroke: var(--pf-clr-white-1);
+}
+.pf-contact-5-content:is(.has-contact-7) .pf-pr-5:hover {
+  background: var(--pf-clr-white-1);
+  color: var(--pf-clr-pr-6);
+}
+.pf-contact-5-content:is(.has-contact-7) .pf-pr-5:hover .icon {
+  background: var(--pf-clr-pr-6);
+}
+
+/* 
+    contact-7-end
 */
 /* 
     touch-1-start
@@ -14682,6 +14825,16 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
     footer-6-end
+*/
+/* 
+    footer-7-start
+*/
+.pf-footer-1-back-top-icon:is(.has-footer-v7) {
+  stroke: var(--pf-clr-pr-6);
+}
+
+/* 
+    footer-7-end
 */
 /* 
 

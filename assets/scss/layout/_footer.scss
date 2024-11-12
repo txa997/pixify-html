@@ -890,6 +890,17 @@
 /* 
     footer-6-end
 */
+/* 
+    footer-7-start
+*/
+.pf-footer-1-back-top-icon {
+    &:is(.has-footer-v7) {
+        stroke: var(--pf-clr-pr-6);
+    }
+}
+/* 
+    footer-7-end
+*/
 
 
 
