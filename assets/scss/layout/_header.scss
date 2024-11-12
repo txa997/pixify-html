@@ -617,27 +617,29 @@
 
                 
                 .dropdown-menu {
+                    padding: 5px;
                     border-radius: 0;
                     transform-origin: top;
                     bottom: unset;
                     top: 100%;
                     background: var(--pf-clr-white-1);
-                    border-top: 2px solid var(--pf-clr-pr-2);
+                    border-top: none;
                     li  {
                         a {
                             font-weight: 500;
                             color: var(--pf-clr-black-1);
 
                             &::after {
-                                background: var(--pf-clr-pr-2);
+                                background: var(--pf-clr-white-1);
                                 top: 25px;
                                 left: 21px;
                             }
                         }
 
                         &:hover {
+                            background: var(--pf-clr-pr-2);
                             > a {
-                                color: var(--pf-clr-pr-2);
+                                color: var(--pf-clr-white-1);
                             }
                         }
 
@@ -874,12 +876,13 @@
                         li {
                             a {
                                 &::after {
-                                    background: var(--pf-clr-pr-3);
+                                    background: var(--pf-clr-white-1);
                                 }
                             }
                             &:hover {
+                                background: var(--pf-clr-pr-3);
                                 > a {
-                                    color: var(--pf-clr-pr-3);
+                                    color: var(--pf-clr-white-1);
                                 }
                             }
                         }
@@ -1045,12 +1048,13 @@
                         li {
                             a {
                                 &::after {
-                                    background: var(--pf-clr-pr-4);
+                                    background: var(--pf-clr-white-1);
                                 }
                             }
                             &:hover {
+                                background: var(--pf-clr-pr-4);
                                 > a {
-                                    color: var(--pf-clr-pr-4);
+                                    color: var(--pf-clr-white-1);
                                 }
                             }
                         }
@@ -1168,12 +1172,14 @@
                     li {
                         a {
                             &::after {
-                                background: var(--pf-clr-sd-5);
+                                background: var(--pf-clr-white-1);
                             }
                         }
                         &:hover {
+                            background: var(--pf-clr-sd-5);
+
                             > a {
-                                color: var(--pf-clr-sd-5);
+                                color: var(--pf-clr-white-1);
                             }
                         }
                     }

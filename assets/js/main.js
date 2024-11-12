@@ -1186,19 +1186,6 @@ var services6shape = gsap.timeline({
 
 services6shape.fromTo(".pf-services-6-mask .bg-shape" ,  {  clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)", duration: 1 },{  clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 1 } )
 
-// feature-5-shape
-var feature5shape = gsap.timeline({
-	scrollTrigger: {
-	  animation: feature5shape,
-	  trigger: '.pf-feature-5-sec-bg',
-	  start: "top 100%",
-	  end: "top 10%",
-	  toggleActions: 'play none none reverse',
-	  markers: false,
-	}
-});
-
-feature5shape.fromTo(".pf-feature-5-sec-bg" ,  {  clipPath: "polygon(0% 20%, 100% 20%, 100% 100%, 0% 100%)", duration: 1 },{  clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 1 } )
 
 // feature-5-card
 if (window.matchMedia("(min-width: 1200px)").matches) {
@@ -1318,11 +1305,27 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 		}
 	});
 	
-	services7card.from(".pf-services-7-wrap .item-1" ,  {  y: -64,  duration: 1 })
-	services7card.from(".pf-services-7-wrap .item-2" ,  {  y: -128,  duration: 1 },"<=")
-	services7card.from(".pf-services-7-wrap .item-3" ,  {  y: -212,  duration: 1 },"<=")
+	services7card.from(".pf-services-7-wrap .item-1" ,  {  y: 64,  duration: 1 })
+	services7card.from(".pf-services-7-wrap .item-2" ,  {  y: 128,  duration: 1 },"<=")
+	services7card.from(".pf-services-7-wrap .item-3" ,  {  y: 212,  duration: 1 },"<=")
 
 }
+
+// pf-radius-shape-slide-up
+gsap.utils.toArray('.pf-radius-shape-slide-up').forEach((element) => {
+	gsap.timeline({
+		scrollTrigger: {
+			trigger: element,
+			start: "top 85%",
+			end: "top 30%",
+			toggleActions: 'play none none reverse',
+			markers: false,
+			scrub: 1,
+		}
+	}).from(element.querySelector('img'), { yPercent: 100, duration: 1 });
+});
+
+
 
 // img-parallax
 gsap.utils.toArray(".wa-img-parallax").forEach(function(container) {

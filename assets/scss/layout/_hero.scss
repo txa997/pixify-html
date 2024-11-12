@@ -951,6 +951,10 @@
             &-content {
                 max-width: 520px;
 
+                @media #{$lg} {
+                    max-width: 540px;
+                }
+
                 .hero-5-subtitle {
                     animation-delay: .5s;
                     animation-duration: .5s;
@@ -1373,7 +1377,7 @@
             font-size: 90px;
             font-weight: 800;
             text-transform: uppercase;
-            max-width: 496px;
+            max-width: 500px;
             line-height: .84;
             letter-spacing: -3.5px;
 

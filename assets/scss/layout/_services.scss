@@ -1420,29 +1420,7 @@
             }
         }
 
-        &:nth-child(2) {
-            margin-top: 64px;
-
-            @media #{$lg,$md,$xs} {
-                margin-top: 0;
-            }
-        }
-
-        &:nth-child(3) {
-            margin-top: 128px;
-
-            @media #{$lg,$md,$xs} {
-                margin-top: 0;
-            }
-        }
-
-        &:nth-child(4) {
-            margin-top: 212px;
-
-            @media #{$lg,$md,$xs} {
-                margin-top: 0;
-            }
-        }
+        
     }
 }
 
