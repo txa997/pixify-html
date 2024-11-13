@@ -1946,6 +1946,43 @@ if($(".pf-blog-6-active").length) {
 }	
 
 
+// team-1-slider
+if($('.pf-team-1-active').length) {
+	let slider = new Swiper('.pf-team-1-active', {
+		loop: true,
+		spaceBetween: 32,
+		speed: 500,
+		slidesPerView: 4,
+
+		autoplay: {
+			delay: 40000000,
+		},
+
+		pagination: {
+			el: ".fx-t1-pagination",
+			clickable: true,
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+		},
+	});
+}
+
 // client-1-marquee
 if($('.client-1-active').length) {
 	$('.client-1-active').marquee({

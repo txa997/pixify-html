@@ -48,7 +48,7 @@
             .card-disc {
                 font-size: 16px;
                 line-height: 24px;
-                opacity: 80%;
+                opacity: 72%;
             }
     
             &:hover {
@@ -91,7 +91,9 @@
             bottom: 0;
             left: 0;
             z-index: -1;
-            opacity: .5;
+            opacity: .3;
+            width: 40%;
+            
         }
     }
 }
