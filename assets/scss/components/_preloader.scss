@@ -96,6 +96,13 @@
 			background-color: var(--pf-clr-pr-6);
 		}
 	}
+
+	&:is(.has-inner-page) {
+		background: #E7F9FA;
+		// .dot {
+		// 	background-color: var(--pf-clr-pr-6);
+		// }
+	}
 }
 
 

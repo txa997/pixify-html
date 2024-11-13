@@ -347,6 +347,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		var h6ani = gsap.timeline();
 		h6ani.from(".pf-hero-6-bg-img img" , { scale: 1.2, filter: "blur(10px)", duration: 2, delay: .5, ease: "power3.out",  })
 		h6ani.from(".pf-hero-6-bottom" , { yPercent: 100, duration: 1, ease: "power3.out",  })
+
+		// breadcrumb-timeline
+		var breadcrumb = gsap.timeline();
+		breadcrumb.from(".breadcrumb-shape" , { yPercent: -100, delay: .5, ease: "power3.out", duration: 1  })
+		breadcrumb.from(".breadcrumb-line-shape" , { height: 0,  ease: "power3.out", duration: 1  }, "<=")
+		breadcrumb.from(".breadcrumb-list" , { yPercent: -100, opacity: 0,  ease: "power3.out", duration: 1  })
+		breadcrumb.from(".breadcrumb-img" , { y: 100, opacity: 0,  ease: "power3.out", duration: 1  },"<=")
+		breadcrumb.from(".breadcrumb-disc" , { y: 100, opacity: 0,  ease: "power3.out", duration: 1  },"<=.5")
+
 	})
 });
 

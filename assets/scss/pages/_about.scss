@@ -1,0 +1,103 @@
+/* 
+    about-page-start
+*/
+.pf-about {
+    &-inner {
+        &-sec {
+            &-title {
+                max-width: 905px;
+            }
+
+            &-line {
+                background: var(--pf-clr-black-1);
+                height: 1px;
+                width: 100%;
+            }
+        }
+
+        &-left {
+            padding-top: 190px;
+    
+            @media #{$md,$xs} {
+                padding-top: 0px;
+                margin-bottom: 50px;
+            }
+        }
+
+        &-card {
+            max-width: 280px;
+    
+            .card-img {
+                border-radius: 8px;
+                img {
+                    transition: all  .5s var(--pf-cube-1);
+                }
+            }
+    
+            .card-title {
+                font-size: 23px;
+                margin-bottom: 7px;
+                transition: all .3s var(--pf-cube-2);
+    
+                &:hover {
+                    color: var(--pf-clr-pr-1);
+                    transform: translateX(3px);
+                }
+            }
+    
+            .card-disc {
+                font-size: 16px;
+                line-height: 24px;
+                opacity: 80%;
+            }
+    
+            &:hover {
+                .card-img {
+                    img {
+                        transform: scale(105%);
+                    }
+                }
+            }
+        }
+
+        &-content {
+            .disc {
+                margin-bottom: 50px;
+                opacity: 72%;
+            }
+    
+            .content-img {
+                border-radius: 12px;
+            }
+        }
+
+        &-counter {
+            justify-content: start;
+            .pf-counter-1-item-number {
+                color: var(--pf-clr-black-1);
+                .counter {
+                    opacity: 1;
+                }
+            }
+
+            .pf-counter-1-item-disc {
+                color: var(--pf-clr-black-1);
+                font-weight: 400;
+            }
+        }
+
+        &-bg-img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            opacity: .5;
+        }
+    }
+}
+
+
+
+/* 
+    about-page-end
+*/

@@ -1038,6 +1038,9 @@
 
                 &:is(.swiper-slide-thumb-active) {
                     .pf-testimonial-5-preview-single {
+
+                        animation: fadeInRight 1s;
+
                         .item-img {
                             filter: grayscale(0);
                         }
