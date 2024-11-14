@@ -1123,3 +1123,17 @@
 /* 
     testimonial-7-end
 */
+/* 
+    testimonial-8-start
+*/
+.has-testimonial-8 {
+    &:is(.pf-slider-hori-btn) {
+        border: 1px solid rgb(0 0 0 / 20%);
+        .pf-slider-hori-btn-single {
+            color: var(--pf-clr-pr-1);
+        }
+    }
+}
+/* 
+    testimonial-8-end
+*/

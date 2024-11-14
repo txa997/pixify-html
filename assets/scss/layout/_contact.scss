@@ -475,7 +475,13 @@
         position: relative;
         z-index: 1;
 
+        @media #{$lg,$md} {
+            padding-top: 150px;
+        }
+
+
         @media #{$xs} {
+            padding-top: 100px;
             padding-bottom: 50px;
         }
     }
@@ -546,4 +552,20 @@
 }
 /* 
     contact-7-end
+*/
+/* 
+    contact-8-start
+*/
+.pf-contact-5-content {
+    &:is(.has-contact-8) {
+        .pf-subtitle-5 {
+            color: var(--pf-clr-pr-1);
+            &::after {
+                background: var(--pf-clr-pr-1);
+            }
+        }
+    }
+}
+/* 
+    contact-8-end
 */

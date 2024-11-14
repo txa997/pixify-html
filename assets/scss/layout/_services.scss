@@ -1428,3 +1428,26 @@
 /* 
     services-7-end
 */
+
+/* 
+    services-8-start
+*/
+.pf-services-4-card {
+    &:is(.has-services-8) {
+        .pf-arrow-btn {
+            border: 2px solid var(--pf-clr-pr-1);
+            stroke: var(--pf-clr-pr-1);
+
+            &:hover {
+                background: var(--pf-clr-pr-1);
+            }
+        }
+
+        &:hover {
+            background: rgb(42 200 211 / 10%);
+        }
+    }
+}
+/* 
+    services-8-end
+*/

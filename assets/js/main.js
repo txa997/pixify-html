@@ -1398,6 +1398,20 @@ waTranslateY.forEach((box, i) => {
 	});
 });
 
+// skill-progress
+var progress = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: progress,
+	  trigger: '[progress-trigger]',
+	  start: "top 90%",
+	  toggleActions: "play none none reverse",
+	  markers: true
+	}
+});
+	
+progress.from("[progress-trigger-item]" , { xPercent: -100 , duration: 1 })
+
 // testimonial-1-slider
 if($('.pf-t1-active').length) {
 	let slider = new Swiper('.pf-t1-active', {
@@ -1955,7 +1969,7 @@ if($('.pf-team-1-active').length) {
 		slidesPerView: 4,
 
 		autoplay: {
-			delay: 40000000,
+			delay: 4000,
 		},
 
 		pagination: {

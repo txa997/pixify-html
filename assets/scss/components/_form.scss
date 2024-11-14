@@ -174,3 +174,45 @@
 /* 
     form-1-end
 */
+
+/* 
+    form-2-start
+*/
+.pf-form-1 {
+    &:is(.has-v2) {
+
+        .pf-form-1 {
+
+            &-label {
+                color: var(--pf-clr-black-3);
+                opacity: 64%;
+            }
+
+            &-input {
+                font-weight: 400;
+                color: rgb(33 37 39 / 80%);
+                border-color: #DFE1E5;
+
+                &:hover {
+                    color: rgb(33 37 39 / 100%);
+                }
+
+                &:focus {
+                    border-color: var(--pf-clr-pr-1);
+                }
+            }
+
+            &-box {
+                &:focus-within .pf-form-1-label {
+                    color: var(--pf-clr-pr-1);
+                    opacity: 1;
+
+                }
+            }
+        }
+
+    }
+}
+/* 
+    form-2-end
+*/

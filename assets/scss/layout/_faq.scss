@@ -445,3 +445,40 @@
 /* 
     pf-faq-3-end
 */
+
+
+/* 
+    pf-faq-8-start
+*/
+.pf-accordion {
+    &:is(.has-v8) {
+        .pf-accordion-item {
+            border-color:  rgba(0, 0, 0, 0.15);
+
+            .item-title {
+                color: var(--pf-clr-black-1);
+
+                .shape {
+                    fill: rgba(0, 0, 0, 0.7);
+                }
+
+                &:not(.collapsed) {
+                    .shape {
+                        fill: var(--pf-clr-pr-1);
+                    }
+                }
+            }
+
+            .item-body {
+                p {
+                    font-weight: 400;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+/* 
+    pf-faq-8-end
+*/
