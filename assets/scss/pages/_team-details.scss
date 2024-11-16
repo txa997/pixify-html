@@ -5,6 +5,10 @@
     &-person {
         padding-top: 250px;
 
+        @media #{$md,$xs} {
+            margin-bottom: 100px;
+        }
+
         &-row {
             display: grid;
             grid-template-columns: 1fr 1.1fr;
@@ -24,6 +28,12 @@
             justify-content: center;
             align-items: end;
             height: 630px;
+
+            @media #{$md,$xs} {
+                height: auto;
+                max-width: 500px;
+                padding: 0;
+            }
         }
 
         &-social {
@@ -124,13 +134,7 @@
         padding-top: 100px;
         padding-bottom: 455px;
 
-        @media #{$xl} {
-            margin-top: -20px;
-        }
 
-        @media #{$lg,$md,$xs} {
-            margin-top: 100px;
-        }
 
         &-row {
             display: grid;
@@ -169,6 +173,7 @@
                 font-size: 32px;
                 line-height: 1.12;
                 margin-bottom: 28px;
+                color: var(--pf-clr-white-1);
 
                 @media #{$xs} {
                     font-size: 26px;
@@ -183,10 +188,12 @@
                 .title {
                     font-weight: 400;
                     font-size: 17px;
+                    color: var(--pf-clr-white-1);
     
                     span {
                         &:nth-child(2) {
                             color: var(--pf-clr-pr-1);
+                            font-weight: 500;
                         }
                     }
     
@@ -226,35 +233,50 @@
                 padding: 64px 30px;
             }
 
-            .title {
-                color: #000;
-                font-size: 32px;
-                line-height: 1.12;
-                margin-bottom: 40px;
-
-                
-                @media #{$lg} {
-                    font-size: 30px;
-                }
-
-                @media #{$xs} {
-                    font-size: 22px;
-                }
-
-                @media #{$sm} {
-                    font-size: 26px;
-                }
-
+            .pf-form-1-title {
+                color: var(--pf-clr-black-1);
             }
 
-            .fx-form-1-input {
-                background: transparent;
-            }
         }
     }
 }
 
+.pf-skill-1 {
 
+    &-progress {
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        .title {
+            color: #fff;
+            gap: 15px;
+            margin-bottom: 13px;
+        }
+
+
+        &-line {
+            background: rgb(46 46 46 / 10%);
+            height: 10px;
+            border-radius: 0 100px 100px 0;
+            position: relative;
+            z-index: 1;
+    
+
+            .progress-line {
+                position: absolute;
+                top: -5px;
+                left: 0;
+                height: 100%;
+                background: #fff;
+                border-radius: 0 100px 100px 0;
+            }
+
+        }
+    }
+    
+}
 
 /* 
     team-details-1-end

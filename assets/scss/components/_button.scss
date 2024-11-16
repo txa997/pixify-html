@@ -1051,6 +1051,47 @@
     }
 }
 
+
+/* page-pagination */
+
+.pf-page-pagination {
+    display: inline-flex;
+    gap: 9px;
+    flex-wrap: wrap;
+
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        border: 2px solid #F6F6F6;
+        flex: 0 0 auto;
+        width: 52px;
+        height: 52px;
+        font-size: 20px;
+        color: #000;
+        font-weight: 400;
+        transition: all .3s var(--pf-cube-2);
+
+        &:hover {
+            background: var(--pf-clr-pr-1);
+            color: #fff;
+            border-color: var(--pf-clr-pr-1);
+        }
+
+        &:is(.has-btn) {
+            i {
+                opacity: 72%;
+            }
+            &:hover {
+                border-color: var(--pf-clr-pr-1);
+                background: transparent;
+                color: var(--pf-clr-pr-1);
+            }
+        }
+    }
+}
+
 /* 
     button-component-end
 */

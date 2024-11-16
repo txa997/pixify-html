@@ -1406,7 +1406,7 @@ var progress = gsap.timeline({
 	  trigger: '[progress-trigger]',
 	  start: "top 90%",
 	  toggleActions: "play none none reverse",
-	  markers: true
+	  markers: false
 	}
 });
 	
@@ -1994,6 +1994,24 @@ if($('.pf-team-1-active').length) {
 				slidesPerView: 4,
 			},
 		},
+	});
+}
+
+// blog-img
+if($('.pf-blog-img-slide').length) {
+	let slider = new Swiper('.pf-blog-img-slide', {
+		loop: true,
+		spaceBetween: 0,
+		speed: 500,
+		autoplay: {
+			delay: 4000,
+		},
+
+		navigation: {
+			nextEl: ".blog_img_next",
+			prevEl: ".blog_img_prev",
+		},
+
 	});
 }
 

@@ -1,0 +1,189 @@
+/* 
+    blog-page-start
+*/
+.pf-sidebar {
+    background: #F3F3F3;
+    border-radius: 8px;
+
+    &-widget {
+        padding: 32px 32px;
+
+        @media #{$lg} {
+            padding: 32px 20px;
+        }
+
+        @media #{$xs} {
+            padding: 32px 20px;
+        }
+
+        @media #{$sm} {
+            padding: 32px 32px;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #DFE1E5;
+        }
+
+
+        .widget-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+    }
+    
+
+    &:is(.has-left-sidebar) {
+        margin-left: 0px;
+        margin-right: 2px;
+
+        @media #{$md,$xs} {
+            margin-right: 0px;
+            margin-top: 0;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.pf-sidebar {
+    &-search {
+        position: relative;
+        z-index: 1;
+
+        &-input {
+            border: none;
+            outline: none;
+            margin: 0;
+            background: #fff;
+            height: 54px;
+            width: 100%;
+            border-radius: 5px;
+            padding-left: 20px;
+            padding-right: 60px;
+            font-size: 16px;
+            font-weight: 400;
+            color: rgb(65 65 65 / 30%);
+        }
+
+        &-btn {
+            width: 54px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: var(--pf-clr-pr-1);
+            border-radius: 0  5px 5px 0;
+            color: #fff;
+            transition: all .3s ease;
+
+            &:hover {
+                background: #000;
+            }
+        }
+    }
+
+    &-gategories {
+        a {
+            font-family: var(--pf-font-h-1);
+            text-transform: capitalize;
+            font-size: 18px;
+            line-height: 28px;
+            color: rgb(0 0 0 / 72%);
+            display: flex;
+            justify-content: space-between;
+            padding: 18px 0;
+            padding-left: 24px;
+            position: relative;
+            z-index: 1;
+            border-bottom: 1px solid #DFE1E5;
+            transition: all .4s var(--pf-cube-2);
+
+            &::after {
+                content: "";
+                width: 16px;
+                height: 16px;
+                border: 1px solid #CACACA;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                top: 23px;
+                transition: all .4s var(--pf-cube-1);
+            }
+
+            &:hover {
+                color: var(--pf-clr-pr-1);
+
+                &::after {
+                    border-color: transparent;
+                    background: var(--pf-clr-pr-1);
+                }
+            }
+
+        }
+    }
+
+    &-recent-post {
+        &-single {
+            display: grid;
+            grid-template-columns: 1fr 2.1fr;
+            gap: 16px;
+            align-items: self-start;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            .item-img {
+                height: 123px;
+                border-radius: 4px;
+            }
+
+            .item-meta-item {
+                font-family: var(--pf-font-h-1);
+                background: var(--pf-clr-pr-1);
+                font-size: 14px;
+                line-height: 1.5;
+                padding: 0 8px;
+                border-radius: 6px;
+                margin-bottom: 13px;
+            }
+
+            .item-title {
+                font-size: 18px;
+                transition: all .4s var(--pf-cube-2);
+
+                &:hover {
+                    color: var(--pf-clr-pr-1);
+                }
+            }
+        }
+    }
+
+    &-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    
+        a {
+            font-size: 16px;
+            line-height: 20px;
+            font-family: var(--pf-font-h-1);
+            color: rgb(0 0 0 / 60%);
+            background: #fff;
+            display: inline-block;
+            padding: 7px 16px;
+            border-radius: 2px;
+            transition: all .4s var(--pf-cube-2);
+    
+            &:hover {
+                color: var(--pf-clr-white-1);
+                background: var(--pf-clr-pr-1);
+            }
+        }
+    
+    }
+}
+
+
+/* 
+    blog-page-end
+*/

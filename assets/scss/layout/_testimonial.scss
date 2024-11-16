@@ -1137,3 +1137,18 @@
 /* 
     testimonial-8-end
 */
+/* 
+    testimonial-page-start
+*/
+.pf-testimonial-page-area {
+    .pf-testimonial-4-item-single {
+        box-shadow: 0px 40px 120px rgba(0, 0, 0, 0.04);
+        
+        .pf-star {
+            color: var(--pf-clr-pr-1);
+        }
+    }
+}
+/* 
+    testimonial-page-end
+*/

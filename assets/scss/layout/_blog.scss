@@ -932,3 +932,105 @@
 /* 
     blog-7-end
 */
+/* 
+    blog-page-item-start
+*/
+.pf-blog-page-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 42px 32px;
+
+    @media #{$md} {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media #{$xs} {
+        grid-template-columns: 1fr;
+    }
+
+    @media #{$sm} {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.pf-blog-2-item-single {
+    &:is(.has-v8) {
+        .item-img .item-date {
+            background: var(--pf-clr-white-1);
+            color: var(--pf-clr-pr-1);
+            font-weight: 500;
+
+            span {
+                &:nth-child(1) {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .item-meta-item {
+            color: var(--pf-clr-white-1);
+            background: var(--pf-clr-pr-1);
+            border-radius: 100px;
+        }
+
+        .item-img {
+            border-radius: 16px;
+            height: 258px;
+            border-bottom: 8px solid rgb(13 23 63 / 12%);
+            transition: all .4s var(--pf-cube-2);
+
+            img {
+                filter: grayscale(0);
+            }
+        }
+
+        .item-title {
+            color: var(--pf-clr-black-1);
+            font-size: 26px;
+
+            @media #{$xl} {
+                font-size: 24px;
+            }
+
+            @media #{$lg} {
+                font-size: 21px;
+            }
+
+            @media #{$md} {
+                font-size: 22px;
+            }
+
+            @media #{$xs} {
+                font-size: 20px;
+            }
+
+            span {
+                color: inherit;
+            }
+
+            &:hover {
+                color: var(--pf-clr-pr-1);
+            }
+        }
+
+        .item-disc {
+            opacity: 80%;
+        }
+
+        &:hover {
+            .item-img {
+                transform: translateY(3px);
+                img {
+            
+                    transform: unset;
+                }
+            }
+        }
+ 
+    }
+}
+
+
+/* 
+    blog-page-item-end
+*/

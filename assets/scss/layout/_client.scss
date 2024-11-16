@@ -224,3 +224,41 @@
 /* 
     client-5-end
 */
+/* 
+    our-clients-1-start
+*/
+.pf-our-clients-1-area {
+    .pf-client-1-item-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 32px;
+
+        @media #{$lg} {
+            grid-template-columns: 1fr 1fr 1fr 1fr ;
+        }
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr 1fr  ;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr ;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr   ;
+        }
+
+        .pf-client-1-logo {
+            border: 2px solid #F3F3F3;
+            border-radius: 12px;
+            padding: 30px 0;
+            transition: all .4s var(--pf-cube-2);
+
+
+        }
+    }
+}
+/* 
+    our-clients-1-end
+*/
