@@ -569,3 +569,38 @@
 /* 
     contact-8-end
 */
+/* 
+    contact-us-page-start
+*/
+.pf-contact-3-form {
+    &:is(.has-contact-page) {
+        .pf-form-1-radio {
+            span {
+                &:hover {
+                    background: var(--pf-clr-pr-1);
+                }
+            }
+        }
+
+        .pf-form-1-input {
+            &:hover {
+                border-color: var(--pf-clr-pr-1);
+            }
+        }
+
+        .pf-form-1-box {
+            &:focus-within {
+                .pf-form-1-label {
+                    color: var(--pf-clr-pr-1);
+                    opacity: 1;
+                }
+                .pf-form-1-input {
+                    border-color: var(--pf-clr-pr-1);
+                }
+            }
+        }
+    }
+}
+/* 
+    contact-us-page-end
+*/

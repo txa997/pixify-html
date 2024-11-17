@@ -361,6 +361,14 @@
             transform: scale(90%);
         }
 
+        .has-x {
+            path {
+                &:nth-child(2) {
+                    fill: white;
+                }
+            }
+        }
+
     }
 
 

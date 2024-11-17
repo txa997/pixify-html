@@ -33,16 +33,14 @@ a , span  {
 }
 
 svg {
-    &:not(.not-inherit) {
+    fill: inherit;
+    stroke: inherit;
+    transition: inherit;
+
+    * {
         fill: inherit;
         stroke: inherit;
         transition: inherit;
-    
-        * {
-            fill: inherit;
-            stroke: inherit;
-            transition: inherit;
-        }
     }
 }
 
