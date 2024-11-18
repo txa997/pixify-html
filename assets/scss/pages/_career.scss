@@ -212,6 +212,230 @@
     }
 }
 
+
+
+.pf-career-single {
+    &-content {
+        max-width: 730px;
+        @media #{$md,$xs} {
+            margin-bottom: 50px;
+        }
+    
+        h1,h2,h3,h4,h5,h6,p,span,li {
+            font-family: var(--pf-font-h-1);
+            color: #000;
+        }
+    
+        h1,h2,h3,h4,h5,h6 {
+            &:not(:first-child) {
+                padding-top: 15px;
+            }
+        }
+
+        h1 {
+            font-size: 40px;
+            line-height: 1.25;
+            font-weight: 600;
+            margin-bottom: 23px;
+            text-transform: capitalize;
+            @media #{$lg} {
+                font-size: 36px;
+            }
+            @media #{$md} {
+                font-size: 32px;
+            }
+    
+            @media #{$xs} {
+                font-size: 26px;
+            }
+        }
+    
+        > h2 {
+            font-size: 36px;
+            line-height: 1.25;
+            font-weight: 600;
+            margin-bottom: 23px;
+            text-transform: capitalize;
+
+            @media #{$lg} {
+                font-size: 32px;
+            }
+            @media #{$md} {
+                font-size: 28px;
+            }
+    
+            @media #{$xs} {
+                font-size: 24px;
+            }
+        }
+    
+        h3 {
+            font-size: 28px;
+            line-height: 1.25;
+            font-weight: 600;
+            margin-bottom: 23px;
+            text-transform: capitalize;
+    
+            @media #{$lg} {
+                font-size: 26px;
+            }
+    
+            @media #{$md} {
+                font-size: 24px;
+            }
+    
+            @media #{$xs} {
+                font-size: 22px;
+            }
+        }
+    
+        h4 {
+            font-size: 28px;
+            line-height: 1.25;
+            font-weight: 600;
+            margin-bottom: 23px;
+            text-transform: capitalize;
+    
+            @media #{$lg} {
+                font-size: 22px;
+            }
+    
+            @media #{$md,$xs} {
+                font-size: 20px;
+            }
+        }
+    
+        h5 {
+            font-size: 22px;
+            line-height: 1.25;
+            font-weight: 600;
+            margin-bottom: 23px;
+            text-transform: capitalize;
+    
+            @media #{$lg,$md,$xs} {
+                font-size: 18px;
+            }
+        }
+    
+        h6 {
+            font-size: 18px;
+            line-height: 1.25;
+            font-weight: 600;
+            margin-bottom: 23px;
+            text-transform: capitalize;
+        }
+    
+        p {
+            opacity: 72%;
+            font-weight: 400;
+            line-height: 28px;
+            font-size: 18px;
+            margin-bottom: 18px;
+            
+        }
+    
+    
+        ul {
+            &:not(:last-child) {
+                margin-bottom: 45px;
+            }
+
+            li {
+                font-size: 18px;
+                line-height: 28px;
+                opacity: 72%;
+                padding-left: 16px;
+                position: relative;
+                z-index: 1;
+    
+                &:not(:last-child) {
+                    margin-bottom: 18px;
+                }
+    
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    background: var(--pf-clr-pr-1);
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                }
+    
+            }
+        }
+
+    }
+
+    &-sidebar {
+        background: #EEEEEE;
+        padding: 40px;
+        border-radius: 12px;
+
+        @media #{$lg} {
+            padding: 40px 20px;
+        }
+
+        @media #{$xs} {
+            padding: 40px 20px;
+        }
+
+        @media #{$sm} {
+            padding: 40px;
+        }
+
+        &-list {
+            margin-bottom: 28px;
+            li {
+                font-family: var(--pf-font-h-1);
+                color: #000;
+                font-size: 18px;
+                line-height: 28px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                border-bottom: 1px solid #DFE1E5;
+                padding-bottom: 17px;
+                
+                &:not(:last-child) {
+                    margin-bottom: 18px;
+                }
+    
+                span {
+                    opacity: 72%;
+                    margin-left: auto;
+                }
+
+                svg {
+                    path {
+                        fill: var(--pf-clr-pr-1);
+                    }
+                }
+
+                &:nth-child(1) {
+                    svg {
+                        path {
+                            stroke: var(--pf-clr-pr-1);
+                            &:nth-child(1) {
+                                fill: transparent;
+
+                            }
+
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        &-btn {
+           width: 100%;
+           justify-content: center;
+        }
+    }
+}
+
 /* 
     career-1-end
 */
