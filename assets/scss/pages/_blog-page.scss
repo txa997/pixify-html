@@ -244,7 +244,34 @@
     }
 }
 
+.pf-blog-listing-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 50px;
+    justify-content: center;
 
+    .meta-item {
+        display: inline-flex;
+        flex: 0 0 auto;
+        font-size: 18px;
+        line-height: 20px;
+        color: #000;
+        align-items: center;
+        gap: 8px;
+        opacity: 72%;
+
+        @media #{$xs} {
+            font-size: 16px;
+        }
+    }
+}
+
+.breadcrumb-title {
+    &:is(.has-listing) {
+        margin-bottom: 30px;
+    }
+}
 
 /* 
     blog-page-end
