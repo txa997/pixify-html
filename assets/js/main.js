@@ -587,123 +587,70 @@ about1shape.from(".pf-about-1-line-shape-single svg " ,  {  scaleY: 0,  duration
 // solution-1
 if (window.matchMedia("(min-width: 992px)").matches) {
 
+
 	gsap.to(".pf-solution-1-bg-img", {
 		scrollTrigger: {
-		  trigger: ".pf-solution-1-wrap",
-		  start: "top top", 
-		  end: "bottom bottom", 
-		  pin: ".pf-solution-1-bg-img", 
-		  pinSpacing: true,
-		   
-		}
+			trigger: ".pf-solution-1-wrap",
+			start: "top top",
+			end: "bottom bottom",
+			pin: ".pf-solution-1-bg-img",
+			pinSpacing: true,
+		},
 	});
-	
 	gsap.to(".pf-solution-1-item-number", {
 		scrollTrigger: {
-		  trigger: ".pf-solution-1-wrap",
-		  start: "top top", 
-		  end: "bottom bottom", 
-		  pin: ".pf-solution-1-item-number", 
-		  pinSpacing: true,
-		   
-		}
+			trigger: ".pf-solution-1-wrap",
+			start: "top top",
+			end: "bottom bottom",
+			pin: ".pf-solution-1-item-number",
+			pinSpacing: true,
+		},
 	});
-	
 
-	
-	var solutionCard2 = gsap.timeline({
-		scrollTrigger: {
-		  animation: solutionCard2,
-		  trigger: '.pf-s1-card-2',
-		  start: "top 80%",
-		  end: "top -40%",
-		  scrub: .5,
-		  toggleActions: 'play reverse play reverse',
-		  markers: false,
-		}
+	document.querySelectorAll(".pf-solution-1-wrap .pf-solution-1-item-card-single").forEach((card, index) => {
+		let cardNum = index + 1;
+		let timeline = gsap.timeline({
+			scrollTrigger: {
+				trigger: `.pf-s1-card-${cardNum}`,
+				start: "top 80%",
+				end: "top -40%",
+				scrub: 0.5,
+				toggleActions: "play reverse play reverse",
+				markers: false,
+			},
+		});
+		timeline.fromTo(
+			`.pf-s1-num-${cardNum}`,
+			{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", duration: 1 },
+			{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: 1 }
+		);
+		timeline.to(`.pf-s1-btn-${cardNum}`, {
+			background: "#2AC8D3",
+			color: "#000",
+			borderColor: "transparent",
+			duration: 0.1,
+		});
+		timeline.to(`.pf-solution-1-bg-img .main-img-${cardNum}`, {
+			opacity: 1,
+			duration: 0.5,
+		});
+		timeline.from(`.pf-s1-card-${cardNum}`, { opacity: 0, duration: 0.5 }, "<");
+		timeline.to(`.pf-s1-card-${cardNum}`, { opacity: 0, duration: 0.5 });
 	});
-	
-	solutionCard2.fromTo(".pf-s1-num-2" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", duration:1 }, {  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 , })
-	solutionCard2.to(".pf-s1-btn-2" ,  {  background: "#2AC8D3", color: "#000", borderColor: "transparent", duration: .1 })
-	solutionCard2.to(".pf-solution-1-bg-img .main-img-2" ,  {  opacity: 1, duration: .5 })
-	solutionCard2.from(".pf-s1-card-2" ,  {  opacity: 0, duration: .5 },"<")
-	solutionCard2.to(".pf-s1-card-2" ,  {  opacity: 0, duration: .5 })
-	
-	var solutionCard3 = gsap.timeline({
-		scrollTrigger: {
-		  animation: solutionCard3,
-		  trigger: '.pf-s1-card-3',
-		  start: "top 80%",
-		  end: "top -40%",
-		  scrub: .5,
-		  toggleActions: 'play reverse play reverse',
-		  markers: false,
-		}
-	});
-	
-	solutionCard3.fromTo(".pf-s1-num-3" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", duration:1 }, {  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 , })
-	solutionCard3.to(".pf-s1-btn-3" ,  {  background: "#2AC8D3", color: "#000", borderColor: "transparent", duration: .1 })
-	solutionCard3.to(".pf-solution-1-bg-img .main-img-3" ,  {  opacity: 1, duration: .5 })
-	solutionCard3.from(".pf-s1-card-3" ,  {  opacity: 0, duration: .5 },"<")
-	solutionCard3.to(".pf-s1-card-3" ,  {  opacity: 0, duration: .5 })
-	
-	var solutionCard4 = gsap.timeline({
-		scrollTrigger: {
-		  animation: solutionCard4,
-		  trigger: '.pf-s1-card-4',
-		  start: "top 80%",
-		  end: "top -40%",
-		  scrub: .5,
-		  toggleActions: 'play reverse play reverse',
-		  markers: false,
-		}
-	});
-	
-	solutionCard4.fromTo(".pf-s1-num-4" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", duration:1 }, {  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 , })
-	solutionCard4.to(".pf-s1-btn-4" ,  {  background: "#2AC8D3", color: "#000", borderColor: "transparent", duration: .1 })
-	solutionCard4.to(".pf-solution-1-bg-img .main-img-4" ,  {  opacity: 1, duration: .5 })
-	solutionCard4.from(".pf-s1-card-4" ,  {  opacity: 0, duration: .5 },"<")
-	solutionCard4.to(".pf-s1-card-4" ,  {  opacity: 0, duration: .5 })
-	
-	var solutionCard5 = gsap.timeline({
-		scrollTrigger: {
-		  animation: solutionCard5,
-		  trigger: '.pf-s1-card-5',
-		  start: "top 80%",
-		  end: "top -40%",
-		  scrub: .5,
-		  toggleActions: 'play reverse play reverse',
-		  markers: false,
-		}
-	});
-	
-	solutionCard5.fromTo(".pf-s1-num-5" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", duration:1 }, {  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 , })
-	solutionCard5.to(".pf-s1-btn-5" ,  {  background: "#2AC8D3", color: "#000", borderColor: "transparent", duration: .1 })
-	solutionCard5.to(".pf-solution-1-bg-img .main-img-5" ,  {  opacity: 1, duration: .5 })
-	solutionCard5.from(".pf-s1-card-5" ,  {  opacity: 0, duration: .5 },"<")
-	solutionCard5.to(".pf-s1-card-5" ,  {  opacity: 0, duration: .5 })
-	
-	var solutionCard6 = gsap.timeline({
-		scrollTrigger: {
-		  animation: solutionCard6,
-		  trigger: '.pf-s1-card-6',
-		  start: "top 90%",
-		  end: "top -60%",
-		  scrub: .5,
-		  toggleActions: 'play reverse play reverse',
-		  markers: false,
-		}
-	});
-	
-	solutionCard6.fromTo(".pf-s1-num-6" , { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", duration:1 }, {  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",  duration:1 , })
-	solutionCard6.to(".pf-s1-btn-6" ,  {  background: "#2AC8D3", color: "#000", borderColor: "transparent", duration: .1 })
-	solutionCard6.to(".pf-solution-1-bg-img .main-img-6" ,  {  opacity: 1, duration: .5 })
-	solutionCard6.from(".pf-s1-card-6" ,  {  opacity: 0, duration: .5 },"<")
-	solutionCard6.to(".pf-s1-card-6" ,  {  opacity: 0, duration: .5 })
 
+	var pxSolutionCount = gsap.timeline({
+
+		scrollTrigger: {
+		  trigger: '.pf-solution-1-item-card',
+		  start: "top -100%",
+		  toggleActions: 'play reverse play reverse',
+		  markers: true,
+		  scrub: 1,
+		}
+	});
+	pxSolutionCount.to(".pf-solution-1-item-number-btn" ,  {  y: "-500px", })
 
 }
-
 
 // overview-1
 var overview1 = gsap.timeline({
