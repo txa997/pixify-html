@@ -8527,13 +8527,26 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: absolute;
   left: 0;
   bottom: 105%;
-  padding: 20px 26px;
+  padding: 30px 26px;
+  padding-bottom: 20px;
   backdrop-filter: blur(8px);
   background: rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   transition: all 0.4s var(--pf-cube-2);
   transform: scale(0) translateY(100%);
   transform-origin: bottom center;
+}
+.pf-about-1-earth-text .modal-box .close {
+  position: absolute;
+  right: 13px;
+  top: 10px;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.4s var(--pf-cube-2);
+}
+.pf-about-1-earth-text .modal-box .close:hover {
+  color: var(--pf-clr-pr-1);
 }
 .pf-about-1-earth-text .modal-box .item-title {
   font-size: 20px;
@@ -8606,13 +8619,26 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: absolute;
   right: 0;
   bottom: 105%;
-  padding: 20px 26px;
+  padding: 30px 26px;
+  padding-bottom: 20px;
   backdrop-filter: blur(8px);
   background: rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   transition: all 0.4s var(--pf-cube-2);
   transform: scale(0) translateY(100%);
   transform-origin: bottom center;
+}
+.pf-about-1-earth-text-2 .modal-box .close {
+  position: absolute;
+  right: 13px;
+  top: 10px;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.4s var(--pf-cube-2);
+}
+.pf-about-1-earth-text-2 .modal-box .close:hover {
+  color: var(--pf-clr-pr-1);
 }
 .pf-about-1-earth-text-2 .modal-box .item-title {
   font-size: 20px;

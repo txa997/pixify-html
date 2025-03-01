@@ -2032,6 +2032,9 @@ $(".pf-about-1-modal-toggle").on("click", function() {
     $(this).addClass("active");
 });
 
+$(document).on("click", ".pf-about-1-modal-close", function() {
+    $(".pf-about-1-modal-toggle").removeClass("active");
+});
 
 // feather-icon
 feather.replace()

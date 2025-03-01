@@ -99,7 +99,8 @@
                 position: absolute;
                 left: 0;
                 bottom: 105%;
-                padding: 20px 26px;
+                padding: 30px 26px;
+                padding-bottom: 20px;
                 backdrop-filter: blur(8px);
                 background: rgba(255, 255, 255, 0.08);
                 border-radius: 12px;
@@ -107,6 +108,19 @@
                 transform: scale(0) translateY(100%);
                 transform-origin: bottom center;
                 
+
+                .close {
+                    position: absolute;
+                    right: 13px;
+                    top: 10px;
+                    font-size: 16px;
+                    line-height: 1;
+                    cursor: pointer;
+                    transition: all .4s var(--pf-cube-2);
+                    &:hover {
+                        color: var(--pf-clr-pr-1);
+                    }
+                }
 
                 .item-title {
                     font-size: 20px;
@@ -188,13 +202,27 @@
                 position: absolute;
                 right: 0;
                 bottom: 105%;
-                padding: 20px 26px;
+                padding: 30px 26px;
+                padding-bottom: 20px;
                 backdrop-filter: blur(8px);
                 background: rgba(255, 255, 255, 0.08);
                 border-radius: 12px;
                 transition: all .4s var(--pf-cube-2);
                 transform: scale(0) translateY(100%);
                 transform-origin: bottom center;
+
+                .close {
+                    position: absolute;
+                    right: 13px;
+                    top: 10px;
+                    font-size: 16px;
+                    line-height: 1;
+                    cursor: pointer;
+                    transition: all .4s var(--pf-cube-2);
+                    &:hover {
+                        color: var(--pf-clr-pr-1);
+                    }
+                }
                 
 
                 .item-title {
