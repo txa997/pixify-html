@@ -558,7 +558,7 @@ var about1 = gsap.timeline({
 	  animation: about1,
 	  trigger: '.pf-about-1-earth',
 	  start: "top 90%",
-	  toggleActions: 'play reverse play reverse',
+	  toggleActions: 'play none none reverse',
 	  markers: false,
 	}
 });
@@ -644,7 +644,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 		  trigger: '.pf-solution-1-item-card',
 		  start: "top -100%",
 		  toggleActions: 'play reverse play reverse',
-		  markers: true,
+		  markers: false,
 		  scrub: 1,
 		}
 	});
@@ -2024,6 +2024,12 @@ $(".pf-solution-7-item").on("mouseover", function(){
 	var current_class = document.getElementsByClassName("pf-solution-7-item active");
 	current_class[0].className = current_class[0].className.replace(" active", "");
 	this.className += " active";
+});
+
+// about-1-modal
+$(".pf-about-1-modal-toggle").on("click", function() {
+    $(".pf-about-1-modal-toggle").removeClass("active");
+    $(this).addClass("active");
 });
 
 
