@@ -551,28 +551,24 @@ subtitle4.forEach((box, i) => {
 	});
 });
 
-// about-1-timeline
-var about1 = gsap.timeline({
-
+// new-js-remove-old-js
+gsap.to(".pf-about-1-tabs-pane", {
 	scrollTrigger: {
-	  animation: about1,
-	  trigger: '.pf-about-1-earth',
-	  start: "top 90%",
-	  toggleActions: 'play none none reverse',
-	  markers: false,
+		trigger: ".pf-about-1-tabs-pane",
+		start: "top 90%",
+		toggleClass: "active",
+		toggleActions: "play none none none",
+		once: true,
+		markers: false,
 	}
 });
-about1.from(".pf-about-1-earth-img img" ,  {  rotation: 90, opacity: 0, duration: 1 })
-about1.from(".a1-ani-point-1" ,  {  scale: 0, duration: .5 } , "<=.5")
-about1.fromTo(".a1-ani-line" , { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",  duration:1 }, { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",  duration: .5 })
-about1.from(".a1-ani-point-2" ,  {  scale: 0, duration: .5 })
-about1.from(".a1-ani-text" ,  {  scale: .8, opacity: 0,  duration: .5 }, "<=.5")
+
+
 
 // about-1-shape
 var about1shape = gsap.timeline({
 
 	scrollTrigger: {
-	  animation: about1,
 	  trigger: '.pf-about-1-line-shape-single',
 	  start: "top 80%",
 	  toggleActions: 'play reverse play reverse',
